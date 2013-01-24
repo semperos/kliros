@@ -1,0 +1,73 @@
+\version "2.11"
+\include "kliros.ly"
+
+global =  { \set Score.timing = ##f 
+                \key f \major 
+                \autoBeamOff 
+                \clef "G_8"
+}
+
+%#(set-global-staff-size 18)
+%\header {
+%        title = \markup\override #'(font-name . "Bookman") "Lord, I have Cried"
+%        dedication = \markup\override #'(font-name . "Bookman") "Tone VIII" 
+%        subtitle =\markup\override #'(font-name . "Bookman") "Znamenny Chant"
+%        tagline = ""
+%        composer = " " arranger = " "
+%}
+	\score{
+        \relative c'
+        { \global 
+        %\mark\markup\smaller{ \who{Canonarch:}} 
+        bes\breve^\markup\bigger{\hspace #-12 \who{Canonarch:} \hspace #3 In the Eighth Tone:} 
+        a8([ g a bes]) c4. a8 bes4 a g2\fermata\bar"||"
+        }
+        \addlyrics
+        {
+        \left "Lord I have cried unto" Thee. __ Heark -- en  un -- to me.
+        }
+\include "layout.ly"
+}
+
+\score{
+        \relative c'
+        { \global \mark\markup{\smaller\who{Chanters:}}
+        g8([ a]) bes4 bes8([ a]) g4 a4.( g8) bes4( a) g2\fermata\bar"||"
+        }
+        \addlyrics
+        {
+	Heark -- en un -- to me, __ O __ Lord.  
+        }
+\include "layout.ly"
+}
+
+\score{
+        \relative c'
+        { \global
+        \mark\markup\smaller{\who{Canonarch:}} 
+        bes\breve \Z
+        a8([ g]) a([ bes]) c4.( a8) bes4 a g2\fermata\bar"||"
+        }
+        \addlyrics
+        {
+	\left"Lord I have cried unto Thee. Hearken unto me. Attend to the voice of my supplication" 
+        when I __ cry __ un -- to Thee. 
+        }
+\include "layout.ly"
+}
+\markup\bigger{ \hspace #54 \who{Chanters:} \hspace #3 "Hearken unto me, O Lord."}
+
+
+\score{ \relative c'
+        { \global \mark\markup\smaller{\who{Canonarch:}} 
+        g4 g bes\breve \hideNote bes4 \Z a8([ g]) a([ bes]) c4.( a8 bes4) a g2\fermata\bar"||"
+        }
+        \addlyrics {
+                Let my \left"prayer be set forth as incense before Thee, the lifting up of my hands as" an 
+                eve -- ning sac -- ri -- fice.
+        }
+\include "layout.ly"
+}
+\markup\bigger{ \hspace #54 \who{Chanters:} \hspace #3  "Hearken unto me, O Lord."}
+
+
