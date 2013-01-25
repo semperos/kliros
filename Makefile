@@ -30,5 +30,9 @@ pdf/%.pdf midi/%.midi: scores/%.ly
 # Convenience rules
 score: pdf/$(piece).pdf
 
+show: view
+view:
+	xdg-open pdf/$(piece).pdf
+
 play:
 	timidity midi/$(piece).midi
