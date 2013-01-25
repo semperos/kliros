@@ -204,7 +204,7 @@ englishWords = \lyricmode {
   \layout { ragged-last = ##f
 
             \context { \Staff
-                                %          \remove "Time_signature_engraver"
+                                         \remove "Time_signature_engraver"
                                 %              \remove "Bar_number_engraver"
                      }
                                 % this is a correction to keep it from getting crowded on the final system, especially when ragged-last is set.
