@@ -1,4 +1,8 @@
+# LilyPond
 *.pdf
 *.midi
 /pdf/
 /midi/
+
+# Python
+*.pyc
