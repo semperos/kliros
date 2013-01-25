@@ -125,39 +125,40 @@ bass = {
 %%%% WORDS
 
 slavonicWords = \lyricmode {
-  И ны -- не и при -- сно и во ве -- ки ве -- ков. __ А -- мин.
-  Е -- ди -- но -- род -- ный Сы -- не и Сло -- ве Бо -- жий, без -- смер -- тен Сый,
-  и из -- во -- ли -- вый спа -- се -- ни -- я на -- ше -- го ра -- ди
-  во -- пло -- ти -- ти -- ся от Свя -- ты -- я Бо -- го -- ро -- ди -- цы и Прис -- но -- де -- вы Ма -- ри -- и,
-  не -- пре -- ло -- жно во -- че -- ло -- ве -- чи -- вый -- ся,
-  рас -- пный -- ся же Хри -- сте Бо -- же,
-  смер -- ти -- ю смерть по -- пра -- вый,
-  Е -- дин Сый Свя -- ты -- я Тро -- и -- цы,
-  спро -- слав -- ля -- е -- мый От -- цу и Свя -- то -- му Ду -- ху,
-  спа -- си нас.
+  % \override LyricText #'font-name = #"Hirmos Ponomar"
+  И ны́ -- не и при́ -- сно и во ве́ -- ки ве -- ко́в. __ А -- ми́н.
+  Е -- ди -- но -- ро́д -- ный Сы́ -- не и Сло́ -- ве Бо́ -- жий, без -- сме́р -- тен Сый,
+  и из -- во́ -- ли -- вый спа -- се́ -- ни -- я на́ -- ше -- го ра́ -- ди
+  во -- пло -- ти́ -- ти -- ся от Свя -- ты́ -- я Бо -- го -- ро́ -- ди -- цы и При́с -- но -- де -- вы Ма -- ри́ -- и,
+  не -- пре -- ло́ -- жно во -- че -- ло -- ве́ -- чи -- вый -- ся,
+  рас -- пный́ -- ся же Хри -- сте́ Бо́ -- же,
+  сме́р -- ти -- ю смерть по -- пра́ -- вый,
+  Е -- ди́н Сый Свя -- ты́ -- я Тро́ -- и -- цы,
+  спро -- слав -- ля́ -- е -- мый От -- цу́ и Свя -- то́ -- му Ду́ -- ху,
+  спа -- си́ нас.
   %%
-  Гос -- по -- ди по -- ми -- луй.
-  Гос -- по -- ди по -- ми -- луй.
-  Те -- бе Гос -- по -- ди.
-  А -- минь. __
+  Го́с -- по -- ди по -- ми́ -- луй.
+  Го́с -- по -- ди по -- ми́ -- луй.
+  Те -- бе́ Го́с -- по -- ди.
+  А -- ми́нь. __
 }
 
 englishWords = \lyricmode {
-  I ny -- ne i pri -- sno i vo ve -- ki ve -- kov. __ A -- min.
-  E -- di -- no -- rod -- nyĭ Sy -- ne i Slo -- ve Bo -- zhiĭ, bez -- smer -- ten Syĭ,
-  i iz -- vo -- li -- vyĭ spa -- se -- ni -- ya na -- she -- go ra -- di
-  vo -- plo -- ti -- ti -- sya ot Svya -- ty -- ya Bo -- go -- ro -- di -- tsy i Pris -- no -- de -- vy Ma -- ri -- i,
-  ne -- pre -- lo -- zhno vo -- che -- lo -- ve -- chi -- vyĭ -- sya,
-  ras -- pnyĭ -- sya zhe Khri -- ste Bo -- zhe,
-  smer -- ti -- yu smert' po -- pra -- vyĭ,
-  E -- din Syĭ Svya -- ty -- ya Tro -- i -- tsy,
-  spro -- slav -- lya -- e -- myĭ Ot -- tsu i Svya -- to -- mu Du -- khu,
-  spa -- si nas.
+  I ný -- ne i prí -- sno i vo vé -- ki ve -- kóv. __ A -- mín.
+  E -- di -- no -- ród -- nyĭ Sý -- ne i Sló -- ve Bó -- zhiĭ, bez -- smér -- ten Syĭ,
+  i iz -- vó -- li -- vyĭ spa -- sé -- ni -- ya ná -- she -- go rá -- di
+  vo -- plo -- tí -- ti -- sya ot Svya -- tý -- ya Bo -- go -- ró -- di -- tsy i Prís -- no -- de -- vy Ma -- rí -- i,
+  ne -- pre -- ló -- zhno vo -- che -- lo -- vé -- chi -- vyĭ -- sya,
+  ras -- pnyĭ́ -- sya zhe Khri -- sté Bó -- zhe,
+  smér -- ti -- yu smert' po -- prá -- vyĭ,
+  E -- dín Syĭ Svya -- tý -- ya Tró -- i -- tsy,
+  spro -- slav -- lyá -- e -- myĭ Ot -- tsú i Svya -- tó -- mu Dú -- khu,
+  spa -- sí nas.
   %%
-  Gos -- po -- di po -- mi -- luĭ.
-  Gos -- po -- di po -- mi -- luĭ.
-  Te -- be Gos -- po -- di.
-  A -- min'. __
+  Gós -- po -- di po -- mí -- luĭ.
+  Gós -- po -- di po -- mí -- luĭ.
+  Te -- bé Gós -- po -- di.
+  A -- mín'. __
 }
 
 %%%% SCORE
