@@ -124,7 +124,7 @@ bass = {
 
 %%%% WORDS
 
-slavonicWords = \lyricmode {
+cyrillicText = \lyricmode {
   % \override LyricText #'font-name = #"Hirmos Ponomar"
   И ны́ -- не и при́ -- сно и во ве́ -- ки ве -- ко́в. __ А -- ми́н.
   Е -- ди -- но -- ро́д -- ный Сы́ -- не и Сло́ -- ве Бо́ -- жий, без -- сме́р -- тен Сый,
@@ -143,7 +143,7 @@ slavonicWords = \lyricmode {
   А -- ми́нь. __
 }
 
-englishWords = \lyricmode {
+latinText = \lyricmode {
   I ný -- ne i prí -- sno i vo vé -- ki ve -- kóv. __ A -- mín.
   E -- di -- no -- ród -- nyĭ Sý -- ne i Sló -- ve Bó -- zhiĭ, bez -- smér -- ten Syĭ,
   i iz -- vó -- li -- vyĭ spa -- sé -- ni -- ya ná -- she -- go rá -- di
@@ -181,9 +181,9 @@ englishWords = \lyricmode {
 
       }
 
-      \new Lyrics \lyricsto "alto" { \slavonicWords }
+      \new Lyrics \lyricsto "alto" { \cyrillicText }
 
-      \new Lyrics \lyricsto "alto" { \englishWords }
+      \new Lyrics \lyricsto "alto" { \latinText }
 
     >>
 
