@@ -118,7 +118,7 @@ bass = {
 %%%% WORDS
 
 slavonicWords = \lyricmode {
-  И ны -- не и при -- сно и во ве -- ки ве -- ков. А -- мин.
+  И ны -- не и при -- сно и во ве -- ки ве -- ков. __ А -- мин.
   Е -- ди -- но -- род -- ный Сы -- не и Сло -- ве Бо -- жий, без -- смер -- тен Сый,
   и из -- во -- ли -- вый спа -- се -- ни -- я на -- ше -- го ра -- ди
   во -- пло -- ти -- ти -- ся от Свя -- ты -- я Бо -- го -- ро -- ди -- цы и Прис -- но -- де -- вы Ма -- ри -- и,
@@ -132,11 +132,11 @@ slavonicWords = \lyricmode {
   Гос -- по -- ди по -- ми -- луй.
   Гос -- по -- ди по -- ми -- луй.
   Те -- бе Гос -- по -- ди.
-  А -- минь.
+  А -- минь. __
 }
 
 englishWords = \lyricmode {
-  I ny -- ne i pri -- sno i vo ve -- ki ve -- kov. A -- min.
+  I ny -- ne i pri -- sno i vo ve -- ki ve -- kov. __ A -- min.
   E -- di -- no -- rod -- nyĭ Sy -- ne i Slo -- ve Bo -- zhiĭ, bez -- smer -- ten Syĭ,
   i iz -- vo -- li -- vyĭ spa -- se -- ni -- ya na -- she -- go ra -- di
   vo -- plo -- ti -- ti -- sya ot Svya -- ty -- ya Bo -- go -- ro -- di -- tsy i Pris -- no -- de -- vy Ma -- ri -- i,
@@ -150,7 +150,7 @@ englishWords = \lyricmode {
   Gos -- po -- di po -- mi -- luĭ.
   Gos -- po -- di po -- mi -- luĭ.
   Te -- be Gos -- po -- di.
-  A -- min'.
+  A -- min'. __
 }
 
 %%%% SCORE
