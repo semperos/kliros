@@ -1,6 +1,4 @@
-% This is a lilypond template for Fr. Savaati and choir.
-% It currently relies on "kliros.ly" which should be in the same directory,
-% but if you decide that you don't kliros.ly, you can remove the \include line and toss it.
+% O Only Begotten Son, Slavonic
 \version "2.16.2"
 \include "../inc/kliros.ly"
 
@@ -16,12 +14,6 @@
                                 % If you don't have black tagline lilypond will advertise itself at the bottom of page 1
   tagline = "Ss. Cyril & Methodius Russian Orthodox Church"
 }
-
-                                % Here is a definition.
-                                % You can put anything here that applies to all staves/voices,
-                                % so that you don't have to type it all every time.
-                                % or you can remove what I've put here as you see fit.
-                                % The ingredients are now commented out. Remove "%" to activate
 
 global = {
                                 % to turn off the time signature (not necessary  for Italianate/German froo-froo) :
@@ -48,7 +40,7 @@ global = {
 
 }
 
-%%%%% WHERE THE NOTES GO
+%%%%% NOTES
 
 soprano = {
   a'4 a a a a a a a a a g a( g) f2 g1 \bar "||"
@@ -123,10 +115,7 @@ bass = {
 }
 
 
-%%%% WHERE THE WORDS GO (below)
-                                % N.B. The files must be encoded in utf-8 for cyrillic letters.
-                                % I've assumed that you'll use \lyricmode, which is more versatile,
-                                % but means that you need to give the words durations, like the notes
+%%%% WORDS
 
 slavonicWords = \lyricmode {
   И ны -- не и при -- сно и во ве -- ки ве -- ков. А -- мин.
@@ -164,9 +153,7 @@ englishWords = \lyricmode {
   A -- min'.
 }
 
-
-%% In the actual score block, all these pieces are put together
-%% You might decide you'd rather type everything right into the score than separate it in definitions.
+%%%% SCORE
 
 \score
 {
@@ -228,10 +215,6 @@ englishWords = \lyricmode {
             \context {
               \Lyrics \override LyricSpace #'minimum-distance = #.8 }
           }
-
-                                %The end of this  file:
 }
 
-
-
-                                %Glory to God for all things.
+% Glory to God for all things.
