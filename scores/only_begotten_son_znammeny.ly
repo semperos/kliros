@@ -136,14 +136,14 @@ slavonicWords = \lyricmode {
 }
 
 englishWords = \lyricmode {
-  I ny -- ne i pris -- no i vo ve -- ki ve -- kov. A -- min.
+  I ny -- ne i pri -- sno i vo ve -- ki ve -- kov. A -- min.
   E -- di -- no -- rod -- nyĭ Sy -- ne i Slo -- ve Bo -- zhiĭ, bez -- smer -- ten Syĭ,
   i iz -- vo -- li -- vyĭ spa -- se -- ni -- ya na -- she -- go ra -- di
   vo -- plo -- ti -- ti -- sya ot Svya -- ty -- ya Bo -- go -- ro -- di -- tsy i Pris -- no -- de -- vy Ma -- ri -- i,
   ne -- pre -- lo -- zhno vo -- che -- lo -- ve -- chi -- vyĭ -- sya,
   ras -- pnyĭ -- sya zhe Khri -- ste Bo -- zhe,
   smer -- ti -- yu smert' po -- pra -- vyĭ,
-  E -- din Cyĭ Svya -- ty -- ya Tro -- i -- tsy,
+  E -- din Syĭ Svya -- ty -- ya Tro -- i -- tsy,
   spro -- slav -- lya -- e -- myĭ Ot -- tsu i Svya -- to -- mu Du -- khu,
   spa -- si nas.
   %%
