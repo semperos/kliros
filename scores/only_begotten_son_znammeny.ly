@@ -12,7 +12,7 @@
                                 % N.B. "meter" is not the time signature, but a space for descriptive terms like "allegro"
   meter = ""
                                 % If you don't have black tagline lilypond will advertise itself at the bottom of page 1
-  tagline = "Ss. Cyril & Methodius Russian Orthodox Church"
+  tagline = "Ss. Cyril & Methodius Russian Orthodox Church ♰ Summerville, SC"
 }
 
 global = {
