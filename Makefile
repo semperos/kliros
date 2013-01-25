@@ -25,5 +25,8 @@ pdf/%.pdf midi/%.midi: scores/%.ly
 	-mv "$*.pdf" pdf/
 	-mv "$*.midi" midi/
 
-# Convenience rule
+# Convenience rules
 score: pdf/$(piece).pdf
+
+play:
+	timidity midi/$(piece).midi
