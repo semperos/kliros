@@ -125,8 +125,8 @@ bass = {
 %%%% WORDS
 
 cyrillicText = \lyricmode {
-  % \override LyricText #'font-name = #"Hirmos Ponomar"
-  % \override LyricText #'font-size = #3
+  \override LyricText #'font-name = #"Hirmos Ponomar"
+  \override LyricText #'font-size = #3
   И ны́ -- не и при́ -- сно и во ве́ -- ки ве -- ко́в. __ А -- ми́н.
   Е -- ди -- но -- ро́д -- ный Сы́ -- не и Сло́ -- ве Бо́ -- жий, без -- сме́р -- тен Сый,
   и из -- во́ -- ли -- вый спа -- се́ -- ни -- я на́ -- ше -- го ра́ -- ди

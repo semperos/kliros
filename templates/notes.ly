@@ -1,11 +1,11 @@
 %%%%% NOTES
 
 soprano = {
-  a4 a bes2 a1 \fermata \bar "|."
+  a'4 a bes2 a1 \fermata \bar "|."
 }
 
 alto = {
-  f4 f e2 f1 \fermata \bar "|."
+  f'4 f e2 f1 \fermata \bar "|."
 }
 
 tenor = {

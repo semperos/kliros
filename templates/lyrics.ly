@@ -9,7 +9,7 @@ cyrillicText = \lyricmode {
 }
 {% endif %}
 
-{% if latin_text %}
+  {% if latin_text %}
 latinText = \lyricmode {
 {{ latin_text }}
 }

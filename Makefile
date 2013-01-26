@@ -12,6 +12,7 @@ LILY_CMD = lilypond -ddelete-intermediate-files \
 config:
 	@echo "Checking system settings for compatibility..."
 	@type lilypond 1>/dev/null && echo " * LilyPond is ready" || { echo " [ERROR] LilyPond not found. Please install LilyPond and ensure the 'lilypond' binary is on your PATH.";  exit 1; }
+	@echo "Make sure fonts you want to use with Lilypond are visible to Lilypond (put in ~/.fonts to be sure)"
 	mkdir -p pdf
 	mkdir -p midi
 
