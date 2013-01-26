@@ -6,7 +6,7 @@ CPU_CORES=`cat /proc/cpuinfo | grep -m1 "cpu cores" | sed s/".*: "//`
 LILY_CMD = lilypond -ddelete-intermediate-files \
                     -dno-point-and-click -djob-count=$(CPU_CORES)
 
-.PHONY: config clean score
+.PHONY: config clean score reqs
 
 # Ensure the system can compile LilyPond source files
 config:
@@ -14,6 +14,10 @@ config:
 	@type lilypond 1>/dev/null && echo " * LilyPond is ready" || { echo " [ERROR] LilyPond not found. Please install LilyPond and ensure the 'lilypond' binary is on your PATH.";  exit 1; }
 	mkdir -p pdf
 	mkdir -p midi
+
+reqs:
+	@echo "Updating requirements file for PIP packages..."
+	pip freeze > requirements.txt
 
 # Remove PDF's and MIDI files
 clean:
