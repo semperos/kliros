@@ -127,12 +127,12 @@ bass = {
 cyrillicText = \lyricmode {
   \override LyricText #'font-name = #"Hirmos Ponomar"
   \override LyricText #'font-size = #3
-  И ны́ -- не и при́ -- сно и во ве́ -- ки ве -- ко́в. __ А -- ми́н.
+  И ны́ -- не и при́ -- сно и во ве́ -- ки ве -- ко́в. __ А -- ми́нь.
   Е -- ди -- но -- ро́д -- ный Сы́ -- не и Сло́ -- ве Бо́ -- жий, без -- сме́р -- тен Сый,
   и из -- во́ -- ли -- вый спа -- се́ -- ни -- я на́ -- ше -- го ра́ -- ди
   во -- пло -- ти́ -- ти -- ся от Свя -- ты́ -- я Бо -- го -- ро́ -- ди -- цы и При́с -- но -- де -- вы Ма -- ри́ -- и,
   не -- пре -- ло́ -- жно во -- че -- ло -- ве́ -- чи -- вый -- ся,
-  рас -- пный́ -- ся же Хри -- сте́ Бо́ -- же,
+  рас -- пны́й -- ся же Хри -- сте́ Бо́ -- же,
   сме́р -- ти -- ю смерть по -- пра́ -- вый,
   Е -- ди́н Сый Свя -- ты́ -- я Тро́ -- и -- цы,
   спро -- слав -- ля́ -- е -- мый От -- цу́ и Свя -- то́ -- му Ду́ -- ху,
@@ -145,12 +145,12 @@ cyrillicText = \lyricmode {
 }
 
 latinText = \lyricmode {
-  I ný -- ne i prí -- sno i vo vé -- ki ve -- kóv. __ A -- mín.
+  I ný -- ne i prí -- sno i vo vé -- ki ve -- kóv. __ A -- mín'.
   E -- di -- no -- ród -- nyĭ Sý -- ne i Sló -- ve Bó -- zhiĭ, bez -- smér -- ten Syĭ,
   i iz -- vó -- li -- vyĭ spa -- sé -- ni -- ya ná -- she -- go rá -- di
   vo -- plo -- tí -- ti -- sya ot Svya -- tý -- ya Bo -- go -- ró -- di -- tsy i Prís -- no -- de -- vy Ma -- rí -- i,
   ne -- pre -- ló -- zhno vo -- che -- lo -- vé -- chi -- vyĭ -- sya,
-  ras -- pnyĭ́ -- sya zhe Khri -- sté Bó -- zhe,
+  ras -- pnýĭ -- sya zhe Khri -- sté Bó -- zhe,
   smér -- ti -- yu smert' po -- prá -- vyĭ,
   E -- dín Syĭ Svya -- tý -- ya Tró -- i -- tsy,
   spro -- slav -- lyá -- e -- myĭ Ot -- tsú i Svya -- tó -- mu Dú -- khu,
