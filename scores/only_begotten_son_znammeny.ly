@@ -4,7 +4,11 @@
 
                                 % see appropriate lilypond docs for all header fields
 \header {
-  title = "Единородный Сыне"
+  title = \markup {
+    \override #'(font-name . "Hirmos Ponomar")
+    \override #'(font-size . 6)
+    "Единоро́дный Сы́не"
+  }
   subtitle = "O Only-begotten Son"
   composer = "abbr. Znamenny Chant"
   arranger = "E. Smirnov, D. Gregoire"
