@@ -13,16 +13,16 @@
 chant = { \set Score.defaultBarType = "" \override Score.SpacingSpanner #'strict-note-spacing = ##t \set Score.barAlways = ##t }
 
 %THE BARLINES I USE (MOSTLY I ONLY USE W J Z & D )
-W = { \once \override Staff.BarLine #'bar-size = #2 \bar "|" 
+W = { \once \override Staff.BarLine #'bar-size = #2 \bar "|"
 	 }
 J = { \once \override Staff.BarLine #'extra-offset = #'(0 . 2)
-	\once \override Staff.BarLine #'bar-size = #1 \bar "|" } 
+	\once \override Staff.BarLine #'bar-size = #1 \bar "|" }
 Z = { \bar "" \break }
-D = { \bar ":" } 
+D = { \bar ":" }
 B = { \override BreathingSign #'text = #(make-musicglyph-markup "scripts.rvarcomma") \breathe }
 C =  { \once \override BreathingSign #'text = #(make-musicglyph-markup "scripts.caesura") \breathe }
 
-% FOR PADDING NOTES 
+% FOR PADDING NOTES
 padNote = { \once \override Score.SeparationItem #'padding = #1.5 }
 padNoteM = { \once \override Score.SeparationItem #'padding = #1 }
 padNotes = { \override Score.SeparationItem #'padding = #2 }
@@ -61,44 +61,44 @@ B = \set associatedVoice = #"bass"
 %%% \markup\PrSays#"String"
 #(define-markup-command (PrSays layout props arg) (string?)
 	(interpret-markup layout props
-		(markup #:pad-markup 3 
-			#:hspace 12 
-			#:with-color (rgb-color 0.8 0.1 0) 
-			#:italic "Priest:" #:hspace 4.55  
-			(#:override '(line-width . 60) 
+		(markup #:pad-markup 3
+			#:hspace 12
+			#:with-color (rgb-color 0.8 0.1 0)
+			#:italic "Priest:" #:hspace 4.55
+			(#:override '(line-width . 60)
 				(#:justify-string arg))
 	)))
 
 %%% \markup\DnSays#"String"
 #(define-markup-command (DnSays layout props arg) (string?)
 	(interpret-markup layout props
-		(markup #:pad-markup 3 
-			#:hspace 12 
-			#:with-color (rgb-color 0.8 0.1 0) 
+		(markup #:pad-markup 3
+			#:hspace 12
+			#:with-color (rgb-color 0.8 0.1 0)
 			#:italic "Deacon:" #:hspace 3
-			(#:override '(line-width . 60) 
+			(#:override '(line-width . 60)
 				(#:justify-string arg))
 	)))
 
 %%% \markup\RdrSays#"String"
 #(define-markup-command (RdrSays layout props arg) (string?)
 	(interpret-markup layout props
-		(markup #:pad-markup 3 
-			#:hspace 12 
-			#:with-color (rgb-color 0.8 0.1 0) 
+		(markup #:pad-markup 3
+			#:hspace 12
+			#:with-color (rgb-color 0.8 0.1 0)
 			#:italic "Reader:" #:hspace 3
-			(#:override '(line-width . 60) 
+			(#:override '(line-width . 60)
 				(#:justify-string arg))
 	)))
 
 %%% \markup\refrain#"The refrain ...."
 #(define-markup-command (refrain layout props arg) (string?)
 	(interpret-markup layout props
-		(markup #:pad-markup 3 
-			#:hspace 12 
-			#:with-color (rgb-color 0.8 0.1 0) 
+		(markup #:pad-markup 3
+			#:hspace 12
+			#:with-color (rgb-color 0.8 0.1 0)
 			#:italic "Refrain:" #:hspace 3
-			(#:override '(line-width . 60) 
+			(#:override '(line-width . 60)
 				(#:italic #:justify-string arg))
 	)))
 
@@ -128,19 +128,19 @@ B = \set associatedVoice = #"bass"
 
 %STICH - for the number of a sticheron
 #(define-markup-command (stich layout props arg) (string?)
-	(interpret-markup layout props 
-		(markup	#:override '(font-name . "Free Serif") 
-			#:raise -9	
-			#:fill-line  
+	(interpret-markup layout props
+		(markup	#:override '(font-name . "Free Serif")
+			#:raise -9
+			#:fill-line
 			 (arg)))
 	)
 
 %rubric --- syntax like this: \markup\rubric #"The rubric here, between quotations"
-% NB --- THIS IS ONLY FOR *LONG RUBRICS*. FOR SHORT RUBRICS "who" BETTER 
+% NB --- THIS IS ONLY FOR *LONG RUBRICS*. FOR SHORT RUBRICS "who" BETTER
 #(define-markup-command (rubric layout props arg) (string?)
-	(interpret-markup layout props 
-		(markup #:with-color (rgb-color 0.8 0.1 0) #:fill-line 
-			 ( #:override '(line-width . 60) 
+	(interpret-markup layout props
+		(markup #:with-color (rgb-color 0.8 0.1 0) #:fill-line
+			 ( #:override '(line-width . 60)
                            #:override '(font-name . "urw palladio l italic")
                            #:justify-string arg)))
 	)
@@ -158,7 +158,7 @@ leftBracket = {
 \once\override BreathingSign #'Y-offset = ##f
 % Trick to print it after barlines and signatures:
 \once\override BreathingSign #'break-align-symbol = #'custos
-\breathe 
+\breathe
 }
 #(define-markup-command (right-bracket layout props) ()
 "Draw right hand bracket"
@@ -174,18 +174,18 @@ rightBracket = {
 
 % ISON
 #(define-markup-command (ison layout props arg) (markup?)
-(interpret-markup layout  props 
+(interpret-markup layout  props
 	( markup
-		
-		#:left-align 
-		#:with-color (rgb-color 0.8 0.1 0) 
-			arg) 
-	) ) 
+
+		#:left-align
+		#:with-color (rgb-color 0.8 0.1 0)
+			arg)
+	) )
 
 % A small title
 #(define-markup-command (titlito layout props arg) (string?)
-	(interpret-markup layout props 
-		(markup #:raise -5 #:bold #:fill-line 
+	(interpret-markup layout props
+		(markup #:raise -5 #:bold #:fill-line
 			(arg))))
 
 % Hide only ONE note
@@ -203,27 +203,27 @@ hideNote =\sequential {
 %% A verse
 #(define-markup-command (verse layout props arg) (string?)
 	(interpret-markup layout props
-		(markup 
-			#:hspace 12 #:with-color (rgb-color 0.8 0.1 0) 
+		(markup
+			#:hspace 12 #:with-color (rgb-color 0.8 0.1 0)
 			( #:override '(font-size . 1.5) #:override '(font-name . "Free Serif") "℣." ) #:hspace 3
-			(#:override '(line-width . 80) 
+			(#:override '(line-width . 80)
 				(#:justify-string arg))
 	)))
 
 %%% And the response
 #(define-markup-command (response layout props arg) (string?)
 	(interpret-markup layout props
-		(markup 
-			#:hspace 12  #:with-color (rgb-color 0.8 0.1 0) 
+		(markup
+			#:hspace 12  #:with-color (rgb-color 0.8 0.1 0)
 			(#:override '(font-size . 1.5) "℟.") #:hspace 3
-			(#:override '(line-width . 80) 
+			(#:override '(line-width . 80)
 				(#:justify-string arg))
 	)))
 
 
-% To give grace notes slashed-stems, regardless of whether they have slurs. 
+% To give grace notes slashed-stems, regardless of whether they have slurs.
 % to override ride this from inside .ly file, include: startGraceMusic =  { }
-startGraceMusic = { 
+startGraceMusic = {
         \once\override Stem #'stroke-style = #"grace"
 }
 
@@ -236,15 +236,15 @@ pSU = { \once\override PhrasingSlur #'direction = #UP }
 %#(define-markup-list-command (paragraph layout props args) (markup-list?)
 %        (let ((indent (chain-assoc-get 'par-indent props 5)))
 %                (interpret-markup-list layout props
-%                        (make-justified-lines-markup-list 
-%                        (cons (make-hspace-markup indent) 
+%                        (make-justified-lines-markup-list
+%                        (cons (make-hspace-markup indent)
 %                                args)))))
 
 %\paper{
 %bookTitleMarkup = \markup {
 %% I added a place for a graphic header
 %% You have to do \markup{ \epsfile #number #number #"name-of-file.eps"}
-%    
+%
 %  \override #'(baseline-skip . 3.5)
 %  \column {
 %    \fill-line { \fromproperty #'header:banner }
@@ -277,7 +277,3 @@ pSU = { \once\override PhrasingSlur #'direction = #UP }
 %  }
 %}
 %}
-
-
-
-
