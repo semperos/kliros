@@ -14,7 +14,7 @@ def common_defaults():
         'ragged_last': '##f',
         'cyrillic_text': 'Господи помилуй',
         'latin_text': 'Gos -- po -- di po -- mi -- luĭ.',
-        'main_text': 'Lord, have mercy.'
+        'main_text': 'Lord, have mer -- cy.'
         }
 
 def satb_defaults():
