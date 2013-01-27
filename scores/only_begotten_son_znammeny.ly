@@ -147,23 +147,23 @@ cyrillicText = \lyricmode {
   Те -- бе́ Го́с -- по -- ди.
   А -- ми́нь. __
 }
-
+%
 latinText = \lyricmode {
-  I ný -- ne i prí -- sno i vo vé -- ki ve -- kóv. __ A -- mín'.
+  I ný -- ne i prı́ -- sno i vo vé -- ki ve -- kóv. __ A -- mı́n'.
   E -- di -- no -- ród -- nyĭ Sý -- ne i Sló -- ve Bó -- zhiĭ, bez -- smér -- ten Syĭ,
   i iz -- vó -- li -- vyĭ spa -- sé -- ni -- ya ná -- she -- go rá -- di
-  vo -- plo -- tí -- ti -- sya ot Svya -- tý -- ya Bo -- go -- ró -- di -- tsy i Prís -- no -- de -- vy Ma -- rí -- i,
+  vo -- plo -- tı́ -- ti -- sya ot Svya -- tý -- ya Bo -- go -- ró -- di -- tsy i Prı́s -- no -- de -- vy Ma -- rı́ -- i,
   ne -- pre -- ló -- zhno vo -- che -- lo -- vé -- chi -- vyĭ -- sya,
   ras -- pnýĭ -- sya zhe Khri -- sté Bó -- zhe,
   smér -- ti -- yu smert' po -- prá -- vyĭ,
-  E -- dín Syĭ Svya -- tý -- ya Tró -- i -- tsy,
+  E -- dı́n Syĭ Svya -- tý -- ya Tró -- i -- tsy,
   spro -- slav -- lyá -- e -- myĭ Ot -- tsú i Svya -- tó -- mu Dú -- khu,
-  spa -- sí nas.
+  spa -- sı́ nas.
   %%
-  Gós -- po -- di po -- mí -- luĭ.
-  Gós -- po -- di po -- mí -- luĭ.
+  Gós -- po -- di po -- mı́ -- luĭ.
+  Gós -- po -- di po -- mı́ -- luĭ.
   Te -- bé Gós -- po -- di.
-  A -- mín'. __
+  A -- mı́n'. __
 }
 
 %%%% SCORE
