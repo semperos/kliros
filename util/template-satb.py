@@ -23,9 +23,9 @@ def renderTemplates(context):
     prelude = render('prelude', context)
     header = render('header', context)
     glbl = render('global', context)
-    notes = render('notes', context)
+    notes = render('satb/notes', context)
     lyrics = render('lyrics', context)
-    score = render('score', context)
+    score = render('satb/score', context)
     return  '\n'.join([prelude, header, glbl, notes, lyrics, score])
 
 ####################
