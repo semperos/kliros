@@ -48,7 +48,7 @@ def read_boolean(name, context):
 # on the command-line.
 #
 def merge_os_environment(context):
-    read_value('NAME', context)
-    read_value('TITLE', context)
-    read_boolean('BILINGUAL', context)
+    read_value('name', context)
+    read_value('title', context)
+    read_boolean('bilingual', context)
     return context
