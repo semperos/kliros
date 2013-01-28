@@ -11,7 +11,7 @@
   }
   subtitle = "O Only-begotten Son"
   composer = "abbr. Znamenny Chant"
-  arranger = "E. Smirnov, D. Gregoire"
+  arranger = "E. Smirnov"
   poet = "Tone 6"
                                 % N.B. "meter" is not the time signature, but a space for descriptive terms like "allegro"
   meter = ""
