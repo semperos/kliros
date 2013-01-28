@@ -2,12 +2,39 @@
 
 This repository contains the LilyPond source code for Eastern Orthodox Byzantine, Russian and Georgian chants. The `holy_cross_hermitage` folder contains music obtained from the website of Holy Cross Hermitage in Wayne, WV. Several of the top-level files, including `kliros.ly`, `layout.ly` and `midi.ly` are also from that source.
 
+## Dependencies ##
+
+Depending on which parts of this project you want to use, you'll need the following software installed:
+
+ * Make
+ * Lilypond (>= 2.16.2)
+ * TeX/LaTeX (more specifically, XeLaTeX)
+ * Python (>= 2.7)
+
+You should also install the fonts under the `fonts` directory before attempting to compile any documents.
+
+If you use the Python scripts (used for generating templates for creating new scores), you'll need to install the following Python packages listed in the `requirements.txt` file, which has been generated using the Pip utility's `freeze` command.
+
 ## Usage ##
 
-You'll need LilyPond installed. The version I'm beginning with is 2.16.2. Once that's installed, all you need to generate PDF's and/or MIDI files from the `*.ly` source files is to run:
+Common tasks have been captured in the `Makefile`. Use the default `make` command to determine if you have satisfied the minimum system-level dependencies specified in the [Dependencies](#dependencies) section.
 
-```
-lilypond <name of file>
+### Compile Musical Scores ###
+
+Music has been typeset using Lilypond. See the `scores` directory for a listing of available scores.
+
+To compile a single piece of music, you should run the following:
+
+```bash
+make score name=only_begotten_son_znammeny
 ```
 
-This will soon be automated with a working Makefile.
+The `score` rule requires at least a `name` variable be defined, which represents the base filename of the score to be compiled (e.g., `scores/only_begotten_son_znammeny.ly`). This will compile the Lilypond file with that name under the `scores` directory and place the PDF and MIDI output into the `pdf` and `midi` folders respectively.
+
+While putting together a new piece of music, it helps to use a PDF viewer that either auto-reloads files when changed, or makes it easy to refresh them after each edit-compile cycle.
+
+### Compile Texts ###
+
+Text have been composed using a form of LaTeX called XeLaTeX. This flavor of LaTeX makes trivial to use system-installed fonts in TeX documents without requiring any font conversions.
+
+Documents are compiled differently based on their needs. Some are simple documents that require a single pass, others may have tables of contents and references that require several compilation passes. If you're not familiar with LaTeX, you should familiarize yourself with it first.

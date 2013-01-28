@@ -12,7 +12,9 @@ LILY_CMD = lilypond -ddelete-intermediate-files \
 config:
 	@echo "Checking system settings for compatibility..."
 	@type lilypond 1>/dev/null && echo " * LilyPond is ready" || { echo " [ERROR] LilyPond not found. Please install LilyPond and ensure the 'lilypond' binary is on your PATH.";  exit 1; }
-	@echo "Make sure fonts you want to use with Lilypond are visible to Lilypond (put in ~/.fonts to be sure)"
+	@type xelatex 1>/dev/null && echo " * XeLaTeX is ready" || { echo " [ERROR] XeLaTeX not found. Please install the appropriate TeX distribution for your platform and ensure the its binaries (esp. xelatex) are on your PATH.";  exit 1; }
+	@type python 1>/dev/null && echo " * Python is ready" || { echo " [ERROR] Python not found. Please install Python and ensure the 'python' binary is on your PATH.";  exit 1; }
+	@echo "Make sure fonts in this projects 'fonts' folder, as well as any others you want to use with Lilypond, are visible to Lilypond (put in ~/.fonts to be sure)."
 	mkdir -p pdf
 	mkdir -p midi
 
