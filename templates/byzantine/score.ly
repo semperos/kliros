@@ -4,14 +4,14 @@
 {
   \context ChoirStaff <<
     \context Staff = top <<
-      \context Voice = soprano \relative c'
+      \context Voice = melody \relative c'
       { \voiceOne \clef "{{ clef }}" \global
 
         \melody
 
       }
 
-      \context Voice = alto \relative c
+      \context Voice = ison \relative c
       { \voiceTwo \clef "{{ clef }}" \global
 
         \ison
@@ -20,13 +20,13 @@
 
       {% if bilingual %}
         {% if cyrillic_text %}
-      \new Lyrics \lyricsto "alto" { \cyrillicText }
+      \new Lyrics \lyricsto "melody" { \cyrillicText }
         {% endif %}
         {% if latin_text %}
-      \new Lyrics \lyricsto "alto" { \latinText }
+      \new Lyrics \lyricsto "melody" { \latinText }
         {% endif %}
       {% else %}
-      \new Lyrics \lyricsto "alto" { \mainText }
+      \new Lyrics \lyricsto "melody" { \mainText }
       {% endif %}
     >>
   >>
