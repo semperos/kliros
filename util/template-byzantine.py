@@ -9,7 +9,7 @@ import defaults
 # State #
 #########
 
-context = defaults.satb_defaults()
+context = defaults.byzantine_defaults()
 context = defaults.merge_os_environment(context)
 
 ####################
@@ -17,7 +17,7 @@ context = defaults.merge_os_environment(context)
 ####################
 
 def main():
-    out = template.renderTemplates('satb', context)
+    out = template.renderTemplates('byzantine', context)
     template.write(out, context)
 
 if __name__ == "__main__":

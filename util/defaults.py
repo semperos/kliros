@@ -47,7 +47,7 @@ def read_boolean(name, context):
 # of the template are made configurable
 # on the command-line.
 #
-def read_os_environment(context):
+def merge_os_environment(context):
     read_value('NAME', context)
     read_value('TITLE', context)
     read_boolean('BILINGUAL', context)

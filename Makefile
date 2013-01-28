@@ -6,7 +6,7 @@ CPU_CORES=`cat /proc/cpuinfo | grep -m1 "cpu cores" | sed s/".*: "//`
 LILY_CMD = lilypond -ddelete-intermediate-files \
                     -dno-point-and-click -djob-count=$(CPU_CORES)
 
-.PHONY: config clean score reqs template-satb
+.PHONY: config clean score reqs template-satb template-byz
 
 # Ensure the system can compile LilyPond source files
 config:
@@ -30,6 +30,10 @@ template-satb:
 	@echo "Generating a score with SATB template..."
 	./util/template-satb.py
 
+template-byz:
+	@echo "Generating a score with Byznatine template..."
+	./util/template-byzantine.py
+
 # Compile LilyPond source
 pdf/%.pdf midi/%.midi: scores/%.ly
 	$(LILY_CMD) $<;
@@ -37,11 +41,11 @@ pdf/%.pdf midi/%.midi: scores/%.ly
 	-mv "$*.midi" midi/
 
 # Convenience rules
-score: pdf/$(piece).pdf
+score: pdf/$(name).pdf
 
 show: view
 view:
-	xdg-open pdf/$(piece).pdf
+	xdg-open pdf/$(name).pdf
 
 play:
-	timidity midi/$(piece).midi
+	timidity midi/$(name).midi
