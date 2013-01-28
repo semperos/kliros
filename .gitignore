@@ -4,5 +4,11 @@
 /pdf/
 /midi/
 
+# LaTeX
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+
 # Python
 *.pyc
