@@ -277,3 +277,9 @@ pSU = { \once\override PhrasingSlur #'direction = #UP }
 %  }
 %}
 %}
+
+%% Daniel's Additions %%
+
+#(define-markup-command (ison layout props arg) (markup?)
+	(interpret-markup layout props (
+                markup #:override '(fontsize. 0.2) arg)))
