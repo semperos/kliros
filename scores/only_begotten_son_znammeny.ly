@@ -54,7 +54,7 @@ global = {
 %%%%% NOTES
 
 soprano = {
-  a'4 a a a a a a a a a g a( g) f2 g1 \bar "||"
+  a'4 a\breve a4 a g a( g) f2 g1 \bar "||"
   f4 f f g2 g4 g g g g g g f g a( g) f( g) a2 \W
   g4 a bes2 a4 a a a a a a a g a2( g) f \W
   f4 g a2 a4 a \Z a a a a a a a a a a a a a a g a( g f2) g2 \W
@@ -72,7 +72,7 @@ soprano = {
 }
 
 alto = {
-  f'4 f f f f f f f f f e f( e) d2 e1 \bar "||"
+  f'4 f\breve f4 f e f( e) d2 e1 \bar "||"
   d4 d d e2 e4 e e e e e e d e f( e) d( e) f2 \W
   d4 f f2 f4 f f f f f f f e f2( e) d \W
   d4 d f2 f4 f \Z f f f f f f f f f f f f f f e f( e d2) e2 \W
@@ -90,7 +90,7 @@ alto = {
 }
 
 tenor = {
-  c'4 c c c c c c c c c c c2 a4( c) c1 \bar "||"
+  c'4 c\breve c4 c c c2 a4( c) c1 \bar "||"
   a4 a a c2 c4 c c c c c c a c c2 a4( c) c2 \W
   bes4 c d2 c4 c c c c c c c c c1 a2 \W
   a4 a c2 c4 c \Z c c c c c c c c c c c c c c c c2( a4 c) c2 \W
@@ -108,7 +108,7 @@ tenor = {
 }
 
 bass = {
-  f4  f f f f f f f f f c f( c) d2 c1 \bar "||"
+  f4 f\breve f4 f c f( c) d2 c1 \bar "||"
   d4 d d c2 c4 c c c c c c d c f( c) d( c) f2 \W
   g4 f bes,2 f'4 f f f f f f f c f2( c) d \W
   d4 c f2 f4 f \Z f f f f f f f f f f f f f f c f( c d2) c2 \W
@@ -131,7 +131,7 @@ bass = {
 cyrillicText = \lyricmode {
   % \override LyricText #'font-name = #"Izhitsa"
   % \override LyricText #'font-size = #1.5
-  И ны́ -- не и при́ -- сно и во ве́ -- ки ве -- ко́в. __ А -- ми́нь.
+  И \left "ны́не и при́сно и во" ве́ -- ки ве -- ко́в. __ А -- ми́нь.
   Е -- ди -- но -- ро́д -- ный Сы́ -- не и Сло́ -- ве Бо́ -- жий, без -- сме́р -- тен Сый,
   и из -- во́ -- ли -- вый спа -- се́ -- ни -- я на́ -- ше -- го ра́ -- ди
   во -- пло -- ти́ -- ти -- ся от Свя -- ты́ -- я Бо -- го -- ро́ -- ди -- цы и При́с -- но -- де -- вы Ма -- ри́ -- и,
@@ -149,7 +149,7 @@ cyrillicText = \lyricmode {
 }
 %
 latinText = \lyricmode {
-  I ný -- ne i prı́ -- sno i vo vé -- ki ve -- kóv. __ A -- mı́n'.
+  I \left "nýne i prı́sno i vo" vé -- ki ve -- kóv. __ A -- mı́n'.
   E -- di -- no -- ród -- nyĭ Sý -- ne i Sló -- ve Bó -- zhiĭ, bez -- smér -- ten Syĭ,
   i iz -- vó -- li -- vyĭ spa -- sé -- ni -- ya ná -- she -- go rá -- di
   vo -- plo -- tı́ -- ti -- sya ot Svya -- tý -- ya Bo -- go -- ró -- di -- tsy i Prı́s -- no -- de -- vy Ma -- rı́ -- i,
