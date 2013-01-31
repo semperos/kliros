@@ -25,8 +25,7 @@ global = {
 
 
   \time 4/4
-
-
+  % \set Score.timing=##f
   \key d \minor
 
 
@@ -36,18 +35,31 @@ global = {
 
 melody = {
   d4(^\markup\ison{Un.} c) d(^\markup\ison{D} e) f( g) f2
-  g4( f8 e) f4 g f^\markup\ison{C} e d2^\markup\ison{D} \bar "||"
+  g4( f8 e) f4 g f^\markup\ison{C} e d2^\markup\ison{D} \bar "||" \break
   %%
-  d4(^\markup\ison{Un.} c) d(^\markup\ison{D} e) g8( f) e g f2 \bar "||"
+  d4(^\markup\ison{Un.} c) d(^\markup\ison{D} e) g8( f) e g f2 \bar "||" \break
   %%
-  bes4^\markup\ison{D} a g f8( e) f( g f e d4) e f2 \bar "||"
+  bes4^\markup\ison{D} a g f8( e) f( g f e d4) e f2 \bar "||" \break
   %%
-  e4^\markup\ison{D} g f e g(^\markup\ison{C} f) e8( f) e4 d2^\markup\ison{D} \bar "||"
+  e4^\markup\ison{D} g f e g(^\markup\ison{C} f) e8( f) e4 d2^\markup\ison{D} \bar "||" \break
   %%
-  d4( e d e) f( g f g) a( bes a g) f8( g f e) d4( c) d e f2
-  f4 g2 f4 e f8( g) a4 g2 a4 g f e d2
+  \override System #'ragged-right = ##f
+  d4(^\markup\ison{D} e d e) f( g f g) a( bes a g) f8( g f e) d4( c)^\markup\ison{C} d^\markup\ison{D} e f2
+  f4 g2 f4 e f8( g) a4 g2 a4^\markup\ison{C} g f e d2^\markup\ison{D}
+  d4 e8(^\markup\ison{C} d c4) d(^\markup\ison{D} e) g8( f e g) f2
+  f4 e f g f8( e) d4 d e8(^\markup\ison{C} d c4) d4^\markup\ison{D} e f( g) f2
+  f4 f( e8 d) c4(^\markup\ison{C} d e f) g4.( f8 ees4 d)^\markup\ison{D} d2 \bar "||" \break
   %%
-  d4 e8( d c4) d( e) g8( f e g) f2
+  c2^\markup\ison{C} d2^\markup\ison{D} \fermata \bar "||"
+  %%
+  g4^\markup\ison{D} a4.( g8 f4 e f2. e8 d e^\markup\ison{C} f e2 d1^\markup\ison{D}) \fermata \bar "||" \break
+  %%
+  \cadenzaOn
+  d4^\markup\ison{Un.} d( c d^\markup\ison{D} e) g4.( f8 e4 d) d2. \W
+  d4^\markup\ison{Un.} d( c) d(^\markup\ison{D} e) g8([ f]) e([ g]) f2. \W
+  f4 bes( a) g( f8[ e]) f([ g]) f([ e]) d4( e) g(^\markup\ison{C} f) e4.( d8^\markup\ison{D}) d2 \W
+  d8([^\markup\ison{B} e]) f4 d d( c8[ b]) b4(^\markup\ison{Un.} c d^\markup\ison{D} e8[ g]) f([ g f e]) d([^\markup\ison{C} e] c4) e( d2^\markup\ison{D}) \fermata \bar "||"
+  \cadenzaOff
 }
 
 %%%% WORDS
@@ -67,10 +79,10 @@ cyrillicText = \lyricmode {
   Ис -- по́лнь не́ -- бо и зем -- ля́ сла́ -- вы тво -- е -- я́,
   О -- са́н -- на "в вы́ш" -- них.
   Бла -- го -- сло -- ве́н гря -- ды́й во и́ -- мя Гос -- по́ -- дне,
-  О -- са́н -- на "в вы́ш" -- них.
+  О -- са́н -- на \left "в вы́ш" -- них.
   А -- ми́нь.
-  А -- ми́нь.
-  Те -- бе́ по -- е́м, Те -- бе́ бла-- го -- сло -- ви́м,
+  А -- ми́нь. __
+  Те -- бе́ по -- е́м, Те -- бе́ бла -- го -- сло -- ви́м,
   те -- бе́ бла -- го -- да -- ри́м, Го́с -- по -- ди,
   и мо́ -- лим ти ся, Бо́ -- же наш.
 }
@@ -92,8 +104,8 @@ latinText = \lyricmode {
   Bla -- go -- slo -- vén grya -- dýĭ vo ı́ -- mya Gos -- pó -- dne,
   O -- sán -- na "v výsh" -- nikh.
   A -- mı́n'.
-  A -- mı́n'.
-  Te -- bé po -- ém, Te -- bé bla-- go -- slo -- vı́m,
+  A -- mı́n'. __
+  Te -- bé po -- ém, Te -- bé bla -- go -- slo -- vı́m,
   te -- bé bla -- go -- da -- rı́m, Gós -- po -- di,
   i mó -- lim ti sya, Bó -- zhe nash.
 }
@@ -127,11 +139,12 @@ latinText = \lyricmode {
 
   \include "../inc/midi_fast.ly"
 
-
-  \layout { ragged-last = ##f
+  \layout { ragged-last = ##t
+            ragged-right = ##t
+            indent = 0
 
             \context { \Staff
-
+                       % \remove "Time_signature_engraver"
 
                      }
                                 % this is a correction to keep it from getting crowded on the final system, especially when ragged-last is set.
