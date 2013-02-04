@@ -35,30 +35,37 @@ global = {
 
 melody = {
   d4(^\markup\ison{Un.} c) d(^\markup\ison{D} e) f( g) f2
-  g4( f8 e) f4 g f^\markup\ison{C} e d2^\markup\ison{D} \bar "||" \break
+  g4( f8 e) f4 g f^\markup\ison{C} e d2^\markup\ison{D} \bar "||"
   %%
-  d4(^\markup\ison{Un.} c) d(^\markup\ison{D} e) g8( f) e g f2 \bar "||" \break
+  d4(^\markup\ison{Un.} c) d(^\markup\ison{D} e) g8( f) e g f2 \bar "||"
   %%
-  bes4^\markup\ison{D} a g f8( e) f( g f e d4) e f2 \bar "||" \break
+  bes4^\markup\ison{D} a g f8( e) f( g f e d4) e f2 \bar "||"
   %%
-  e4^\markup\ison{D} g f e g(^\markup\ison{C} f) e8( f) e4 d2^\markup\ison{D} \bar "||" \break
+  e4^\markup\ison{D} g f e g(^\markup\ison{C} f) e8( f) e4 d2^\markup\ison{D} \bar "||"
   %%
   \override System #'ragged-right = ##f
   d4(^\markup\ison{D} e d e) f( g f g) a( bes a g) f8( g f e) d4( c)^\markup\ison{C} d^\markup\ison{D} e f2
   f4 g2 f4 e f8( g) a4 g2 a4^\markup\ison{C} g f e d2^\markup\ison{D}
   d4 e8(^\markup\ison{C} d c4) d(^\markup\ison{D} e) g8( f e g) f2
   f4 e f g f8( e) d4 d e8(^\markup\ison{C} d c4) d4^\markup\ison{D} e f( g) f2
-  f4 f( e8 d) c4(^\markup\ison{C} d e f) g4.( f8 ees4 d)^\markup\ison{D} d2 \bar "||" \break
+  f4 f( e8 d) c4(^\markup\ison{C} d e f) g4.( f8 ees4 d)^\markup\ison{D} d2 \bar "||"
   %%
   c2^\markup\ison{C} d2^\markup\ison{D} \fermata \bar "||"
   %%
-  g4^\markup\ison{D} a4.( g8 f4 e f2. e8 d e^\markup\ison{C} f e2 d1^\markup\ison{D}) \fermata \bar "||" \break
+  g4^\markup\ison{D} a4.( g8 f4 e f2. e8 d e^\markup\ison{C} f e2 d1^\markup\ison{D}) \fermata \bar "||"
   %%
   \cadenzaOn
   d4^\markup\ison{Un.} d( c d^\markup\ison{D} e) g4.( f8 e4 d) d2. \W
   d4^\markup\ison{Un.} d( c) d(^\markup\ison{D} e) g8([ f]) e([ g]) f2. \W
   f4 bes( a) g( f8[ e]) f([ g]) f([ e]) d4( e) g(^\markup\ison{C} f) e4.( d8^\markup\ison{D}) d2 \W
   d8([^\markup\ison{B} e]) f4 d d( c8[ b]) b4(^\markup\ison{Un.} c d^\markup\ison{D} e8[ g]) f([ g f e]) d([^\markup\ison{C} e] c4) e( d2^\markup\ison{D}) \fermata \bar "||"
+  \cadenzaOff
+  %%
+  \cadenzaOn
+  d4^\markup\ison{Coming soon...} d d d e e f g a g
+  g f8([ g]) f([ e]) d4( c) d e8([ f]) e4 f f2 \W
+  f4 e f g a g2 g4 g a bes c2( bes4) a g f a g f8([ e]) d4 e8([ f]) e4 d2 \W
+  d4 a'([ g8 f8]) f4( e) d2( c4 f) f8([ g f e]) d([ e] d4) d2
   \cadenzaOff
 }
 
@@ -85,6 +92,16 @@ cyrillicText = \lyricmode {
   Те -- бе́ по -- е́м, Те -- бе́ бла -- го -- сло -- ви́м,
   те -- бе́ бла -- го -- да -- ри́м, Го́с -- по -- ди,
   и мо́ -- лим ти ся, Бо́ -- же наш.
+  %%
+  Дос -- то́й -- но есть я́ -- ко во -- и́с -- ти -- ну
+  бла -- жи́ -- ти тя, Бо -- го -- ро́ -- ди -- цу,
+  прис -- но -- бла -- же́н -- ну -- ю и пре -- не -- по -- ро́ч -- ну -- ю,
+  и ма́ -- терь Бо́ -- га на́ -- ше -- го.
+  Чест -- не́й -- шу -- ю хе -- ру -- ви́м...
+  и сла́в -- ней -- шу -- ю без срав -- не́ -- ни -- я се -- ра -- фи́м,
+  без ист -- ле́ -- ни -- я Бо́ -- га Сло́ -- ва ро́жд -- шу -- ю,
+  су́ -- щу -- ю Бо -- го -- ро́ -- ди -- цу,
+  тя ве -- ли -- ча́ -- ем.
 }
 
 % po -- klo -- nyá -- ti -- sya Ot -- tsú i Sý -- nu, i Svya -- tó -- mu Dú -- khu, Tró -- i -- tse e -- di -- no -- súshch -- neĭ i ne -- raz -- dél' -- neĭ.
@@ -108,6 +125,16 @@ latinText = \lyricmode {
   Te -- bé po -- ém, Te -- bé bla -- go -- slo -- vı́m,
   te -- bé bla -- go -- da -- rı́m, Gós -- po -- di,
   i mó -- lim ti sya, Bó -- zhe nash.
+  %%
+  Dos -- tóĭ -- no est' yá -- ko vo -- ı́s -- ti -- nu
+  bla -- zhı́ -- ti tya, Bo -- go -- ró -- di -- tsu,
+  pris -- no -- bla -- zhén -- nu -- yu i pre -- ne -- po -- róch -- nu -- yu,
+  i má -- ter' Bó -- ga ná -- she -- go.
+  Chest -- néĭ -- shu -- yu khe -- ru -- vı́m...
+  i sláv -- neĭ -- shu -- yu bez srav -- né -- ni -- ya se -- ra -- fı́m,
+  bez ist -- lé -- ni -- ya Bó -- ga Sló -- va rózhd -- shu -- yu,
+  sú -- shchu -- yu Bo -- go -- ró -- di -- tsu,
+  tya ve -- li -- chá -- em.
 }
 
 %%%% SCORE
@@ -139,9 +166,9 @@ latinText = \lyricmode {
 
   \include "../inc/midi_fast.ly"
 
-  \layout { ragged-last = ##t
-            ragged-right = ##t
-            indent = 0
+  \layout { %ragged-last = ##t
+            %ragged-right = ##t
+            %indent = 0
 
             \context { \Staff
                        % \remove "Time_signature_engraver"

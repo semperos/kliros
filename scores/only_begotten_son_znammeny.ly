@@ -5,7 +5,7 @@
                                 % see appropriate lilypond docs for all header fields
 \header {
   title = \markup {
-    \override #'(font-name . "Izhitsa")
+    \override #'(font-name . "Hirmos Ponomar")
     \override #'(font-size . 6)
     "Единоро́дный Сы́не"
   }
