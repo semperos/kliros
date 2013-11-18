@@ -91,6 +91,28 @@ B = \set associatedVoice = #"bass"
 				(#:justify-string arg))
 	)))
 
+%%% \markup\ChtSays#"String"
+#(define-markup-command (ChtSays layout props arg) (string?)
+	(interpret-markup layout props
+		(markup #:pad-markup 3
+			#:hspace 12
+			#:with-color (rgb-color 0.8 0.1 0)
+			#:italic "Чтец:" #:hspace 3
+			(#:override '(line-width . 60)
+				(#:justify-string arg))
+	)))
+
+%%% \markup\ChtSays#"String"
+#(define-markup-command (Stikh layout props arg) (string?)
+	(interpret-markup layout props
+		(markup #:pad-markup 3
+			#:hspace 2
+			#:with-color (rgb-color 0.8 0.1 0)
+			#:italic "Стих:" #:hspace 3
+			(#:override '(line-width . 60)
+				(#:justify-string arg))
+	)))
+
 %%% \markup\refrain#"The refrain ...."
 #(define-markup-command (refrain layout props arg) (string?)
 	(interpret-markup layout props
