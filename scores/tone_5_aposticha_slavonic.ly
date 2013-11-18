@@ -9,7 +9,7 @@
     \override #'(font-size . 6)
     "Стихи́ры на стихо́вне"
   }
-  subtitle = "Hymns of the Aposticha"
+  subtitle = "Stichera at the Aposticha"
   composer = "Russian Chant"
   % arranger = ". Brewer"
   poet = "Tone 5"
@@ -34,7 +34,7 @@ global = {
                                 % A key signature (alter as needed):
                                 % If off, it's C-major/a-minor by default
 
-  \key d \major
+  \key g \major
 
                                 % If you want a time signature, set it like this
 
@@ -54,125 +54,72 @@ global = {
 %%%%% NOTES
 
 soprano = {
-  a'4 a2 a4 a a g a b2 g4 g g2
-  % a'4 a\breve a4 a g a( g) f2 g1 \bar "||"
-  % f4 f f g2 g4 g g g g g g f g a( g) f( g) a2 \W
-  % g4 a bes2 a4 a a a a a a a g a2( g) f \W
-  % f4 g a2 a4 a \Z a a a a a a a a a a a a a a g a( g f2) g2 \W
-  % f4 f g2 g4 g f g a( g) f g a2 \W
-  % g4( a) bes2 a4  a a g a2( g) f \W
-  % a2 a4 a a g a( g f2) g2 \W
-  % f4 g2 g4 g f g a( g) f( g) a2
-  % g4 a bes2 a4 a a a a \Z a a g a2( g) f \W
-  % g4( a) bes2.( a4 g2 f) g1 \fermata \bar "|."
-  % %%
-  % a4 a a g a( g f2) g1 \W
-  % g4 g f g a( g f g) a1 \bar "||"
-  % g4( a) bes2 a2.( g4 a2) g f1 \bar "||"
-  % a2.( g4) f2( g a1) \bar "|."
+  a'4 a2 a4 a a g a b2 g4 g g2 \W
+  b4 b b b b a b2 b a \W
+  a4 a2 a4 a a a a g2( fis4) e2 \W
+  a4 a a2 a4 a a a a a a b2( g4) g2 \W
+  b4 b b b b a b2 b4 b a2 \W
+  a4 a a2 fis4 g a g fis e2 \W
+  a4 a2 a4 a b2 g4 g2 \W
+  b4 b b a2( g4) g fis2( g4 fis) e2 \bar "|."
 }
 
 alto = {
-  fis'4 fis2 fis4 fis fis e fis g2 d4 d d2
-  % f'4 f\breve f4 f e f( e) d2 e1 \bar "||"
-  % d4 d d e2 e4 e e e e e e d e f( e) d( e) f2 \W
-  % d4 f f2 f4 f f f f f f f e f2( e) d \W
-  % d4 d f2 f4 f \Z f f f f f f f f f f f f f f e f( e d2) e2 \W
-  % d4 d e2 e4 e d e f( e) d e f2 \W
-  % d4( f) f2 f4 f f e f2( e) d \W
-  % f2 f4 f f e f( e d2) e2 \W
-  % d4 e2 e4 e d e f( e) d( e) f2
-  % d4 f f2 f4 f f f f \Z f f e f2( e) d \W
-  % d4( f) f1( e2 d) d1 \bar "|."
-  % %%
-  % f4 f f e f( e d2) e1 \W
-  % e4 e d e f( e d e) f1 \bar "||"
-  % d4( f) f2 f2.( e4 f2) e d1 \bar "||"
-  % f2.( e4) d2( e f1) \bar "|."
+  fis'4 fis2 fis4 fis fis e fis g2 d4 d d2 \W
+  g4 g g g g fis g2 g fis \W
+  fis4 fis2 fis4 fis fis fis fis e2( e4) e2 \W
+  fis4 fis fis2 fis4 fis fis fis fis fis fis g2( d4) d2 \W
+  g4 g g g g fis g2 g4 g fis2 \W
+  fis4 fis fis2 e4 e e e e e2 \W
+  fis4 fis2 fis4 fis g2 d4 d2 \W
+  g4 g g d2( d4) d d2( d4 d) b2 \bar "|."
 }
 
 tenor = {
-  d'4 d2 d4 d d d d d2 b4 b b2
-  % c'4 c\breve c4 c c c2 a4( c) c1 \bar "||"
-  % a4 a a c2 c4 c c c c c c a c c2 a4( c) c2 \W
-  % bes4 c d2 c4 c c c c c c c c c1 a2 \W
-  % a4 a c2 c4 c \Z c c c c c c c c c c c c c c c c2( a4 c) c2 \W
-  % a4 a c2 c4 c a c c2 a4 c4 c2 \W
-  % bes4( c) d2 c4 c c c c1 a2 \W
-  % c2 c4 c c c c2 a4( c) c2 \W
-  % a4 c2 c4 c a c c2 a4( c) c2
-  % bes4 c d2 c4 c c c c \Z c c c c1 a2 \W
-  % bes4( c) d2.( c4~c2 a) bes1 \fermata \bar "|."
-  % %%
-  % c4 c c c c2( a4 c) c1 \W
-  % c4 c a c c2( a4 c) c1 \bar "||"
-  % bes4( c) d2 c2.( c4 c2) c2 a1 \bar "||"
-  % c1 a2( c2 c1) \bar "|."
+  d'4 d2 d4 d d d d d2 b4 b b2 \W
+  d4 d d d d d d2 d d \W
+  d4 d2 d4 d d d d b2( a4) g2 \W
+  d'4 d d2 d4 d d d d d d d2( b4) b2 \W
+  d4 d d d d d d2 d4 d d2 \W
+  d4 d d2 a4 b b b a g2 \W
+  d'4 d2 d4 d d2 b4 b2 \W
+  d4 d d d2( b4) b a2( b4 a) g2 \bar "|."
 }
 
 bass = {
-  d4 d2 d4 d d d d d2 g4 g g2
-  % f4 f\breve f4 f c f( c) d2 c1 \bar "||"
-  % d4 d d c2 c4 c c c c c c d c f( c) d( c) f2 \W
-  % g4 f bes,2 f'4 f f f f f f f c f2( c) d \W
-  % d4 c f2 f4 f \Z f f f f f f f f f f f f f f c f( c d2) c2 \W
-  % d4 d c2 c4 c d c f( c) d c f2 \W
-  % g4( f) bes,2 f'4 f f c f2( c) d \W
-  % f2 f4 f f c f( c d2) c2 \W
-  % d4 c2 c4 c d c f( c) d( c) f2
-  % g4 f bes,2 f'4 f f f f \Z f f c f2( c) d \W
-  % g4( f) bes,2.( f'4 c2 d) g1 \bar "|."
-  % %%
-  % f4 f f c f( c d2) c1 \W
-  % c4 c d c f( c d c) f1 \bar "||"
-  % g4( f) bes,2 f'2.( c4 f2) c d1 \bar "||"
-  % f2.( c4) d2( c f1) \bar "|."
+  d4 d2 d4 d d d d d2 g4 g g2 \W
+  g4 g g g g d g2 g d \W
+  d4 d2 d4 d d d d e2( e4) e2 \W
+  d4 d d2 d4 d d d d d d g2( g4) g2 \W
+  g4 g g g g d g2 g4 g d2 \W
+  d4 d d2 e4 e e e e e2 \W
+  d4 d2 d4 d g2 g4 g2 \W
+  g4 g g fis2( g4) g d2( b4 d) e2 \bar "|."
 }
 
 
 %%%% WORDS
 
 cyrillicText = \lyricmode {
-  % \override LyricText #'font-name = #"Izhitsa"
-  % \override LyricText #'font-size = #1.5
-  Те -- бе́ во -- пло -- ще́н -- на -- го спа́ -- са хри -- ста́,
-  % и небес не разлучившася, во гласех пений величаем:
-
-  % OLD:
-  % И \left "ны́не и при́сно и во" ве́ -- ки ве -- ко́в. __ А -- ми́нь.
-  % Е -- ди -- но -- ро́д -- ный Сы́ -- не и Сло́ -- ве Бо́ -- жий, без -- сме́р -- тен Сый,
-  % и из -- во́ -- ли -- вый спа -- се́ -- ни -- я на́ -- ше -- го ра́ -- ди
-  % во -- пло -- ти́ -- ти -- ся от Свя -- ты́ -- я Бо -- го -- ро́ -- ди -- цы и При́с -- но -- де -- вы Ма -- ри́ -- и,
-  % не -- пре -- ло́ -- жно во -- че -- ло -- ве́ -- чи -- вый -- ся,
-  % рас -- пны́й -- ся же Хри -- сте́ Бо́ -- же,
-  % сме́р -- ти -- ю смерть по -- пра́ -- вый,
-  % Е -- ди́н Сый Свя -- ты́ -- я Тро́ -- и -- цы,
-  % спро -- слав -- ля́ -- е -- мый От -- цу́ и Свя -- то́ -- му Ду́ -- ху,
-  % спа -- си́ нас.
-  % %%
-  % Го́с -- по -- ди по -- ми́ -- луй.
-  % Го́с -- по -- ди по -- ми́ -- луй.
-  % Те -- бе́ Го́с -- по -- ди.
-  % А -- ми́нь. __
+  Те -- бе́ во -- пло -- ще́н -- на -- го спа́ -- са Хри -- ста́,
+  и не -- бе́с не раз -- лу -- чи́в -- ша -- ся,
+  во гла́ -- сех пе́ -- ний ве -- ли -- ча́ __ ем:
+  я́ -- ко крест и смерть при -- я́л е -- си́ за род __ наш,
+  я́ -- ко че -- ло -- ве -- ко -- лю́ -- бец гос -- по́дь,
+  ис -- про -- ве́р -- гий а́ -- до -- ва вра -- та́,
+  три -- дне́в -- но вос -- кре́сл е -- си́,
+  спа -- са́ -- я ду́ __ шы на́ __ ша.
 }
 %
 latinText = \lyricmode {
-  Te -- be vo -- plo -- shchen -- na -- go spa -- sa khri -- sta,
-  % I \left "nýne i prı́sno i vo" vé -- ki ve -- kóv. __ A -- mı́n'.
-  % E -- di -- no -- ród -- nyĭ Sý -- ne i Sló -- ve Bó -- zhiĭ, bez -- smér -- ten Syĭ,
-  % i iz -- vó -- li -- vyĭ spa -- sé -- ni -- ya ná -- she -- go rá -- di
-  % vo -- plo -- tı́ -- ti -- sya ot Svya -- tý -- ya Bo -- go -- ró -- di -- tsy i Prı́s -- no -- de -- vy Ma -- rı́ -- i,
-  % ne -- pre -- ló -- zhno vo -- che -- lo -- vé -- chi -- vyĭ -- sya,
-  % ras -- pnýĭ -- sya zhe Khri -- sté Bó -- zhe,
-  % smér -- ti -- yu smert' po -- prá -- vyĭ,
-  % E -- dı́n Syĭ Svya -- tý -- ya Tró -- i -- tsy,
-  % spro -- slav -- lyá -- e -- myĭ Ot -- tsú i Svya -- tó -- mu Dú -- khu,
-  % spa -- sı́ nas.
-  % %%
-  % Gós -- po -- di po -- mı́ -- luĭ.
-  % Gós -- po -- di po -- mı́ -- luĭ.
-  % Te -- bé Gós -- po -- di.
-  % A -- mı́n'. __
+  Te -- bé vo -- plo -- shchén -- na -- go spá -- sa Khri -- stá,
+  i ne -- bés ne raz -- lu -- chı́v -- sha -- sya,
+  vo glá -- sekh pé -- niĭ ve -- li -- chá __ em:
+  yá -- ko krest i smert' pri -- yál e -- sı́ za rod __ nash,
+  yá -- ko che -- lo -- ve -- ko -- lyú -- bets gos -- pód',
+  is -- pro -- vér -- giĭ á -- do -- va vra -- tá,
+  tri -- dnév -- no vos -- krésl e -- sı́,
+  spa -- sá -- ya dú __ shy ná __ sha.
 }
 
 %%%% SCORE
