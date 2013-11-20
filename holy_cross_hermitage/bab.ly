@@ -54,7 +54,7 @@ B = { \override BreathingSign #'text = #(make-musicglyph-markup "scripts.rvarcom
 		\hspace #3 \italic  { Alleluia. }}
 
 \markup { \hspace #3 \italic \with-color #(x11-color 'red) {Canonarch:}
-		\hspace #3 \override #'(line-width . 65) \justify { And they that had led us away asked us for a hymn, saying "Sing us one of the songs of Sion. } }
+		\hspace #3 \override #'(line-width . 65) \justify { And they that had led us away asked us for a hymn, saying "Sing us one of the songs of Sion." } }
 
 \markup { \hspace #3 \italic \with-color #(x11-color 'red) {Choir:}
 		\hspace #3 \italic { Alleluia. }}
