@@ -106,7 +106,7 @@ B = \set associatedVoice = #"bass"
 #(define-markup-command (Stikh layout props arg) (string?)
 	(interpret-markup layout props
 		(markup #:pad-markup 3
-			#:hspace 2
+			#:hspace 3
 			#:with-color (rgb-color 0.8 0.1 0)
 			#:italic "Стих:" #:hspace 3
 			(#:override '(line-width . 60)
