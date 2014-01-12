@@ -82,7 +82,7 @@ bass = {
   c4 c c c c c c2. c4 f2 \W
   d4 d d d d d d d2( cis4 d) a2 \W
   a4 a a a a a a a2. a4 d2( c2) \bar "||"
-  f2 f2 e4( f) c2 c4( g) a( b d a) d2 \bar "|."
+  f2 f2 e4( f) c2 c2 f4( g a a,) d2 \bar "|."
 }
 
 
