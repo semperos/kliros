@@ -305,3 +305,12 @@ pSU = { \once\override PhrasingSlur #'direction = #UP }
 #(define-markup-command (ison layout props arg) (markup?)
 	(interpret-markup layout props (
                 markup #:override '(fontsize. 0.2) arg)))
+
+deleteDynamics = #(define-music-function (parser location music) (ly:music?)
+ (music-filter
+  (lambda (evt)
+   (not (memq (ly:music-property evt 'name) (list
+       'AbsoluteDynamicEvent
+       'CrescendoEvent
+       'DecrescendoEvent))))
+     music))
