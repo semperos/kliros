@@ -1,4 +1,4 @@
-% O Only Begotten Son, Slavonic
+                                % O Only Begotten Son, Slavonic
 \version "2.16.2"
 \include "../inc/kliros.ly"
 
@@ -129,8 +129,8 @@ bass = {
 %%%% WORDS
 
 cyrillicText = \lyricmode {
-  % \override LyricText #'font-name = #"Izhitsa"
-  % \override LyricText #'font-size = #1.5
+                                % \override LyricText #'font-name = #"Izhitsa"
+                                % \override LyricText #'font-size = #1.5
   И \left "ны́не и при́сно и во" ве́ -- ки ве -- ко́в. __ А -- ми́нь.
   Е -- ди -- но -- ро́д -- ный Сы́ -- не и Сло́ -- ве Бо́ -- жий, без -- сме́р -- тен Сый,
   и из -- во́ -- ли -- вый спа -- се́ -- ни -- я на́ -- ше -- го ра́ -- ди
@@ -147,7 +147,7 @@ cyrillicText = \lyricmode {
   Те -- бе́ Го́с -- по -- ди.
   А -- ми́нь. __
 }
-%
+                                %
 latinText = \lyricmode {
   I \left "nýne i prı́sno i vo" vé -- ki ve -- kóv. __ A -- mı́n'.
   E -- di -- no -- ród -- nyĭ Sý -- ne i Sló -- ve Bó -- zhiĭ, bez -- smér -- ten Syĭ,
@@ -217,7 +217,7 @@ latinText = \lyricmode {
   \layout { ragged-last = ##f
 
             \context { \Staff
-                                         \remove "Time_signature_engraver"
+                       \remove "Time_signature_engraver"
                                 %              \remove "Bar_number_engraver"
                      }
                                 % this is a correction to keep it from getting crowded on the final system, especially when ragged-last is set.
@@ -230,4 +230,4 @@ latinText = \lyricmode {
           }
 }
 
-% Glory to God for all things.
+                                % Glory to God for all things.
