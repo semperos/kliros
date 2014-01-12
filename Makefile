@@ -1,10 +1,15 @@
 # See http://lilypond.org/doc/v2.16/Documentation/usage/make-and-makefiles
 
-# determine how many processors are present
+UNAME := $(shell uname)
+
+ifeq ($(UNAME), Darwin)
+LILY_CMD := lilypond -V  -dno-point-and-click -djob-count=8
+endif
+
+ifeq ($(UNAME), Linux)
 CPU_CORES=`cat /proc/cpuinfo | grep -m1 "cpu cores" | sed s/".*: "//`
-# The command to run lilypond
-LILY_CMD = lilypond -ddelete-intermediate-files \
-                    -dno-point-and-click -djob-count=$(CPU_CORES)
+LILY_CMD := lilypond -ddelete-intermediate-files -dno-point-and-click -djob-count=$(CPU_CORES)
+endif
 
 .PHONY: config clean score reqs template-satb template-byz
 
