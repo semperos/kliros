@@ -1,0 +1,7 @@
+*.eps
+*.count
+*.tex
+*.texi
+*.ly
+*.txt
+*.dep

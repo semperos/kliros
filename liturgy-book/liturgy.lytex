@@ -1,0 +1,36 @@
+%-*- mode:latex -*-
+\documentclass{memoir}
+
+\usepackage{ifxetex}
+\ifxetex
+%xetex specific stuff
+\usepackage{xunicode,fontspec,xltxtra}
+\setmainfont[Numbers=OldStyle]{Heuristica}
+\setsansfont{Optima}
+\else
+%This can be empty if you are not going to use pdftex
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{mathpazo}%Times
+\usepackage{helvet}%Helvetica
+\fi
+
+\usepackage{pdfpages}
+
+\begin{document}
+\title{Liturgy of St. John Chrysostom}
+%% \posttitle{Byzantine & Russian Chants\\English & Slavonic}
+\author{Ss. Cyril and Methodius Russian Orthodox Church}
+\maketitle
+
+\chapter{Introduction}
+
+This is an introduction.
+
+\chapter{Second Psalm}
+
+\includepdf[pages=-,scale=.9]{../pdf/only_begotten_son_znammeny.pdf}
+
+And then things continue per usual.
+
+\end{document}
