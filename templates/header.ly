@@ -9,8 +9,8 @@
   tagline = \markup {
     \fill-line {
       \center-column {
-        \line { Ss. Cyril & Methodius Russian Orthodox Church ♰ Summerville, SC }
-        \line { Приход Свв. Кирилла и Мефодия Русской Православной Церкви ♰ Summerville, SC }
+        \line { Ss. Cyril & Methodius Russian Orthodox Church, Summerville, SC }
+        \line { Приход Свв. Кирилла и Мефодия Русской Православной Церкви, Summerville, SC }
       }
     }
   }
