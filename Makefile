@@ -4,14 +4,30 @@ UNAME := $(shell uname)
 
 ifeq ($(UNAME), Darwin)
 LILY_CMD := lilypond -V  -dno-point-and-click -djob-count=8
+OPEN_CMD := open
+MIDI_PLAY_CMD := open
 endif
 
 ifeq ($(UNAME), Linux)
 CPU_CORES=`cat /proc/cpuinfo | grep -m1 "cpu cores" | sed s/".*: "//`
 LILY_CMD := lilypond -ddelete-intermediate-files -dno-point-and-click -djob-count=$(CPU_CORES)
+OPEN_CMD := xdg-open
+MIDI_PLAY_CMD := timidity
 endif
 
-.PHONY: config clean score reqs template-satb template-byz
+ifdef pdf_outdir
+	PDF_OUTDIR := $(pdf_outdir)
+else
+	PDF_OUTDIR := pdf
+endif
+
+ifdef midi_outdir
+	MIDI_OUTDIR := $(midi_outdir)
+else
+	MIDI_OUTDIR := midi
+endif
+
+.PHONY: config clean score reqs template-satb template-byz liturgy-book
 
 # Ensure the system can compile LilyPond source files
 config:
@@ -30,8 +46,8 @@ reqs:
 # Remove PDF's and MIDI files
 clean:
 	@echo "Removing compiled output..."
-	-rm pdf/*.pdf
-	-rm midi/*.midi
+	-rm $(PDF_OUTDIR)/*.pdf
+	-rm $(MIDI_OUTDIR)/*.midi
 
 template-satb:
 	@echo "Generating a score with SATB template..."
@@ -42,17 +58,20 @@ template-byz:
 	./util/template-byzantine.py
 
 # Compile LilyPond source
-pdf/%.pdf midi/%.midi: scores/%.ly
+$(PDF_OUTDIR)/%.pdf $(MIDI_OUTDIR)/%.midi: scores/%.ly
 	$(LILY_CMD) $<;
-	-mv "$*.pdf" pdf/
-	-mv "$*.midi" midi/
+	-mv "$*.pdf" $(PDF_OUTDIR)/
+	-mv "$*.midi" $(MIDI_OUTDIR)/
 
 # Convenience rules
-score: pdf/$(name).pdf
+score: $(PDF_OUTDIR)/$(name).pdf
+
+liturgy-book:
+	@make -C liturgy-book
 
 show: view
 view:
-	xdg-open pdf/$(name).pdf
+	$(OPEN_CMD) pdf/$(name).pdf
 
 play:
-	timidity midi/$(name).midi
+	$(MIDI_PLAY_CMD) midi/$(name).midi
