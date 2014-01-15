@@ -21,7 +21,10 @@ all: liturgy.pdf
 # TODO Automate this by scanning for \includepdf lines and extracting
 #      file names.
 %.pdf: %.tex
-	make -C .. name=only_begotten_son_znammeny output_dir=$(CURRENT_DIR) score
+	make -C .. pdf/only_begotten_son_znammeny.pdf
+	make -C .. pdf/great_ektenia_trilingual.pdf
+	make -C .. pdf/sunday_liturgy_first_antiphon.pdf
+	make -C .. pdf/sunday_liturgy_second_antiphon.pdf
 	$(LATEX_CMD) $<
 
 # Ensure the system can compile LilyPond source files
