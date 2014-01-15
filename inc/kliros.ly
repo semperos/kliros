@@ -69,15 +69,17 @@ B = \set associatedVoice = #"bass"
 				(#:justify-string arg))
 	)))
 
+%% #:override '(baseline-skip . 0.5)
 %%% \markup\DnSays#"String"
 #(define-markup-command (DnSays layout props arg) (string?)
 	(interpret-markup layout props
 		(markup #:pad-markup 3
 			#:hspace 12
+
 			#:with-color (rgb-color 0.8 0.1 0)
 			#:italic "Deacon:" #:hspace 3
 			(#:override '(line-width . 60)
-				(#:justify-string arg))
+                         (#:justify-string arg))
 	)))
 
 %%% \markup\RdrSays#"String"
