@@ -1,36 +1,132 @@
 %-*- mode:latex -*-
-\documentclass{memoir}
+\documentclass[12pt,
+               a4paper,
+               footinclude=true,
+               headinclude=true,
+               titlepage,
+               draft
+               ]{scrbook}
 
-\usepackage{ifxetex}
-\ifxetex
-%xetex specific stuff
-\usepackage{xunicode,fontspec,xltxtra}
-\setmainfont[Numbers=OldStyle]{Heuristica}
-\setsansfont{Optima}
-\else
-%This can be empty if you are not going to use pdftex
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{mathpazo}%Times
-\usepackage{helvet}%Helvetica
-\fi
+\usepackage[linedheaders,
+            eulermath,
+            eulerchapternumbers,
+            parts,
+            floatperchapter]{classicthesis}
 
 \usepackage{pdfpages}
 
+% make the part links in the TOC point to the right page
+\usepackage{etoolbox}
+\pretocmd{\oldpart}{\cleardoublepage}{}{}
+
+\makeatletter
+\def\ttl@tocpart{% %magic code, don't ask
+  \def\ttl@a{\protect\numberline{\thepart}\@gobble{}}}
+
+%% If you want part titles aligned with chapter titles
+%% uncomment the following line and remove the code
+%% up to (and excluding) \makeatother
+% \setlength{\cftpartnumwidth}{\cftchapnumwidth}
+
+\let\classic@l@part\l@part
+\renewcommand\l@part[2]{%
+  \begingroup
+  \renewcommand{\numberline}[1]{\textsc{##1} }%
+  \classic@l@part{#1}{#2}%
+  \endgroup
+}
+\makeatother
+
 \begin{document}
-\title{Liturgy of St. John Chrysostom}
-%% \posttitle{Byzantine & Russian Chants\\English & Slavonic}
-\author{Ss. Cyril and Methodius Russian Orthodox Church}
-\maketitle
 
-\chapter{Introduction}
+\tableofcontents
 
-This is an introduction.
-
-\chapter{Second Psalm}
-
-\includepdf[pages=-,scale=.9]{../pdf/only_begotten_son_znammeny.pdf}
-
-And then things continue per usual.
+\part{Introduction}
+\chapter{In Orthodoxy and Unity of Thought}
+Language of the people\ldots
+\part{Liturgy of the Catechumens}
+\chapter{Great Ektenia/Litany}
+\includepdf[pages=-,scale=.95]{../pdf/great_ektenia_trilingual.pdf}
+\includepdf[pages=-,scale=.95]{../pdf/sunday_liturgy_first_antiphon.pdf}
+\chapter{Second Antiphon}
+\includepdf[pages=-,scale=.95]{../pdf/sunday_liturgy_second_antiphon.pdf}
+\includepdf[pages=-,scale=.95]{../pdf/only_begotten_son_znammeny.pdf}
+\part{Liturgy of the Faithful}
+\part{Communion}
+\part{Dismissal}
 
 \end{document}
+
+
+%% Polytonic Greek Input
+%% +--------+----------------------------+
+%% |Key(s)  |Diacritical Mark Produced   |
+%% |        |                            |
+%% |        |                            |
+%% +--------+----------------------------+
+%% |-       |smooth breathing and        |
+%% |        |circumflex                  |
+%% |        |                            |
+%% |        |                            |
+%% +--------+----------------------------+
+%% |=       |smooth breathing and grave  |
+%% |        |accent                      |
+%% |        |                            |
+%% |        |                            |
+%% +--------+----------------------------+
+%% |[       |circumflex                  |
+%% +--------+----------------------------+
+%% |]       |grave accent                |
+%% |        |                            |
+%% +--------+----------------------------+
+%% |;       |acute accent                |
+%% |        |                            |
+%% +--------+----------------------------+
+%% |'       |smooth breathing            |
+%% |        |                            |
+%% +--------+----------------------------+
+%% |/       |smooth breathing and acute  |
+%% |        |accent                      |
+%% |        |                            |
+%% |        |                            |
+%% +--------+----------------------------+
+%% |Shift _ |rough breathing and         |
+%% |        |circumflex                  |
+%% |        |                            |
+%% |        |                            |
+%% +--------+----------------------------+
+%% |Shift + |rough breathing and grave   |
+%% |        |accent                      |
+%% |        |                            |
+%% |        |                            |
+%% +--------+----------------------------+
+%% |Shift { |iota subscript              |
+%% |        |                            |
+%% +--------+----------------------------+
+%% |Shift } |grave accent                |
+%% |        |                            |
+%% +--------+----------------------------+
+%% |Shift : |diaresis                    |
+%% |        |                            |
+%% +--------+----------------------------+
+%% |Shift ''|rough breathing             |
+%% |        |                            |
+%% +--------+----------------------------+
+%% |Shift ? |rough breathing and acute   |
+%% |        |accent                      |
+%% |        |                            |
+%% |        |                            |
+%% +--------+----------------------------+
+%% |Shift W |diaresis and acute accent   |
+%% |        |                            |
+%% |        |                            |
+%% +--------+----------------------------+
+%% |Option i|iota subscript              |
+%% |        |                            |
+%% +--------+----------------------------+
+%% |Option I|breve                       |
+%% |        |                            |
+%% +--------+----------------------------+
+%% |Shift   |macron                      |
+%% |Option L|                            |
+%% +--------+----------------------------+
