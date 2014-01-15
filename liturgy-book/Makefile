@@ -1,10 +1,20 @@
 # See http://lilypond.org/doc/v2.16/Documentation/usage/make-and-makefiles
+UNAME := $(shell uname)
+ifeq ($(UNAME), Darwin)
+OPEN_CMD := open
+MIDI_PLAY_CMD := open
+endif
+
+ifeq ($(UNAME), Linux)
+OPEN_CMD := xdg-open
+MIDI_PLAY_CMD := timidity
+endif
 
 LATEX_CMD := latexmk -pdflatex='xelatex -shell-escape -interaction nonstopmode' -pdf
-LILY_BOOK_CMD := lilypond-book --format=latex --latex-program="xelatex"
+LILY_BOOK_CMD := lilypond-book # --format=latex # --latex-program="xelatex"
 CURRENT_DIR := $(shell pwd)
 
-.PHONY: config clean score reqs template-satb template-byz
+.PHONY: config clean open
 
 all: liturgy.pdf
 
@@ -32,3 +42,10 @@ config:
 	@echo "Checking system settings for compatibility..."
 	@type xelatex 1>/dev/null && echo " * XeLaTeX is ready" || { echo " [ERROR] XeLaTeX not found. Please install the appropriate TeX distribution for your platform and ensure the its binaries (esp. xelatex) are on your PATH.";  exit 1; }
 	@echo "Make sure fonts in this projects 'fonts' folder, as well as any others you want to use with Lilypond, are visible to Lilypond (put in ~/.fonts to be sure)."
+
+clean:
+	-@rm liturgy.tex *.pdf *.aux *.lof *.log *.lol *.lot *.out *.toc *.fls *.fdb_latexmk *.dep *.ly
+	find . -type d -name '[0-9a-z][0-9a-z]' | xargs rm -rf
+
+open:
+	$(OPEN_CMD) liturgy.pdf
