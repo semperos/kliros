@@ -5,3 +5,5 @@
 *.ly
 *.txt
 *.dep
+*.out
+*.toc
