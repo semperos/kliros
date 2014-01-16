@@ -5,7 +5,7 @@
 \paper  {
   myStaffSize = #20
   #(define fonts
-    (make-pango-font-tree "Brill"
+    (make-pango-font-tree "Palatino"
                           "Lucida Sans"
                           "Monaco"
                            (/ myStaffSize 20)))
@@ -17,14 +17,15 @@
     % \override #'(font-size . 6)
     "Great Ektenia/Litany"
   }
-  composer = "Byzantine Chant"
+  % composer = "Byzantine Chant"
   % arranger = "Dcn. Daniel"
-  poet = "Tone 8"
+  % poet = "Tone 8"
 
   tagline = \markup {
     \fill-line {
       \center-column {
         \line { Ss. Cyril & Methodius Russian Orthodox Church, Summerville, SC }
+        \line { Приход Свв. Кирилла и Мефодия Русской Православной Церкви, Summerville, SC }
       }
     }
   }
@@ -36,14 +37,28 @@ global = {
   \key d \minor
 }
 
-%%%% First Stichera %%%%
+textEnglish = \lyricmode {
+  Lord, have mer -- cy.
+}
+
+textGreek = \lyricmode {
+  Κύ -- ρι -- ε ἐ -- λέ -- η -- σον.
+}
+
+textGreekTransliterated = \lyricmode {
+  Ký -- ri -- e e -- lé -- i -- son.
+}
+
+textSlavonic = \lyricmode {
+  Го́с -- по -- ди по -- ми́ -- луй.
+}
+
+textSlavonicTransliterated = \lyricmode {
+  Gós -- po -- di po -- mı́ -- luĭ.
+}
 
 notesOne = {
   e4.( d8) c4 e8[( f] g4 e) c1 \W
-}
-
-textOne = \lyricmode {
-  Lord, have mer -- cy.
 }
 
 notesTwo = {
@@ -56,48 +71,29 @@ notesTwo = {
   %   }
   % }
 
-textTwo = \lyricmode {
-  Κύ -- ρι -- ε ἐ -- λέ -- η -- σον.
-}
-
 notesThree = {
   g'4. e8 f4 g \times 2/3 {a8([ gis a]} c4 a) g1 \W
-}
-
-textThree = \lyricmode {
-  Го́с -- по -- ди по -- ми́ -- луй.
 }
 
 notesFour = {
   c'4.( b8 a4) g \times 2/3 {g8([ f g]} a4 f) g2 \W
 }
 
-textFour = \lyricmode {
-  Lord, have mer -- cy.
-}
-
 notesFive = {
   a'8[( bes]) a[( g]) f4 e f8[( a g f]) e[( d]) e2 \W
-}
-
-textFive = \lyricmode {
-  Κύ -- ρι -- ε ἐ -- λέ -- η -- σον.
 }
 
 notesSix = {
   g'4. f8 e[( d]) c4 e8[( f] g4 e) c2 \W
 }
 
-textSix = \lyricmode {
-  Го́с -- по -- ди по -- ми́ -- луй.
-}
-
 %%%% SCORE
-\markup{{\numlet{1}}\DnSays#"In peace, let us pray to the Lord."}
+\markup{{\numlet{1}}
+        \pad-around #2 { \DnSays#"In peace, let us pray to the Lord." } }
 
 \score {
   \relative c' {\global \notesOne}
-  \addlyrics \textOne
+  \addlyrics \textEnglish
   \include "../inc/midi_fast.ly"
   \include "../inc/byz_layout.ly"
 }
@@ -106,7 +102,8 @@ textSix = \lyricmode {
 
 \score {
   \relative c' {\global \notesTwo}
-  \addlyrics \textTwo
+  \addlyrics \textGreek
+  \addlyrics \textGreekTransliterated
   \include "../inc/midi_fast.ly"
   \include "../inc/byz_layout.ly"
 }
@@ -115,7 +112,8 @@ textSix = \lyricmode {
 
 \score {
   \relative c' {\global \notesThree}
-  \addlyrics \textThree
+  \addlyrics \textSlavonic
+  \addlyrics \textSlavonicTransliterated
   \include "../inc/midi_fast.ly"
   \include "../inc/byz_layout.ly"
 }
@@ -124,16 +122,17 @@ textSix = \lyricmode {
 
 \score {
   \relative c' {\global \notesFour}
-  \addlyrics \textFour
+  \addlyrics \textEnglish
   \include "../inc/midi_fast.ly"
   \include "../inc/byz_layout.ly"
 }
 
-\markup{{\numlet{5}}\DnSays#"For our great lord and father, the Most Holy Patriarch [name]; for our lord, the Very Most Reverend Metropolitan [name], First Hierarch of the Russian Church Abroad; for the venerable priesthood, the diaconate in Christ, for all the clery and people, let us pray to the Lord."}
+\markup{{\numlet{5}}\DnSays#"For our great lord and father, the Most Holy Patriarch [name]; for our lord, the Very Most Reverend Metropolitan [name], First Hierarch of the Russian Church Abroad; for the venerable priesthood, the diaconate in Christ, for all the clergy and people, let us pray to the Lord."}
 
 \score {
   \relative c' {\global \notesFive}
-  \addlyrics \textFive
+  \addlyrics \textGreek
+  \addlyrics \textGreekTransliterated
   \include "../inc/midi_fast.ly"
   \include "../inc/byz_layout.ly"
 }
@@ -142,7 +141,8 @@ textSix = \lyricmode {
 
 \score {
   \relative c' {\global \notesSix}
-  \addlyrics \textSix
+  \addlyrics \textSlavonic
+  \addlyrics \textSlavonicTransliterated
   \include "../inc/midi_fast.ly"
   \include "../inc/byz_layout.ly"
 }
@@ -151,7 +151,7 @@ textSix = \lyricmode {
 
 \score {
   \relative c' {\global \notesOne}
-  \addlyrics \textOne
+  \addlyrics \textEnglish
   \include "../inc/midi_fast.ly"
   \include "../inc/byz_layout.ly"
 }
@@ -160,7 +160,8 @@ textSix = \lyricmode {
 
 \score {
   \relative c' {\global \notesTwo}
-  \addlyrics \textTwo
+  \addlyrics \textGreek
+  \addlyrics \textGreekTransliterated
   \include "../inc/midi_fast.ly"
   \include "../inc/byz_layout.ly"
 }
@@ -169,7 +170,8 @@ textSix = \lyricmode {
 
 \score {
   \relative c' {\global \notesThree}
-  \addlyrics \textThree
+  \addlyrics \textSlavonic
+  \addlyrics \textSlavonicTransliterated
   \include "../inc/midi_fast.ly"
   \include "../inc/byz_layout.ly"
 }
@@ -178,7 +180,7 @@ textSix = \lyricmode {
 
 \score {
   \relative c' {\global \notesFour}
-  \addlyrics \textFour
+  \addlyrics \textEnglish
   \include "../inc/midi_fast.ly"
   \include "../inc/byz_layout.ly"
 }
@@ -187,7 +189,8 @@ textSix = \lyricmode {
 
 \score {
   \relative c' {\global \notesFive}
-  \addlyrics \textFive
+  \addlyrics \textGreek
+  \addlyrics \textGreekTransliterated
   \include "../inc/midi_fast.ly"
   \include "../inc/byz_layout.ly"
 }
@@ -196,7 +199,8 @@ textSix = \lyricmode {
 
 \score {
   \relative c' {\global \notesSix}
-  \addlyrics \textSix
+  \addlyrics \textSlavonic
+  \addlyrics \textSlavonicTransliterated
   \include "../inc/midi_fast.ly"
   \include "../inc/byz_layout.ly"
 }
@@ -212,18 +216,27 @@ textSix = \lyricmode {
 
 \markup{\DnSays#"Calling to rememberance our most holy, most pure, most blessed, glorious Lady Theotokos and Ever-Virgin Mary with all the saints, let us commit ourselves and one another, and all our life unto Christ our God."}
 
+
+\markup {
+  \pad-around #2 {
+    \who#"While the Deacon says the above:"
+  }
+}
 \score {
   \relative c' {\global f4 f2 f4 f f f f g2( e) c \W }
   \addlyrics \lyricmode { Most ho -- ly The -- o -- to -- kos, save us. }
+  \addlyrics \lyricmode { \left "Ὑπεραγία Θεοτόκε, σῶσον ἠμάς." }
+  \addlyrics \lyricmode { \left "Пресвята́я Богоро́дице, спаси́ нас." }
   \include "../inc/midi_fast.ly"
   \include "../inc/byz_layout.ly"
 }
 
-%% TODO Fix font usage in inc/kliros
 \markup\who{After the Deacon has finished:}
 \score {
   \relative c' {\global f2 e d c \W }
   \addlyrics \lyricmode { To Thee, O Lord. }
+  \addlyrics \lyricmode { Σοί Κύ -- ρι -- ε. }
+  \addlyrics \lyricmode { Те -- "бе́ го́с" -- по -- ди. }
   \include "../inc/midi_fast.ly"
   \include "../inc/byz_layout.ly"
 }
