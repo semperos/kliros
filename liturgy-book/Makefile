@@ -14,7 +14,7 @@ LATEX_CMD := latexmk -pdflatex='xelatex -shell-escape -interaction nonstopmode' 
 LILY_BOOK_CMD := lilypond-book # --format=latex # --latex-program="xelatex"
 CURRENT_DIR := $(shell pwd)
 
-.PHONY: config clean open
+.PHONY: config clean clean-deps open
 
 all: liturgy.pdf
 
@@ -46,6 +46,9 @@ config:
 clean:
 	-@rm liturgy.tex *.pdf *.aux *.lof *.log *.lol *.lot *.out *.toc *.fls *.fdb_latexmk *.dep *.ly
 	find . -type d -name '[0-9a-z][0-9a-z]' | xargs rm -rf
+
+clean-full: clean
+	-@rm ../pdf/*.pdf
 
 open:
 	$(OPEN_CMD) liturgy.pdf
