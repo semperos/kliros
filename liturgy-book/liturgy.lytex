@@ -4,7 +4,7 @@
                footinclude=true,
                headinclude=true,
                titlepage,
-               draft
+               %% draft
                ]{scrbook}
 
 \usepackage[linedheaders,
@@ -14,6 +14,7 @@
             floatperchapter]{classicthesis}
 
 \usepackage{pdfpages}
+\usepackage{ifxetex}
 
 % make the part links in the TOC point to the right page
 \usepackage{etoolbox}
@@ -38,7 +39,8 @@
 \makeatother
 
 \begin{document}
-
+\title{Liturgy of St. John Chrysostom}
+\maketitle
 \tableofcontents
 
 \part{Introduction}
