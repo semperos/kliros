@@ -75,7 +75,6 @@ B = \set associatedVoice = #"bass"
 	(interpret-markup layout props
 		(markup #:pad-markup 3
 			#:hspace 12
-
 			#:with-color (rgb-color 0.8 0.1 0)
 			#:italic "Deacon:" #:hspace 3
 			(#:override '(line-width . 60)
@@ -133,13 +132,13 @@ B = \set associatedVoice = #"bass"
 	(interpret-markup layout (cons(list '(font-size . 1.5)) props) (markup #:fill-line (#:says arg))
 	))
 
+% Before: 		markup #:override '(font-name . "urw palladio l italic")
 % WHO -- this is for name-labels that have music (not text) after them
 %--- syntax \markup\who{Name:}
-#(define-markup-command (who layout props arg) (markup?)
-	(interpret-markup layout props (
-		markup #:override '(font-name . "urw palladio l italic")
-                #:with-color (rgb-color 0.8 0.1 0) arg))
-	)
+#(define-markup-command (who layout props text) (markup?)
+	(interpret-markup layout props
+          (markup #:with-color (rgb-color 0.8 0.1 0)
+                  #:italic text)))
 
 %numlet -- for using the \number markup, but smaller
 %% (They're huge by default)
