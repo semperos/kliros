@@ -27,7 +27,7 @@ else
 	MIDI_OUTDIR := midi
 endif
 
-.PHONY: config clean score reqs template-satb template-byz liturgy-book
+.PHONY: config clean clean-full score reqs template-satb template-byz liturgy-book
 
 # Ensure the system can compile LilyPond source files
 config:
@@ -48,6 +48,11 @@ clean:
 	@echo "Removing compiled output..."
 	-rm $(PDF_OUTDIR)/*.pdf
 	-rm $(MIDI_OUTDIR)/*.midi
+
+clean-full:
+	@echo "Removing all compiled output..."
+	-find . -type f -name '*.pdf' | xargs rm
+	-find . -type f -name '*.midi' | xargs rm
 
 template-satb:
 	@echo "Generating a score with SATB template..."

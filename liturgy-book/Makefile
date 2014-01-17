@@ -31,6 +31,7 @@ all: liturgy.pdf
 # TODO Automate this by scanning for \includepdf lines and extracting
 #      file names.
 %.pdf: %.tex
+	cp ../inc/only_begotten_son_abbr_znammeny_smirnov.ipdf ../pdf/only_begotten_son_abbr_znammeny_smirnov.pdf
 	make -C .. pdf/only_begotten_son_znammeny.pdf
 	make -C .. pdf/great_ektenia_trilingual.pdf
 	make -C .. pdf/sunday_liturgy_first_antiphon.pdf
