@@ -1,4 +1,14 @@
 %-*- mode:latex -*-
+%%
+%% See http://www.eadiocese.org/companion.htm for English text, Russian music
+%% for all major services. Includes a link to Jared's resources from
+%% St. John's.
+%%
+%% All externals PDF's from places like the above should go under the main
+%% inc/ folder and be given an extension like .ipdf so that they are
+%% (1) kept under version control (most output extensions like .pdf and .midi
+%% are gitignored) and (2) copies of them are made and deleted as needed.
+%%
 \documentclass[12pt,
                a4paper,
                footinclude=true,

@@ -1,6 +1,6 @@
 % (No Title)
 \version "2.16.2"
-\include "../inc/kliros.ly"
+\include "../inc/kliros.ily"
 \header {
   title = \markup {
     \override #'(font-name . "Hirmos Ponomar")
@@ -121,8 +121,8 @@ latinTextThird = \lyricmode {
   \addlyrics \cyrillicTextFirst
   \addlyrics \latinTextFirst
 
-  \include "../inc/midi_fast.ly"
-  \include "../inc/byz_layout.ly"
+  \include "../inc/midi_fast.ily"
+  \include "../inc/byz_layout.ily"
 }
 
 \markup{\Stikh#"Госпо́дь воцари́ся в ле́поту, облече́ся."}
@@ -133,8 +133,8 @@ latinTextThird = \lyricmode {
   \addlyrics \cyrillicTextSecond
   \addlyrics \latinTextSecond
 
-  \include "../inc/midi_fast.ly"
-  \include "../inc/byz_layout.ly"
+  \include "../inc/midi_fast.ily"
+  \include "../inc/byz_layout.ily"
 }
 
 \markup{\Stikh#"И́бо утверди́ вселе́нную, я́же не подви́жится."}
@@ -145,8 +145,8 @@ latinTextThird = \lyricmode {
   \addlyrics \cyrillicTextThird
   \addlyrics \latinTextThird
 
-  \include "../inc/midi_fast.ly"
-  \include "../inc/byz_layout.ly"
+  \include "../inc/midi_fast.ily"
+  \include "../inc/byz_layout.ily"
 }
 
 \markup{\Stikh#"До́му твоему́ подоба́ет святы́ня го́споди, в долготу́ дний."}

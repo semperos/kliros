@@ -1,6 +1,6 @@
 % (No Title)
 \version "2.16.2"
-\include "../inc/kliros.ly"
+\include "../inc/kliros.ily"
 \header {
   title = \markup {
     \override #'(font-name . "Hirmos Ponomar")
@@ -164,7 +164,7 @@ latinText = \lyricmode {
     >>
   >>
 
-  \include "../inc/midi_fast.ly"
+  \include "../inc/midi_fast.ily"
 
   \layout { %ragged-last = ##t
             %ragged-right = ##t

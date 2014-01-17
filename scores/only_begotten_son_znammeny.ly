@@ -1,6 +1,6 @@
                                 % O Only Begotten Son, Slavonic
 \version "2.16.2"
-\include "../inc/kliros.ly"
+\include "../inc/kliros.ily"
 
                                 % see appropriate lilypond docs for all header fields
 \header {
@@ -211,7 +211,7 @@ latinText = \lyricmode {
     >>
   >>
 
-  \include "../inc/midi_fast.ly"
+  \include "../inc/midi_fast.ily"
                                 % Here is the layout block I have commented out things that only apply to unmetred chant.
                                 % "ragged-last" you can leave or comment out as you wish (or set to ##f which does the same)
   \layout { ragged-last = ##f

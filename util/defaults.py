@@ -4,8 +4,8 @@ import os
 def common_defaults():
     return {
         'lilypond_version': '2.16.2',
-        'include_list': ['../inc/kliros.ly'],
-        'midi_include': '../inc/midi_fast.ly',
+        'include_list': ['../inc/kliros.ily'],
+        'midi_include': '../inc/midi_fast.ily',
         'title': '(No Title)',
         'bilingual': False,
         'key_signature': 'd \minor',

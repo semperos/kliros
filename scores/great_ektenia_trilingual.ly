@@ -1,6 +1,6 @@
 % (No Title)
 \version "2.16.2"
-\include "../inc/kliros.ly"
+\include "../inc/kliros.ily"
 
 \paper  {
   myStaffSize = #20
@@ -94,8 +94,8 @@ notesSix = {
 \score {
   \relative c' {\global \notesOne}
   \addlyrics \textEnglish
-  \include "../inc/midi_fast.ly"
-  \include "../inc/byz_layout.ly"
+  \include "../inc/midi_fast.ily"
+  \include "../inc/byz_layout.ily"
 }
 
 \markup{{\numlet{2}}\DnSays#"For the peace from above, and the salvation of our souls, let us pray to the Lord."}
@@ -104,8 +104,8 @@ notesSix = {
   \relative c' {\global \notesTwo}
   \addlyrics \textGreek
   \addlyrics \textGreekTransliterated
-  \include "../inc/midi_fast.ly"
-  \include "../inc/byz_layout.ly"
+  \include "../inc/midi_fast.ily"
+  \include "../inc/byz_layout.ily"
 }
 
 \markup{{\numlet{3}}\DnSays#"For the peace of the whole world, the good estate of the holy churches of God, and the union of all, let us pray to the Lord."}
@@ -114,8 +114,8 @@ notesSix = {
   \relative c' {\global \notesThree}
   \addlyrics \textSlavonic
   \addlyrics \textSlavonicTransliterated
-  \include "../inc/midi_fast.ly"
-  \include "../inc/byz_layout.ly"
+  \include "../inc/midi_fast.ily"
+  \include "../inc/byz_layout.ily"
 }
 
 \markup{{\numlet{4}}\DnSays#"For this holy temple, and for them that with faith, reverence, and the fear of God enter herein, let us pray to the Lord."}
@@ -123,8 +123,8 @@ notesSix = {
 \score {
   \relative c' {\global \notesFour}
   \addlyrics \textEnglish
-  \include "../inc/midi_fast.ly"
-  \include "../inc/byz_layout.ly"
+  \include "../inc/midi_fast.ily"
+  \include "../inc/byz_layout.ily"
 }
 
 \markup{{\numlet{5}}\DnSays#"For our great lord and father, the Most Holy Patriarch [name]; for our lord, the Very Most Reverend Metropolitan [name], First Hierarch of the Russian Church Abroad; for the venerable priesthood, the diaconate in Christ, for all the clergy and people, let us pray to the Lord."}
@@ -133,8 +133,8 @@ notesSix = {
   \relative c' {\global \notesFive}
   \addlyrics \textGreek
   \addlyrics \textGreekTransliterated
-  \include "../inc/midi_fast.ly"
-  \include "../inc/byz_layout.ly"
+  \include "../inc/midi_fast.ily"
+  \include "../inc/byz_layout.ily"
 }
 
 \markup{{\numlet{6}}\DnSays#"For this land, its authorities, and armed forces, and for all who with faith and piety dwell therein, let us pray to the Lord."}
@@ -143,8 +143,8 @@ notesSix = {
   \relative c' {\global \notesSix}
   \addlyrics \textSlavonic
   \addlyrics \textSlavonicTransliterated
-  \include "../inc/midi_fast.ly"
-  \include "../inc/byz_layout.ly"
+  \include "../inc/midi_fast.ily"
+  \include "../inc/byz_layout.ily"
 }
 
 \markup{{\numlet{7}}\DnSays#"For the God-preserved Russian Land and its Orthodox people, both in the homeland and in the diaspora, and for their salvation, let us pray to the Lord."}
@@ -152,8 +152,8 @@ notesSix = {
 \score {
   \relative c' {\global \notesOne}
   \addlyrics \textEnglish
-  \include "../inc/midi_fast.ly"
-  \include "../inc/byz_layout.ly"
+  \include "../inc/midi_fast.ily"
+  \include "../inc/byz_layout.ily"
 }
 
 \markup{{\numlet{8}}\DnSays#"That He may deliver His people from enemies visible and invisible, and confirm in us oneness of mind, brotherly love, and piety, let us pray to the Lord."}
@@ -162,8 +162,8 @@ notesSix = {
   \relative c' {\global \notesTwo}
   \addlyrics \textGreek
   \addlyrics \textGreekTransliterated
-  \include "../inc/midi_fast.ly"
-  \include "../inc/byz_layout.ly"
+  \include "../inc/midi_fast.ily"
+  \include "../inc/byz_layout.ily"
 }
 
 \markup{{\numlet{9}}\DnSays#"For this city, for every city and country and the faithful that dwell therein, let us pray to the Lord."}
@@ -172,8 +172,8 @@ notesSix = {
   \relative c' {\global \notesThree}
   \addlyrics \textSlavonic
   \addlyrics \textSlavonicTransliterated
-  \include "../inc/midi_fast.ly"
-  \include "../inc/byz_layout.ly"
+  \include "../inc/midi_fast.ily"
+  \include "../inc/byz_layout.ily"
 }
 
 \markup{{\numlet{10}}\DnSays#"For seasonable weather, abundance of the fruits of the earth, and peaceful times, let us pray to the Lord."}
@@ -181,8 +181,8 @@ notesSix = {
 \score {
   \relative c' {\global \notesFour}
   \addlyrics \textEnglish
-  \include "../inc/midi_fast.ly"
-  \include "../inc/byz_layout.ly"
+  \include "../inc/midi_fast.ily"
+  \include "../inc/byz_layout.ily"
 }
 
 \markup{{\numlet{11}}\DnSays#"For travelers by sea, land, and air, for the sick, the suffering, the imprisoned, and for their salvation, let us pray to the Lord."}
@@ -191,8 +191,8 @@ notesSix = {
   \relative c' {\global \notesFive}
   \addlyrics \textGreek
   \addlyrics \textGreekTransliterated
-  \include "../inc/midi_fast.ly"
-  \include "../inc/byz_layout.ly"
+  \include "../inc/midi_fast.ily"
+  \include "../inc/byz_layout.ily"
 }
 
 \markup{{\numlet{12}}\DnSays#"That we may be delivered from all tribulation, wrath, danger, and necessity, let us pray to the Lord."}
@@ -201,8 +201,8 @@ notesSix = {
   \relative c' {\global \notesSix}
   \addlyrics \textSlavonic
   \addlyrics \textSlavonicTransliterated
-  \include "../inc/midi_fast.ly"
-  \include "../inc/byz_layout.ly"
+  \include "../inc/midi_fast.ily"
+  \include "../inc/byz_layout.ily"
 }
 
 \markup{\DnSays#"Help us, save us, have mercy on us, and keep us, O God, by Thy grace."}
@@ -210,8 +210,8 @@ notesSix = {
 \score {
   \relative c' {\global bes2 c2 \W}
   \addlyrics \lyricmode { A -- men. }
-  \include "../inc/midi_fast.ly"
-  \include "../inc/byz_layout.ly"
+  \include "../inc/midi_fast.ily"
+  \include "../inc/byz_layout.ily"
 }
 
 \markup{\DnSays#"Calling to rememberance our most holy, most pure, most blessed, glorious Lady Theotokos and Ever-Virgin Mary with all the saints, let us commit ourselves and one another, and all our life unto Christ our God."}
@@ -227,8 +227,8 @@ notesSix = {
   \addlyrics \lyricmode { Most ho -- ly The -- o -- to -- kos, save us. }
   \addlyrics \lyricmode { \left "Ὑπεραγία Θεοτόκε, σῶσον ἠμάς." }
   \addlyrics \lyricmode { \left "Пресвята́я Богоро́дице, спаси́ нас." }
-  \include "../inc/midi_fast.ly"
-  \include "../inc/byz_layout.ly"
+  \include "../inc/midi_fast.ily"
+  \include "../inc/byz_layout.ily"
 }
 
 \markup\who{After the Deacon has finished:}
@@ -237,8 +237,8 @@ notesSix = {
   \addlyrics \lyricmode { To Thee, O Lord. }
   \addlyrics \lyricmode { Σοί Κύ -- ρι -- ε. }
   \addlyrics \lyricmode { Те -- "бе́ го́с" -- по -- ди. }
-  \include "../inc/midi_fast.ly"
-  \include "../inc/byz_layout.ly"
+  \include "../inc/midi_fast.ily"
+  \include "../inc/byz_layout.ily"
 }
 
 \markup{\PrSays#"For to Thee is due all glory, honor, and worship, to the Father, and to the Son, and to the Holy Spirit, now and ever and unto the ages of ages."}
@@ -246,6 +246,6 @@ notesSix = {
 \score {
   \relative c' {\global bes2 c2 \bar "|."}
   \addlyrics \lyricmode { A -- men. }
-  \include "../inc/midi_fast.ly"
-  \include "../inc/byz_layout.ly"
+  \include "../inc/midi_fast.ily"
+  \include "../inc/byz_layout.ily"
 }
