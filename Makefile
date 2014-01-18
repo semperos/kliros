@@ -1,5 +1,8 @@
 # See http://lilypond.org/doc/v2.16/Documentation/usage/make-and-makefiles
 
+raw_scores=$(wildcard scores/*.ly)
+SCORES=$(raw_scores:scores/%.ly=pdf/%.pdf)
+
 UNAME := $(shell uname)
 
 ifeq ($(UNAME), Darwin)
@@ -80,3 +83,5 @@ view:
 
 play:
 	$(MIDI_PLAY_CMD) midi/$(name).midi
+
+all: $(SCORES) liturgy-book
