@@ -66,10 +66,13 @@ template-byz:
 	./util/template-byzantine.py
 
 # Compile LilyPond source
+# Move just thing built: -mv "$*.midi" $(MIDI_OUTDIR)
+# Need to cast net wider because separate scores generate
+# separate midi files
 $(PDF_OUTDIR)/%.pdf $(MIDI_OUTDIR)/%.midi: scores/%.ly
 	$(LILY_CMD) $<;
 	-mv "$*.pdf" $(PDF_OUTDIR)/
-	-mv "$*.midi" $(MIDI_OUTDIR)/
+	-mv *.midi $(MIDI_OUTDIR)/
 
 # Convenience rules
 score: $(PDF_OUTDIR)/$(name).pdf
