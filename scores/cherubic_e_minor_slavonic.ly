@@ -38,7 +38,7 @@ global = {
 
                                 % If you want a time signature, set it like this
 
-                                %                \time 2/4
+                                               % \time 4/4
 
                                 % or whatever. You can change it within the note contexts by simply setting a new one,
                                 % and it's only necessary to change it one voice.
@@ -54,12 +54,12 @@ global = {
 %%%%% NOTES
 
 soprano = {
-  b'4( a8[ g] a4 b) g( a) b c d( c8[ b]) a2 \W
+  {\tempo Andante}b'4( a8[ g] a4 b) g( a) b c d( c8[ b]) a2 \W
   a8[( b c d] b4 a8[ b]) g2
   a8[( b) a( g]) fis4( e8[ fis]) g2 \W
   b8[( e d e] b4 c d c8[ b]) a2
   a8[( b c d] b4 a8[ b]) g2 \W
-  a8[( b) a( g]) fis2( g4 a b4.\fermata c8[ b a g]) fis4 g1 \W
+  a8[( b) a( g]) fis2( g4 a b4.\fermata c8[ b a g) fis] g1 \W
   %%%
   b8[ b a g] a4( b) g( a) b( c d c8[) b] a2 \W
   a8[ b c d] b4( a8[ b]) g2
@@ -73,7 +73,17 @@ soprano = {
   a8[( b a g)] fis4 e8[( fis)] g2 \W
   b8[( e d e] b4) c d( c8[ b] a2)
   a8[( b c) d] b4( a8[ b] g2) \W
-  a8[( b) a( g]) fis2( g4 a b4.\fermata c8[ b a g]) fis4 e1 \W
+  a8[( b) a( g]) fis2( g4 a b4.\fermata c8[ b a g]) fis4 g1 \W
+  %%
+  {\tempo Allegro} b4( a8[ g] a4 b) g( a) b c d( c8[ b]) a2 \W
+  a8[ b c d] b4( a8[ b]) g2
+  a8[( b a g)] fis4( e8[ fis)] g2 \W
+  b8[( e) d( e)] b4 c8 c d4 c8([ b)] a2
+  a8[( b) c d] b4( a8[ b]) g2
+  a8[( b) a g] fis4( e8[ fis)] g2 \W
+  b8[( e d e] b4) c4 d( c8[) b] a2
+  a8[( b c) d] b4( a8[) b] g2 \W
+  a8[( b) a( g]) fis2( g4 a b4.\fermata c8[ b a g]) fis4 e1 \bar "|."
 }
 
 alto = {
@@ -89,6 +99,7 @@ bass = {
 
 %%%% WORDS
 % Иже херувимы тайно образующе и Животворящей Троице Трисвятую песнь припевающе, всякое ныне житейское отложим попечение.
+% Яко да царя всех подымем ангельскими невидимо дориносима чинми. Аллилуиа.
 cyrillicText = \lyricmode {
   И -- же хе -- ру -- ви́ -- мы
   И -- же хе -- ру -- ви́ -- мы
@@ -105,6 +116,16 @@ cyrillicText = \lyricmode {
   жи -- тейс -- ко -- е
   от -- ло -- жим
   от -- ло -- жим по -- пе -- че -- ни -- е.
+  %%
+  Я -- ко да ца -- ря всех
+  я -- ко да ца -- ря всех
+  по -- ды -- мем
+  ан -- гель -- ски -- ми не -- ви -- ди -- мо
+  до -- ри -- но -- си -- ма
+  но -- си -- ма чин -- ми.
+  Ал -- ли -- лу -- и -- а
+  Ал -- ли -- лу -- и -- а
+  Ал -- ли -- лу -- и -- а.
 }
                                 %
 latinText = \lyricmode {
@@ -123,6 +144,16 @@ latinText = \lyricmode {
   zhi -- teĭs -- ko -- e
   ot -- lo -- zhim
   ot -- lo -- zhim po -- pe -- che -- ni -- e.
+  %%
+  Ya -- ko da tsa -- rya vsekh
+  ya -- ko da tsa -- rya vsekh
+  po -- dy -- mem
+  an -- gel' -- ski -- mi ne -- vi -- di -- mo
+  do -- ri -- no -- si -- ma
+  no -- si -- ma chin -- mi.
+  Al -- li -- lu -- i -- a
+  Al -- li -- lu -- i -- a
+  Al -- li -- lu -- i -- a.
 }
 
 %%%% SCORE
