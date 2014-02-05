@@ -7,3 +7,5 @@
 *.dep
 *.out
 *.toc
+
+!foreword.tex

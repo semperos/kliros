@@ -94,7 +94,7 @@
 \maketitle
 \tableofcontents
 
-\cleardoublepage\include{forward}
+\cleardoublepage\include{foreword}
 
 \chapter{Beginning of Service}
 
