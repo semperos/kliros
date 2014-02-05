@@ -1,0 +1,582 @@
+%-*- mode:latex -*-
+%%
+%% See http://www.eadiocese.org/companion.htm for English text, Russian music
+%% for all major services. Includes a link to Jared's resources from
+%% St. John's.
+%%
+%% All externals PDF's from places like the above should go under the main
+%% inc/ folder and be given an extension like .ipdf so that they are
+%% (1) kept under version control (most output extensions like .pdf and .midi
+%% are gitignored) and (2) copies of them are made and deleted as needed.
+%%
+\documentclass[12pt,
+               a4paper,
+               footinclude=true,
+               headinclude=true,
+               titlepage,
+               %% draft
+               ]{scrbook}
+
+\usepackage[linedheaders,
+            eulermath,
+            eulerchapternumbers,
+            parts,
+            floatperchapter]{classicthesis}
+
+\usepackage{pdfpages}
+\usepackage{ifxetex}
+\usepackage[dvipsnames]{xcolor}
+
+% make the part links in the TOC point to the right page
+\usepackage{etoolbox}
+\pretocmd{\oldpart}{\cleardoublepage}{}{}
+
+\makeatletter
+\def\ttl@tocpart{% %magic code, don't ask
+  \def\ttl@a{\protect\numberline{\thepart}\@gobble{}}}
+
+%% If you want part titles aligned with chapter titles
+%% uncomment the following line and remove the code
+%% up to (and excluding) \makeatother
+% \setlength{\cftpartnumwidth}{\cftchapnumwidth}
+
+\let\classic@l@part\l@part
+\renewcommand\l@part[2]{%
+  \begingroup
+  \renewcommand{\numberline}[1]{\textsc{##1} }%
+  \classic@l@part{#1}{#2}%
+  \endgroup
+}
+\makeatother
+
+%%
+%% Custom definitions
+%%
+
+\newcommand{\Priest}[0]{
+\noindent {\textsc{\color{Maroon}Priest:\hspace{1 mm}}}
+}
+
+\newcommand{\People}[0]{
+\noindent {\textsc{\color{Maroon}People:}}
+}
+
+\newcommand{\PeopleRejoice}[0]{
+\noindent{\textsc{\color{Maroon}People:}\par}
+}
+
+\newcommand{\Kontakion}[1]{
+\begin{center}
+  {\textsc{\color{Maroon}Kontakion #1}}
+\end{center}
+}
+
+\newcommand{\Oikos}[1]{
+\begin{center}
+  {\textsc{\color{Maroon}Oikos #1}}
+\end{center}
+}
+
+\newcommand{\Contd}[1]{
+{\setlength{\parindent}{8mm}#1}
+}
+
+\makeatletter
+\newcommand*{\textoverline}[1]{$\overline{\hbox{#1}}\m@th$}
+\makeatother
+
+%% Hyphenation for non-English words
+
+\hyphenation{The-o-to-kos}
+
+\begin{document}
+\title{Book of Akathists}
+\maketitle
+\tableofcontents
+
+\cleardoublepage\include{forward}
+
+\chapter{Beginning of Service}
+
+\Priest{Blessed is our God, always, now and ever, and unto the ages of ages!}
+
+\People{Amen.
+
+Glory to Thee, O God, glory to Thee.
+
+O Heavenly King, The Comforter, the Spirit of Truth, Who art everywhere and fillest all things, Treasury of Blessings and Giver of Life, Come and abide in us, and cleanse us from every impurity, and save our souls, O Good One.
+
+Holy God, Holy Mighty, Holy Immortal have mercy on us. Holy God, Holy Mighty, Holy Immortal have mercy on us. Holy God, Holy Mighty, Holy Immortal have mercy on us.
+
+Glory to the Father and to the Son and to the Holy Spirit, both now and ever, and unto the ages of ages. Amen.
+
+O Most Holy Trinity, have mercy on us. Lord, cleanse us from our sins, Master, pardon our transgressions, Holy One, visit and heal our infirmities for Thy Name's sake.
+
+Lord have mercy. Lord have mercy. Lord have mercy.
+
+Glory to the Father and to the Son and to the Holy Spirit, both now and ever, and unto the ages of ages. Amen.
+
+Our Father, who art in heaven, hallowed be Thy name. Thy kingdom come. Thy will be done on earth as it is in heaven. Give us this day our daily bread, and forgive us our trespasses, as we forgive those who trespass against us, and lead us not into temptation, but deliver us from the evil one.}
+
+\Priest{For Thine is the kingdom, and the power, and the glory of the Father, and of the Son, and of the Holy Spirit, now and ever, and unto the ages of ages.}
+
+\People{Amen.}
+
+
+\chapter{Akathist to the Mother of God}
+
+
+\Kontakion{$A$ (1)}
+
+\People{To Thee, the Champion Leader, we Thy servants dedicate a feast of victory and of thanksgiving as ones rescued out of sufferings, O Theotokos: but as Thou art one with might which is invincible, from all dangers that can be do Thou deliver us, that we may cry to Thee: Rejoice, O Unwedded Bride! (Customarily sung three times at the beginning of the Akathist, once at the end.)}
+
+\Oikos{$B$ (1)}
+
+\Priest{An archangel was sent from Heaven to say to the Theotokos: Rejoice! And beholding Thee, O Lord, taking bodily form, he was amazed and with his bodiless voice he stood crying to Her such things as these:}
+
+\PeopleRejoice{Rejoice, Thou through whom \textoverline{joy} will shine forth:
+
+\Contd{Rejoice, Thou through whom the \textoverline{curse} will cease!}
+
+Rejoice, recall of fallen \textoverline{A}dam:
+
+\Contd{Rejoice, redemption of the \textoverline{tears} of Eve!}
+
+Rejoice, height inaccessible to \textoverline{hu}man thoughts:
+
+\Contd{Rejoice, depth undiscernible even for the eyes of \textoverline{an}gels!}
+
+Rejoice, for Thou art the \textoverline{throne} of the King:
+
+\Contd{Rejoice, for Thou bearest Him Who \textoverline{bear}eth all!}
+
+Rejoice, star that causest the \textoverline{Sun} to appear:
+
+\Contd{Rejoice, womb of the Divine Incar\textoverline{nat}ion!}
+
+Rejoice, Thou through whom \textoverline{creation} is renewed:
+
+\Contd{Rejoice, Thou through whom we worship the Cre\textoverline{a}tor!}
+
+Rejoice, O Bride Unwedded!}
+
+\Kontakion{$\Gamma$ (2)}
+
+\Priest{Seeing herself to be chaste, the holy one said boldly to Gabriel: The marvel of thy speech is difficult for my soul to accept. How canst thou speak of a birth from a seedless conception? And She cried: Alleluia!}
+
+\Oikos{$\Delta$ (2)}
+
+\Priest{Seeking to know knowledge that cannot be known, the Virgin cried to the ministering one: Tell me, how can a son be born from a chaste womb? Then he spake to Her in fear, only crying aloud thus:}
+
+\PeopleRejoice{Rejoice, initiate of God's ineffable will:
+
+\Contd{Rejoice, assurance of those who pray in silence!}
+
+Rejoice, beginning of Christ's miracles:
+
+\Contd{Rejoice, crown of His dogmas!}
+
+Rejoice, heavenly ladder by which God came down:
+
+\Contd{Rejoice, bridge that conveyest us from earth to Heaven!}
+
+Rejoice, wonder of angels sounded abroad:
+
+\Contd{Rejoice, wound of demons bewailed afar!}
+
+Rejoice, Thou Who ineffably gavest birth to the Light:
+
+\Contd{Rejoice, Thou Who didst reveal Thy secret to none!}
+
+Rejoice, Thou Who surpassest the knowledge of the wise:
+
+\Contd{Rejoice, Thou Who givest light to the minds of the faithful!}
+
+Rejoice, O Bride Unwedded!}
+
+\Kontakion{$E$ (3)}
+
+\Priest{The power of the Most High then overshadowed the Virgin for conception, and showed Her fruitful womb as a sweet meadow to all who wish to reap salvation, as they sing: Alleluia!}
+
+\Oikos{$Z$ (3)}
+
+\Priest{Having received God into Her womb, the Virgin hastened to Elizabeth whose unborn babe at once recognized Her embrace, rejoiced, and with leaps of joy as songs, cried to the Theotokos:}
+
+\PeopleRejoice{Rejoice, branch of an Unfading Sprout:
+
+\Contd{Rejoice, acquisition of Immortal Fruit!}
+
+Rejoice, laborer that laborest for the Lover of mankind:
+
+\Contd{Rejoice, Thou Who givest birth to the Planter of our life!}
+
+Rejoice, cornland yielding a rich crop of mercies:
+
+\Contd{Rejoice, table bearing a wealth of forgiveness!}
+
+Rejoice, Thou Who makest to bloom the garden of delight:
+
+\Contd{Rejoice, Thou Who preparest a haven for souls!}
+
+Rejoice, acceptable incense of intercession:
+
+\Contd{Rejoice, propitiation of all the world!}
+
+Rejoice, good will of God to mortals:
+
+\Contd{Rejoice, boldness of mortals before God!}
+
+Rejoice, O Bride Unwedded!}
+
+\Kontakion{$H$ (4)}
+
+\Priest{Having within a tempest of doubting thoughts, the chaste Joseph was troubled. For knowing Thee to have no husband, he suspected a secret union, O blameless one. But having learned that Thy conception was of the Holy Spirit, he said: Alleluia!}
+
+\Oikos{$\Theta$ (4)}
+
+\Priest{While the angels were chanting, the shepherds heard of Christ's coming in the flesh, and having run to the Shepherd, they beheld Him as a blameless Lamb that had been pastured in Mary's womb, and singing to Her, they cried:}
+
+\PeopleRejoice{Rejoice, Mother of the Lamb and the Shepherd:
+
+\Contd{Rejoice, fold of rational sheep!}
+
+Rejoice, torment of invisible enemies:
+
+\Contd{Rejoice, opening of the gates of Paradise!}
+
+Rejoice, for the things of Heaven rejoice with the earth:
+
+\Contd{Rejoice, for the things of earth join chorus}
+
+\Contd{with the heavens!}
+
+Rejoice, never-silent mouth of the Apostles:
+
+\Contd{Rejoice, invincible courage of the passion-bearers!}
+
+Rejoice, firm support of faith:
+
+\Contd{Rejoice, radiant token of Grace!}
+
+Rejoice, Thou through whom hades was stripped bare:
+
+\Contd{Rejoice, Thou through whom we are clothed with glory!}
+
+Rejoice, O Bride Unwedded!}
+
+\Kontakion{$I$ (5)}
+
+\Priest{Having sighted the divinely-moving star, the Magi followed its radiance; and holding it as a lamp, by it they sought a powerful King; and having reached the Unreachable One, they rejoiced, shouting to Him: Alleluia!}
+
+\Oikos{$K$ (5)}
+
+\Priest{The sons of the Chaldees saw in the hands of the Virgin Him Who with His hand made man. And knowing Him to be the Master, even though He had taken the form of a servant, they hastened to serve Him with gifts, and to cry to Her Who is blessed:}
+
+\PeopleRejoice{Rejoice, Mother of the Unsetting Star:
+
+\Contd{Rejoice, dawn of the mystic day!}
+
+Rejoice, Thou Who didst extinguish the furnace of error:
+
+\Contd{Rejoice, Thou Who didst enlighten the initiates}
+
+\Contd{of the Trinity!}
+
+Rejoice, Thou Who didst banish from power
+
+the inhuman tyrant:
+
+\Contd{Rejoice, Thou Who didst show us Christ the Lord,}
+
+\Contd{the Lover of mankind!}
+
+Rejoice, Thou Who redeemest from pagan worship:
+
+\Contd{Rejoice, Thou Who dost drag us from the works of mire!}
+
+Rejoice, Thou Who didst quench the worship of fire:
+
+\Contd{Rejoice, Thou Who rescuest from the flame of the passions!}
+
+Rejoice, guide of the faithful to chastity:
+
+\Contd{Rejoice, gladness of all generations!}
+
+Rejoice, O Bride Unwedded!}
+
+\Kontakion{$\Lambda$ (6)}
+
+\Priest{Having become God-bearing heralds, the Magi returned to Babylon, having fulfilled Thy prophecy; and having preached Thee to all as the Christ, they left Herod as a babbler who knew not how to sing: Alleluia!}
+
+\Oikos{$M$ (6)}
+
+\Priest{By shining in Egypt the light of truth, Thou didst dispel the darkness of falsehood; for its idols fell, O Saviour, unable to endure Thy strength; and those who were delivered from them cried to the Theotokos:}
+
+\PeopleRejoice{Rejoice, uplifting of men:
+
+\Contd{Rejoice, downfall of demons!}
+
+Rejoice, Thou who didst trample down the dominion of delusion:
+
+\Contd{Rejoice, Thou who didst unmask the fraud of idols!}
+
+Rejoice, sea that didst drown the Pharaoh of the mind:
+
+\Contd{Rejoice, rock that doth refresh those thirsting for life!}
+
+Rejoice, pillar of fire that guideth those in darkness:
+
+\Contd{Rejoice, shelter of the world broader than a cloud!}
+
+Rejoice, sustenance replacing manna:
+
+\Contd{Rejoice, minister of holy delight!}
+
+Rejoice, land of promise:
+
+\Contd{Rejoice, Thou from whom floweth milk and honey!}
+
+Rejoice, O Bride Unwedded!}
+
+\Kontakion{$N$ (7)}
+
+\Priest{When Symeon was about to depart this age of delusion, Thou wast brought as a Babe to him, but Thou was recognized by him as perfect God also; wherefore, marveling at Thine ineffable wisdom, he cried: Alleluia!}
+
+\Oikos{$\Xi$ (7)}
+
+\Priest{The Creator showed us a new creation when He appeared to us who came from Him. For He sprang from a seedless womb, and kept it incorrupt as it was, that seeing the miracle we might sing to Her, crying out:}
+
+\PeopleRejoice{Rejoice, flower of incorruptibility:
+
+\Contd{Rejoice, crown of continence!}
+
+Rejoice, Thou from whom shineth the Archetype of the Resurrection:
+
+\Contd{Rejoice, Thou Who revealest the life of the angels!}
+
+Rejoice, tree of shining fruit, whereby the faithful are nourished:
+
+\Contd{Rejoice, tree of goodly shade by which many are sheltered!}
+
+Rejoice, Thou that has carried in Thy womb the Redeemer of captives:
+
+\Contd{Rejoice, Thou that gavest birth to the Guide of those astray!}
+
+Rejoice, supplication before the Righteous Judge:
+
+\Contd{Rejoice, forgiveness of many sins!}
+
+Rejoice, robe of boldness for the naked:
+
+\Contd{Rejoice, love that doth vanquish all desire!}
+
+Rejoice, O Bride Unwedded!}
+
+\Kontakion{$O$ (8)}
+
+\Priest{Having beheld a strange nativity, let us estrange ourselves from the world and transport our minds to Heaven; for the Most High God appeared on earth as a lowly man, because He wished to draw to the heights them that cry to Him: Alleluia!}
+
+\Oikos{$\Pi$ (8)}
+
+\Priest{Wholly present was the Inexpressible Word among those here below, yet in no way absent from those on high; for this was a divine condescension and not a change of place, and His birth was from a God-receiving Virgin Who heard these things:}
+
+\PeopleRejoice{Rejoice, container of the Uncontainable God:
+
+\Contd{Rejoice, door of solemn mystery!}
+
+Rejoice, report doubtful to unbelievers:
+
+\Contd{Rejoice, undoubted boast of the faithful!}
+
+Rejoice, all-holy chariot of Him Who sitteth upon the Cherubim:
+
+\Contd{Rejoice, all-glorious temple of Him Who is above the Seraphim!}
+
+Rejoice, Thou Who hast united opposites:
+
+\Contd{Rejoice, Thou Who hast joined virginity and motherhood!}
+
+Rejoice, Thou through whom transgression hath been absolved:
+
+\Contd{Rejoice, Thou through whom Paradise is opened!}
+
+Rejoice, key to the kingdom of Christ:
+
+\Contd{Rejoice, hope of eternal good things!}
+
+Rejoice, O Bride Unwedded!}
+
+\Kontakion{$P$ (9)}
+
+\Priest{All the angels were amazed at the great act of Thine incarnation; for they saw the Unapproachable God as a man approachable to all, abiding with us, and hearing from all: Alleluia!}
+
+\Oikos{$\Sigma$ (9)}
+
+\Priest{We see most eloquent orators mute as fish before Thee, O Theotokos; for they are at a loss to tell how Thou remainest a Virgin and could bear a child. But we, marveling at this mystery, cry out faithfully:}
+
+\PeopleRejoice{Rejoice, receptacle of the Wisdom of God:
+
+\Contd{Rejoice, treasury of His Providence!}
+
+Rejoice, Thou Who showest philosophers to be fools:
+
+\Contd{Rejoice, Thou Who exposest the learned as irrational!}
+
+Rejoice, for the clever critics have become foolish:
+
+\Contd{Rejoice, for the writers of myths have faded away!}
+
+Rejoice, Thou Who didst rend the webs of the Athenians:
+
+\Contd{Rejoice, Thou Who didst fill the nets of the fishermen!}
+
+Rejoice, Thou Who drawest us from the depths of ignorance:
+
+\Contd{Rejoice, Thou Who enlightenest many with knowledge!}
+
+Rejoice, ship for those who wish to be saved:
+
+\Contd{Rejoice, harbor for sailors on the sea of life!}
+
+Rejoice, O Bride Unwedded!}
+
+\Kontakion{$T$ (10)}
+
+\Priest{Desiring to save the world, He that is the Creator of all came to it according to His Own promise, and He that, as God, is the Shepherd, for our sake appeared unto us as a man; for like calling unto like, as God He heareth: Alleluia!}
+
+\Oikos{$Y$ (10)}
+
+\Priest{A bulwark art Thou to virgins, and to all that flee unto Thee, O Virgin Theotokos; for the Maker of Heaven and earth prepared Thee, O Most-pure one, dwelt in Thy womb, and taught all to call to Thee:}
+
+\PeopleRejoice{Rejoice, pillar of virginity:
+
+\Contd{Rejoice, gate of salvation!}
+
+Rejoice, leader of mental formation:
+
+\Contd{Rejoice, bestower of divine good!}
+
+Rejoice, for Thou didst renew those conceived in shame:
+
+\Contd{Rejoice, for Thou gavest wisdom to those robbed of their minds!}
+
+Rejoice, Thou Who didst foil the corrupter of minds:
+
+\Contd{Rejoice, Thou Who gavest birth to the Sower of purity!}
+
+Rejoice, bridechamber of a seedless marriage:
+
+\Contd{Rejoice, Thou Who dost wed the faithful to the Lord!}
+
+Rejoice, good nourisher of virgins:
+
+\Contd{Rejoice, adorner of holy souls as for marriage!}
+
+Rejoice, O Bride Unwedded!}
+
+\Kontakion{$\Phi$ (11)}
+
+\Priest{Every hymn is defeated that trieth to encompass the multitude of Thy many compassions; for if we offer to Thee, O Holy King, songs equal in number to the sand, nothing have we done worthy of that which Thou hast given us who shout to Thee: Alleluia!}
+
+\Oikos{$X$ (11)}
+
+\Priest{We behold the holy Virgin, a shining lamp appearing to those in darkness; for, kindling the Immaterial Light, She guideth all to divine knowledge, She illumineth minds with radiance, and is honored by our shouting these things:}
+
+\PeopleRejoice{Rejoice, ray of the noetic Sun:
+
+\Contd{Rejoice, radiance of the Unsetting Light!}
+
+Rejoice, lightning that enlightenest our souls:
+
+\Contd{Rejoice, thunder that terrifiest our enemies!}
+
+Rejoice, for Thou didst cause the refulgent Light to dawn:
+
+\Contd{Rejoice, for Thou didst cause the river of many streams to gush forth!}
+
+Rejoice, Thou Who paintest the image of the font:
+
+\Contd{Rejoice, Thou Who blottest out the stain of sin!}
+
+Rejoice, laver that washest the conscience clean:
+
+\Contd{Rejoice, cup that drawest up joy!}
+
+Rejoice, aroma of the sweet fragrance of Christ:
+
+\Contd{Rejoice, life of mystical gladness!}
+
+Rejoice, O Bride Unwedded!}
+
+\Kontakion{$\Psi$ (12)}
+
+\Priest{When the Absolver of all mankind desired to blot out ancient debts, of His Own will He came to dwell among those who had fallen from His Grace; and having torn up the handwriting of their sins, He heareth this from all: Alleluia!}
+
+\Oikos{$\Omega$ (12)}
+
+\Priest{While singing to Thine Offspring, we all praise Thee as a living temple, O Theotokos; for the Lord Who holdeth all things in His hand dwelt in Thy womb, and He sanctified and glorified Thee, and taught all to cry to Thee:}
+
+\PeopleRejoice{Rejoice, tabernacle of God the Word:
+
+\Contd{Rejoice, saint greater than the saints!}
+
+Rejoice, ark gilded by the Spirit:
+
+\Contd{Rejoice, inexhaustible treasury of life!}
+
+Rejoice, precious diadem of pious kings:
+
+\Contd{Rejoice, venerable boast of reverent priests!}
+
+Rejoice, unshakable fortress of the Church:
+
+\Contd{Rejoice, inviolable wall of the kingdom!}
+
+Rejoice, Thou through whom victories are obtained:
+
+\Contd{Rejoice, Thou through whom foes fall prostrate!}
+
+Rejoice, healing of my flesh:
+
+\Contd{Rejoice, salvation of my soul!}
+
+Rejoice, O Bride Unwedded!}
+
+\Kontakion{Final}
+
+\Priest{O all-praised Mother Who didst bear the Word, holiest of all the saints, accept now our offering, and deliver us from all misfortune, and rescue from the torment to come those that cry to Thee: Alleluia! Alleluia! Alleluia! \emph{3 times}}
+
+\People{Alleluia, Alleluia, Alleluia! \emph{after each repetition}}
+
+\begin{center}
+  {\color{Maroon}\emph{And again we sing Oikos 1 and Kontakion 1 }}
+\end{center}
+
+\chapter{End of Service}
+
+
+\Priest{Have mercy on us O God, according to Thy great mercy, we pray Thee, hearken and have mercy.}
+
+\People{Lord, have mercy. \emph{3 times}}
+
+\Priest{Again we pray for the holy Orthodox Patriarchs of the East; for the Orthodox episcopate of the Russian Church; for our lord the Very Most Reverend Metropolitan Vitaliy, First Hierarch of the Russian Church Abroad; for our lord the Most Reverend Anthony, Archbishop of Western America and San Francisco; and for our lord, the Most Reverend Bishop Kyrill; and all our brethren in Christ:}
+
+Again we pray for mercy, life, peace, health, salvation, and visitation for the servants of God NN: (while the names are read, the people sing the litany response softly), and for the pardon and remission of their sins.
+
+Again we beg Thee, O Lord, to hearken to our petition, and have mercy on Thy servants NN: (the response is sung softly as above). In Thy grace and bounty, fulfill their petitions, and forgive all their sins, whether voluntary or involuntary. Accept their sacrifice of praise upon Thy heavenly altar; protect them from every visible and invisible enemy; deliver them from all misery, sickness, and affliction; grant them health and length of days, we pray Thee, O Lord, hearken and have mercy.
+
+\Priest{Again we pray for travelers by land, by sea, and by air; for the sick and the suffering; for the servants of God NN: (as above), and for all those that are under trial, in harsh labor, in exile, imprisonment, and in every tribulation, necessity, and danger, and for their salvation, we pray Thee O Lord, hearken and have mercy.}
+
+Again we pray that the Lord our God will preserve this city and this holy temple and every city and country from pestilence, famine, earthquake, flood, fire, the sword, the invasion of enemies, civil war, and sudden death, and that our good God, Who loveth mankind, will be graciously favorable and easily entreated, and will turn away from us all the wrath stirred up against us, and deliver us from all His righteous chastisement which impendeth against us, and have mercy on us.
+
+Again we pray for the blessed and ever-memorable, holy Orthodox Patriarchs, and pious kings and right-believing queens, and the founders of this holy temple, and for all our fathers and brethren gone to their rest before us, and the Orthodox here and everywhere laid to rest.
+
+Again we pray for all the people here present, who await Thy great and rich mercy.
+
+Again we pray that the Lord will listen to the prayers of us sinners, and have mercy on us.
+
+Hear us O God our Savior, the hope of all the ends of the earth and of those who are far off upon the sea, and show mercy, show mercy O Master, upon us sinners. For Thou art a merciful God and Thou lovest mankind, and unto Thee we ascribe glory: to the Father, and to the Son, and to the Holy Spirit, now and ever, and unto the ages of ages.
+
+\People{Amen.}
+
+\end{document}
