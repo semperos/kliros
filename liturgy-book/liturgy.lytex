@@ -76,14 +76,50 @@ The materials in this book have been composed to help the choir meet their respo
 \part{Liturgy of the Catechumens}
 \chapter{Great Ektenia/Litany}
 \includepdf[pages=-,scale=.95]{../pdf/great_ektenia_trilingual.pdf}
+\chapter{First Antiphon}
 \includepdf[pages=-,scale=.95]{../pdf/sunday_liturgy_first_antiphon.pdf}
 \chapter{Second Antiphon}
 \includepdf[pages=-,scale=.95]{../pdf/sunday_liturgy_second_antiphon.pdf}
 \includepdf[pages=-,scale=.95]{../pdf/only_begotten_son_abbr_znammeny_smirnov.pdf}
 \includepdf[pages=-,scale=.95]{../pdf/only_begotten_son_znammeny.pdf}
+\chapter{Third Antiphon, Beatitudes}
+\include[pages=-,scale=.95]{../pdf/sunday_liturgy_beatitudes.pdf}
 \part{Liturgy of the Faithful}
 \part{Communion}
 \part{Dismissal}
+
+\appendix
+\cleardoublepage
+\part{Appendix}
+\chapter{Byzantine Tones}
+Every week of the year we sing Resurrectional hymns in one of the eight modes of Church music called \emph{tones}. In the Byzantine tradition, there are four primary tones (tones one through four) and four plagal tones derived from them (tones five through eight). In addition to these eight separate modes of music, each tone has both a fast (hiermologic) and slow (sticheraric) variant which are distinct, but maintain musical similarity.
+
+There are three key steps to learning the tones. The first is to memorize pieces of music for each of the eight tones, both fast and slow variants. This amounts to memorizing 16 pieces of music. The second step requires analysis of these pieces of music. You will notice that, for each tone, patterns of melody and cadence emerge. It is important to internalize these melodies and to memorize how to transition between phrases (intermediate transitions), sentences (final transitions), and the end of hymn sequences (final with ending). The final step to mastering the basics of the tones is to apply these melodies and patterns to new, unfamiliar texts. Given the quantity of text in the Church services, we are often called to sing text without explicit musical setting, and it is the job of the chanters to chant these hymns in the prescribed tones based on their usual patterns.
+
+In addition to the standard use of the tones, there are numerous special hymns and melodies that deviate from the normal patterns. Like choice flowers in a bouquet, these add beauty to the musical arrangement of the church's hymnography and should be learned as they are encountered throughout the year. However, they should not be used as exemplars for how to sing normally, unless you are using English texts that are metered and marked for special melodies.
+
+\includepdf[pages=-,scale=.95]{../pdf/byz_tone_1_exemplars.pdf}
+%% \includepdf[pages=-,scale=.95]{../pdf/byz_tone_2_exemplars.pdf}
+%% \includepdf[pages=-,scale=.95]{../pdf/byz_tone_3_exemplars.pdf}
+%% \includepdf[pages=-,scale=.95]{../pdf/byz_tone_4_exemplars.pdf}
+%% \includepdf[pages=-,scale=.95]{../pdf/byz_tone_5_exemplars.pdf}
+%% \includepdf[pages=-,scale=.95]{../pdf/byz_tone_6_exemplars.pdf}
+%% \includepdf[pages=-,scale=.95]{../pdf/byz_tone_7_exemplars.pdf}
+%% \includepdf[pages=-,scale=.95]{../pdf/byz_tone_8_exemplars.pdf}
+
+\chapter{Modern Russian Tones}
+Like the Byzantine and Znammeny traditions that precede it, modern Russian-style chant distinguishes eight tones that are chanted in a cycle each week of the year. In opposition to the Byzantine tradition, unique melodic sequencies and harmonies must be learned for numerous variants of each tone, to include a different variant for troparia/kontakia, stichera (e.g., at the ``Lord, I have cried\ldots''), prokeimena, alleluia, hirmoi/katavasiai, and podoben melodies. Whereas the Byzantine variants of each tone maintain a great amount of musical similarity, the variants of each tone in Russian chant are more different and essentially require separate memorization.
+
+Ideally, chanters who are not directing a choir should learn the melody and one additional voice of harmony for each variant for each of the eight tones. At a minimum, one must know one's own part for each tone. Given the number of commonly occurring variants listed above, one needs to work through approximately 40 pieces of music to learn the spectrum of musical variations in Russian chant.
+
+%% \include[pages=-,scale=.95]{../pdf/satb_tone_1_exemplars.pdf}
+%% \include[pages=-,scale=.95]{../pdf/satb_tone_2_exemplars.pdf}
+%% \include[pages=-,scale=.95]{../pdf/satb_tone_3_exemplars.pdf}
+%% \include[pages=-,scale=.95]{../pdf/satb_tone_4_exemplars.pdf}
+%% \include[pages=-,scale=.95]{../pdf/satb_tone_5_exemplars.pdf}
+%% \include[pages=-,scale=.95]{../pdf/satb_tone_6_exemplars.pdf}
+%% \include[pages=-,scale=.95]{../pdf/satb_tone_7_exemplars.pdf}
+%% \include[pages=-,scale=.95]{../pdf/satb_tone_8_exemplars.pdf}
 
 \end{document}
 
