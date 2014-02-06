@@ -10,7 +10,8 @@ OPEN_CMD := xdg-open
 MIDI_PLAY_CMD := timidity
 endif
 
-LATEX_CMD := latexmk -pdflatex='xelatex -shell-escape -interaction nonstopmode' -pdf
+# LATEX_CMD := latexmk -pdflatex='xelatex -shell-escape -interaction nonstopmode' -pdf
+LATEX_CMD := latexmk -pdf
 LILY_BOOK_CMD := lilypond-book # --format=latex # --latex-program="xelatex"
 CURRENT_DIR := $(shell pwd)
 

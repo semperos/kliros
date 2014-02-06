@@ -24,8 +24,32 @@
             floatperchapter]{classicthesis}
 
 \usepackage{pdfpages}
-\usepackage{ifxetex}
 \usepackage[dvipsnames]{xcolor}
+
+%%%%%%%%%%%%%
+%%% XETEX %%%
+%%%%%%%%%%%%%
+
+%% \usepackage{fontspec}
+%% \usepackage{xltxtra}
+%% \usepackage{xunicode}
+
+%% \usepackage{polyglossia}
+%% \setmainlanguage{english}
+%% \setotherlanguage{russian}
+%% \setotherlanguage[variant=polytonic]{greek}
+
+%% \defaultfontfeatures{Ligatures=TeX,Mapping=tex-text}
+%% \setmainfont[Ligatures=TeX,Mapping=tex-text]{Noticia Text}
+% Per-language font
+%% \newfontfamily{\greekfont}[Ligatures=TeX]{Gentium Plus}
+
+%%%%%%%%%%%%%
+%%% BABEL %%%
+%%%%%%%%%%%%%
+\usepackage[main=english,russian,greek]{babel}
+%% \usepackage[T1]{fontenc}
+%% \usepackage[utf8]{inputenc}
 
 % make the part links in the TOC point to the right page
 \usepackage{etoolbox}
@@ -54,15 +78,15 @@
 %%
 
 \newcommand{\Priest}[0]{
-\noindent {\textsc{\color{Maroon}Priest:\hspace{1 mm}}}
+  \noindent {\textsc{\color{Maroon}Priest:}}
 }
 
 \newcommand{\People}[0]{
-\noindent {\textsc{\color{Maroon}People:}}
+  \noindent {\textsc{\color{Maroon}People:}}
 }
 
 \newcommand{\PeopleRejoice}[0]{
-\noindent{\textsc{\color{Maroon}People:}\par}
+  \noindent{\textsc{\color{Maroon}People:}\par}
 }
 
 \newcommand{\Kontakion}[1]{
@@ -74,6 +98,30 @@
 \newcommand{\Oikos}[1]{
 \begin{center}
   {\textsc{\color{Maroon}Oikos #1}}
+\end{center}
+}
+
+\newcommand{\Ierei}[0]{
+  \noindent {\textsc{\color{Maroon}{\selectlanguage{russian}Иерей:}}}
+}
+
+\newcommand{\Khor}[0]{
+  \noindent {\textsc{\color{Maroon}{\selectlanguage{russian}Хор:}}}
+}
+
+\newcommand{\KhorRaduisya}[0]{
+  \noindent{\textsc{\color{Maroon}{\selectlanguage{russian}Хор:}}}\par
+}
+
+\newcommand{\Kontak}[1]{
+\begin{center}
+  {\textsc{\color{Maroon}{\selectlanguage{russian}Кондак #1}}}
+\end{center}
+}
+
+\newcommand{\Ikos}[1]{
+\begin{center}
+  {\textsc{\color{Maroon}{\selectlanguage{russian}Икос #1}}}
 \end{center}
 }
 
@@ -96,7 +144,8 @@
 
 \cleardoublepage\include{foreword}
 
-\chapter{Beginning of Service}
+%% Beginning of any akathist
+\chapter{Opening Prayers}
 
 \Priest{Blessed is our God, always, now and ever, and unto the ages of ages!}
 
@@ -112,7 +161,7 @@ Glory to the Father and to the Son and to the Holy Spirit, both now and ever, an
 
 O Most Holy Trinity, have mercy on us. Lord, cleanse us from our sins, Master, pardon our transgressions, Holy One, visit and heal our infirmities for Thy Name's sake.
 
-Lord have mercy. Lord have mercy. Lord have mercy.
+Lord, have mercy. {\color{Maroon}\emph{3 times}}
 
 Glory to the Father and to the Son and to the Holy Spirit, both now and ever, and unto the ages of ages. Amen.
 
@@ -122,15 +171,33 @@ Our Father, who art in heaven, hallowed be Thy name. Thy kingdom come. Thy will 
 
 \People{Amen.}
 
+\pagebreak
+
+{\selectlanguage{russian}
+  Сла́ва Тебе́, Бо́же наш, сла́ва Тебе́.
+
+  Царю́ Небе́сный, Уте́шителю, Ду́ше и́стины, И́же везде́ сый и вся исполня́яй, Сокро́вище благи́х и жи́зни Пода́телю, прииди́ и всели́ся в ны, и очи́сти ны от вся́кия скве́рны, и спаси́, Бл́аже, ду́ши на́ша.
+
+  Святы́й Бо́же, Святы́й Кре́пкий, Святы́й Безсме́ртный, поми́луй нас. \emph{(трижды)}
+
+  Сла́ва Отцу́ и Сы́ну и Свято́му Ду́ху, и ны́не и при́сно и во ве́ки веко́в. Ами́нь.
+
+  Пресвята́я Тро́ице, поми́луй нас; Го́споди, очи́сти грехи́ на́ша; Влады́ко, прости́ беззако́ния на́ша; Святы́й, посети́ и исцели́ не́мощи на́ша, и́мене Твоего́ ра́ди.
+
+  Го́споди, поми́луй. \emph{(трижды)}
+
+  Сла́ва Отцу́ и Сы́ну и Свято́му Ду́ху, и ны́не и при́сно и во ве́ки веко́в. Ами́нь.
+
+  О́тче наш, И́же еси́ на небесе́х! Да святи́тся и́мя Твое́, да прии́дет Ца́рствие Твое́, да бу́дет во́ля Твоя́, я́ко на небеси́ и на земли́. Хлеб наш насу́щный даждь нам днесь; и оста́ви нам до́лги на́ша, я́коже и мы оставля́ем должнико́м на́шим; и не введи́ нас во искуше́ние, но изба́ви нас от лука́ваго.
+}
 
 \chapter{Akathist to the Mother of God}
 
-
-\Kontakion{$A$ (1)}
+\Kontakion{{\selectlanguage{greek}A} (1)}
 
 \People{To Thee, the Champion Leader, we Thy servants dedicate a feast of victory and of thanksgiving as ones rescued out of sufferings, O Theotokos: but as Thou art one with might which is invincible, from all dangers that can be do Thou deliver us, that we may cry to Thee: Rejoice, O Unwedded Bride! (Customarily sung three times at the beginning of the Akathist, once at the end.)}
 
-\Oikos{$B$ (1)}
+\Oikos{{\selectlanguage{greek}B} (1)}
 
 \Priest{An archangel was sent from Heaven to say to the Theotokos: Rejoice! And beholding Thee, O Lord, taking bodily form, he was amazed and with his bodiless voice he stood crying to Her such things as these:}
 
@@ -152,7 +219,7 @@ Rejoice, for Thou art the \textoverline{throne} of the King:
 
 Rejoice, star that causest the \textoverline{Sun} to appear:
 
-\Contd{Rejoice, womb of the Divine Incar\textoverline{nat}ion!}
+\Contd{Rejoice, womb of the Divine Incar\textoverline{na}tion!}
 
 Rejoice, Thou through whom \textoverline{creation} is renewed:
 
@@ -160,385 +227,385 @@ Rejoice, Thou through whom \textoverline{creation} is renewed:
 
 Rejoice, O Bride Unwedded!}
 
-\Kontakion{$\Gamma$ (2)}
+\Kontakion{{\selectlanguage{greek}G} (2)}
 
 \Priest{Seeing herself to be chaste, the holy one said boldly to Gabriel: The marvel of thy speech is difficult for my soul to accept. How canst thou speak of a birth from a seedless conception? And She cried: Alleluia!}
 
-\Oikos{$\Delta$ (2)}
+\Oikos{{\selectlanguage{greek}D} (2)}
 
 \Priest{Seeking to know knowledge that cannot be known, the Virgin cried to the ministering one: Tell me, how can a son be born from a chaste womb? Then he spake to Her in fear, only crying aloud thus:}
 
-\PeopleRejoice{Rejoice, initiate of God's ineffable will:
+\PeopleRejoice{Rejoice, initiate of God's in\textoverline{eff}able will:
 
-\Contd{Rejoice, assurance of those who pray in silence!}
+\Contd{Rejoice, assurance of those who pray in \textoverline{si}lence!}
 
-Rejoice, beginning of Christ's miracles:
+Rejoice, beginning of Christ's \textoverline{mi}racles:
 
-\Contd{Rejoice, crown of His dogmas!}
+\Contd{Rejoice, crown of His \textoverline{dog}mas!}
 
-Rejoice, heavenly ladder by which God came down:
+Rejoice, heavenly ladder by which \textoverline{God} came down:
 
-\Contd{Rejoice, bridge that conveyest us from earth to Heaven!}
+\Contd{Rejoice, bridge that conveyest us from earth to \textoverline{Hea}ven!}
 
-Rejoice, wonder of angels sounded abroad:
+Rejoice, wonder of angels \textoverline{sound}ed abroad:
 
-\Contd{Rejoice, wound of demons bewailed afar!}
+\Contd{Rejoice, wound of demons be\textoverline{wailed} afar!}
 
-Rejoice, Thou Who ineffably gavest birth to the Light:
+Rejoice, Thou Who ineffably gavest \textoverline{birth} to the Light:
 
-\Contd{Rejoice, Thou Who didst reveal Thy secret to none!}
+\Contd{Rejoice, Thou Who didst reveal Thy \textoverline{sec}ret to none!}
 
-Rejoice, Thou Who surpassest the knowledge of the wise:
+Rejoice, Thou Who surpassest the \textoverline{know}\textoverline{ledge} of the wise:
 
-\Contd{Rejoice, Thou Who givest light to the minds of the faithful!}
+\Contd{Rejoice, Thou Who givest light to the minds of the \textoverline{faith}ful!}
 
 Rejoice, O Bride Unwedded!}
 
-\Kontakion{$E$ (3)}
+\Kontakion{{\selectlanguage{greek}E} (3)}
 
 \Priest{The power of the Most High then overshadowed the Virgin for conception, and showed Her fruitful womb as a sweet meadow to all who wish to reap salvation, as they sing: Alleluia!}
 
-\Oikos{$Z$ (3)}
+\Oikos{{\selectlanguage{greek}Z} (3)}
 
 \Priest{Having received God into Her womb, the Virgin hastened to Elizabeth whose unborn babe at once recognized Her embrace, rejoiced, and with leaps of joy as songs, cried to the Theotokos:}
 
-\PeopleRejoice{Rejoice, branch of an Unfading Sprout:
+\PeopleRejoice{Rejoice, branch of an Un\textoverline{fad}ing Sprout:
 
-\Contd{Rejoice, acquisition of Immortal Fruit!}
+\Contd{Rejoice, acquisition of Im\textoverline{mor}tal Fruit!}
 
-Rejoice, laborer that laborest for the Lover of mankind:
+Rejoice, laborer that laborest for the \textoverline{Lover} of mankind:
 
-\Contd{Rejoice, Thou Who givest birth to the Planter of our life!}
+\Contd{Rejoice, Thou Who givest birth to the \textoverline{Planter} of our life!}
 
-Rejoice, cornland yielding a rich crop of mercies:
+Rejoice, cornland yielding a rich crop of \textoverline{mer}cies:
 
-\Contd{Rejoice, table bearing a wealth of forgiveness!}
+\Contd{Rejoice, table bearing a wealth of for\textoverline{give}ness!}
 
-Rejoice, Thou Who makest to bloom the garden of delight:
+Rejoice, Thou Who makest to bloom the \textoverline{garden} of delight:
 
-\Contd{Rejoice, Thou Who preparest a haven for souls!}
+\Contd{Rejoice, Thou Who preparest a \textoverline{ha}ven for souls!}
 
-Rejoice, acceptable incense of intercession:
+Rejoice, acceptable incense of inter\textoverline{ces}sion:
 
-\Contd{Rejoice, propitiation of all the world!}
+\Contd{Rejoice, propitiation of \textoverline{all} the world!}
 
-Rejoice, good will of God to mortals:
+Rejoice, good will of God to \textoverline{mor}tals:
 
-\Contd{Rejoice, boldness of mortals before God!}
+\Contd{Rejoice, boldness of \textoverline{mortals} before God!}
 
 Rejoice, O Bride Unwedded!}
 
-\Kontakion{$H$ (4)}
+\Kontakion{{\selectlanguage{greek}H} (4)}
 
 \Priest{Having within a tempest of doubting thoughts, the chaste Joseph was troubled. For knowing Thee to have no husband, he suspected a secret union, O blameless one. But having learned that Thy conception was of the Holy Spirit, he said: Alleluia!}
 
-\Oikos{$\Theta$ (4)}
+\Oikos{{\selectlanguage{greek}J} (4)}
 
 \Priest{While the angels were chanting, the shepherds heard of Christ's coming in the flesh, and having run to the Shepherd, they beheld Him as a blameless Lamb that had been pastured in Mary's womb, and singing to Her, they cried:}
 
-\PeopleRejoice{Rejoice, Mother of the Lamb and the Shepherd:
+\PeopleRejoice{Rejoice, Mother of the Lamb and the \textoverline{She}pherd:
 
-\Contd{Rejoice, fold of rational sheep!}
+\Contd{Rejoice, fold of \textoverline{ra}tional sheep!}
 
-Rejoice, torment of invisible enemies:
+Rejoice, torment of invisible \textoverline{e}nemies:
 
-\Contd{Rejoice, opening of the gates of Paradise!}
+\Contd{Rejoice, opening of the gates of \textoverline{Pa}radise!}
 
-Rejoice, for the things of Heaven rejoice with the earth:
+Rejoice, for the things of Heaven re\textoverline{joice} with the earth:
 
 \Contd{Rejoice, for the things of earth join chorus}
 
-\Contd{with the heavens!}
+\Contd{with the \textoverline{hea}vens!}
 
-Rejoice, never-silent mouth of the Apostles:
+Rejoice, never-silent mouth of the Ap\textoverline{o}stles:
 
-\Contd{Rejoice, invincible courage of the passion-bearers!}
+\Contd{Rejoice, invincible courage of the \textoverline{passion}-bearers!}
 
-Rejoice, firm support of faith:
+Rejoice, firm sup\textoverline{port} of faith:
 
-\Contd{Rejoice, radiant token of Grace!}
+\Contd{Rejoice, radiant \textoverline{to}ken of Grace!}
 
-Rejoice, Thou through whom hades was stripped bare:
+Rejoice, Thou through whom \textoverline{hades} was stripped bare:
 
-\Contd{Rejoice, Thou through whom we are clothed with glory!}
+\Contd{Rejoice, Thou through whom we are clothed with \textoverline{glo}ry!}
 
 Rejoice, O Bride Unwedded!}
 
-\Kontakion{$I$ (5)}
+\Kontakion{{\selectlanguage{greek}I} (5)}
 
 \Priest{Having sighted the divinely-moving star, the Magi followed its radiance; and holding it as a lamp, by it they sought a powerful King; and having reached the Unreachable One, they rejoiced, shouting to Him: Alleluia!}
 
-\Oikos{$K$ (5)}
+\Oikos{{\selectlanguage{greek}K} (5)}
 
 \Priest{The sons of the Chaldees saw in the hands of the Virgin Him Who with His hand made man. And knowing Him to be the Master, even though He had taken the form of a servant, they hastened to serve Him with gifts, and to cry to Her Who is blessed:}
 
-\PeopleRejoice{Rejoice, Mother of the Unsetting Star:
+\PeopleRejoice{Rejoice, Mother of the Un\textoverline{set}ting Star:
 
-\Contd{Rejoice, dawn of the mystic day!}
+\Contd{Rejoice, dawn of the \textoverline{mys}tic day!}
 
-Rejoice, Thou Who didst extinguish the furnace of error:
+Rejoice, Thou Who didst extinguish the furnace of \textoverline{er}ror:
 
 \Contd{Rejoice, Thou Who didst enlighten the initiates}
 
-\Contd{of the Trinity!}
+\Contd{of the \textoverline{Tri}nity!}
 
 Rejoice, Thou Who didst banish from power
 
-the inhuman tyrant:
+the inhuman \textoverline{ty}rant:
 
 \Contd{Rejoice, Thou Who didst show us Christ the Lord,}
 
-\Contd{the Lover of mankind!}
+\Contd{the \textoverline{Lover} of mankind!}
 
-Rejoice, Thou Who redeemest from pagan worship:
+Rejoice, Thou Who redeemest from pagan \textoverline{wor}ship:
 
-\Contd{Rejoice, Thou Who dost drag us from the works of mire!}
+\Contd{Rejoice, Thou Who dost drag us from the \textoverline{works} of mire!}
 
-Rejoice, Thou Who didst quench the worship of fire:
+Rejoice, Thou Who didst quench the \textoverline{wor}ship of fire:
 
-\Contd{Rejoice, Thou Who rescuest from the flame of the passions!}
+\Contd{Rejoice, Thou Who rescuest from the flame of the \textoverline{pass}ions!}
 
-Rejoice, guide of the faithful to chastity:
+Rejoice, guide of the faithful to \textoverline{chas}tity:
 
-\Contd{Rejoice, gladness of all generations!}
+\Contd{Rejoice, gladness of all gene\textoverline{ra}tions!}
 
 Rejoice, O Bride Unwedded!}
 
-\Kontakion{$\Lambda$ (6)}
+\Kontakion{{\selectlanguage{greek}L} (6)}
 
 \Priest{Having become God-bearing heralds, the Magi returned to Babylon, having fulfilled Thy prophecy; and having preached Thee to all as the Christ, they left Herod as a babbler who knew not how to sing: Alleluia!}
 
-\Oikos{$M$ (6)}
+\Oikos{{\selectlanguage{greek}M} (6)}
 
 \Priest{By shining in Egypt the light of truth, Thou didst dispel the darkness of falsehood; for its idols fell, O Saviour, unable to endure Thy strength; and those who were delivered from them cried to the Theotokos:}
 
-\PeopleRejoice{Rejoice, uplifting of men:
+\PeopleRejoice{Rejoice, up\textoverline{lift}ing of men:
 
-\Contd{Rejoice, downfall of demons!}
+\Contd{Rejoice, downfall of \textoverline{de}mons!}
 
-Rejoice, Thou who didst trample down the dominion of delusion:
+Rejoice, Thou who didst trample down the dominion of de\textoverline{lu}sion:
 
-\Contd{Rejoice, Thou who didst unmask the fraud of idols!}
+\Contd{Rejoice, Thou who didst unmask the fraud of \textoverline{i}dols!}
 
-Rejoice, sea that didst drown the Pharaoh of the mind:
+Rejoice, sea that didst drown the \textoverline{Pharaoh} of the mind:
 
-\Contd{Rejoice, rock that doth refresh those thirsting for life!}
+\Contd{Rejoice, rock that doth refresh those \textoverline{thirst}ing for life!}
 
-Rejoice, pillar of fire that guideth those in darkness:
+Rejoice, pillar of fire that guidest those in \textoverline{dark}ness:
 
-\Contd{Rejoice, shelter of the world broader than a cloud!}
+\Contd{Rejoice, shelter of the world \textoverline{broader} than a cloud!}
 
-Rejoice, sustenance replacing manna:
+Rejoice, sustenance replacing \textoverline{man}na:
 
-\Contd{Rejoice, minister of holy delight!}
+\Contd{Rejoice, minister of \textoverline{ho}ly delight!}
 
-Rejoice, land of promise:
+Rejoice, land of \textoverline{pro}mise:
 
-\Contd{Rejoice, Thou from whom floweth milk and honey!}
+\Contd{Rejoice, Thou from whom floweth milk and \textoverline{ho}ney!}
 
 Rejoice, O Bride Unwedded!}
 
-\Kontakion{$N$ (7)}
+\Kontakion{{\selectlanguage{greek}N} (7)}
 
 \Priest{When Symeon was about to depart this age of delusion, Thou wast brought as a Babe to him, but Thou was recognized by him as perfect God also; wherefore, marveling at Thine ineffable wisdom, he cried: Alleluia!}
 
-\Oikos{$\Xi$ (7)}
+\Oikos{{\selectlanguage{greek}X} (7)}
 
 \Priest{The Creator showed us a new creation when He appeared to us who came from Him. For He sprang from a seedless womb, and kept it incorrupt as it was, that seeing the miracle we might sing to Her, crying out:}
 
-\PeopleRejoice{Rejoice, flower of incorruptibility:
+\PeopleRejoice{Rejoice, flower of incorrupti\textoverline{bi}lity:
 
-\Contd{Rejoice, crown of continence!}
+\Contd{Rejoice, crown of \textoverline{con}tinence!}
 
-Rejoice, Thou from whom shineth the Archetype of the Resurrection:
+Rejoice, Thou from whom shineth the Archetype of the Resur\textoverline{rec}tion:
 
-\Contd{Rejoice, Thou Who revealest the life of the angels!}
+\Contd{Rejoice, Thou Who revealest the life of the \textoverline{an}gels!}
 
-Rejoice, tree of shining fruit, whereby the faithful are nourished:
+Rejoice, tree of shining fruit, whereby the faithful are \textoverline{nou}rished:
 
-\Contd{Rejoice, tree of goodly shade by which many are sheltered!}
+\Contd{Rejoice, tree of goodly shade by which many are \textoverline{shel}tered!}
 
-Rejoice, Thou that has carried in Thy womb the Redeemer of captives:
+Rejoice, Thou that has carried in Thy womb the Redeemer of \textoverline{cap}tives:
 
-\Contd{Rejoice, Thou that gavest birth to the Guide of those astray!}
+\Contd{Rejoice, Thou that gavest birth to the \textoverline{Guide} \textoverline{of} those astray!}
 
-Rejoice, supplication before the Righteous Judge:
+Rejoice, supplication before the \textoverline{Righ}teous Judge:
 
-\Contd{Rejoice, forgiveness of many sins!}
+\Contd{Rejoice, forgiveness of \textoverline{ma}ny sins!}
 
-Rejoice, robe of boldness for the naked:
+Rejoice, robe of boldness for the \textoverline{na}ked:
 
-\Contd{Rejoice, love that doth vanquish all desire!}
+\Contd{Rejoice, love that dost vanquish \textoverline{all} desire!}
 
 Rejoice, O Bride Unwedded!}
 
-\Kontakion{$O$ (8)}
+\Kontakion{{\selectlanguage{greek}O} (8)}
 
 \Priest{Having beheld a strange nativity, let us estrange ourselves from the world and transport our minds to Heaven; for the Most High God appeared on earth as a lowly man, because He wished to draw to the heights them that cry to Him: Alleluia!}
 
-\Oikos{$\Pi$ (8)}
+\Oikos{{\selectlanguage{greek}P} (8)}
 
 \Priest{Wholly present was the Inexpressible Word among those here below, yet in no way absent from those on high; for this was a divine condescension and not a change of place, and His birth was from a God-receiving Virgin Who heard these things:}
 
-\PeopleRejoice{Rejoice, container of the Uncontainable God:
+\PeopleRejoice{Rejoice, container of the Uncon\textoverline{tain}able God:
 
-\Contd{Rejoice, door of solemn mystery!}
+\Contd{Rejoice, door of solemn \textoverline{mys}tery!}
 
-Rejoice, report doubtful to unbelievers:
+Rejoice, report doubtful to unbe\textoverline{lie}vers:
 
-\Contd{Rejoice, undoubted boast of the faithful!}
+\Contd{Rejoice, undoubted boast of the \textoverline{faith}ful!}
 
-Rejoice, all-holy chariot of Him Who sitteth upon the Cherubim:
+Rejoice, all-holy chariot of Him Who sitteth upon the \textoverline{Che}rubim:
 
-\Contd{Rejoice, all-glorious temple of Him Who is above the Seraphim!}
+\Contd{Rejoice, all-glorious temple of Him Who is above the \textoverline{Se}raphim!}
 
-Rejoice, Thou Who hast united opposites:
+Rejoice, Thou Who hast united \textoverline{op}posites:
 
-\Contd{Rejoice, Thou Who hast joined virginity and motherhood!}
+\Contd{Rejoice, Thou Who hast joined virginity and \textoverline{mo}therhood!}
 
-Rejoice, Thou through whom transgression hath been absolved:
+Rejoice, Thou through whom trans\textoverline{gression} hath been absolved:
 
-\Contd{Rejoice, Thou through whom Paradise is opened!}
+\Contd{Rejoice, Thou through whom Paradise is \textoverline{o}pened!}
 
-Rejoice, key to the kingdom of Christ:
+Rejoice, key to the \textoverline{king}dom of Christ:
 
-\Contd{Rejoice, hope of eternal good things!}
+\Contd{Rejoice, hope of et\textoverline{er}nal good things!}
 
 Rejoice, O Bride Unwedded!}
 
-\Kontakion{$P$ (9)}
+\Kontakion{{\selectlanguage{greek}R} (9)}
 
 \Priest{All the angels were amazed at the great act of Thine incarnation; for they saw the Unapproachable God as a man approachable to all, abiding with us, and hearing from all: Alleluia!}
 
-\Oikos{$\Sigma$ (9)}
+\Oikos{{\selectlanguage{greek}S} (9)}
 
 \Priest{We see most eloquent orators mute as fish before Thee, O Theotokos; for they are at a loss to tell how Thou remainest a Virgin and could bear a child. But we, marveling at this mystery, cry out faithfully:}
 
-\PeopleRejoice{Rejoice, receptacle of the Wisdom of God:
+\PeopleRejoice{Rejoice, receptacle of the \textoverline{Wis}dom of God:
 
-\Contd{Rejoice, treasury of His Providence!}
+\Contd{Rejoice, treasury of His \textoverline{Pro}vidence!}
 
-Rejoice, Thou Who showest philosophers to be fools:
+Rejoice, Thou Who showest phi\textoverline{lo}sophers to be fools:
 
-\Contd{Rejoice, Thou Who exposest the learned as irrational!}
+\Contd{Rejoice, Thou Who exposest the learnèd as ir\textoverline{ra}tional!}
 
-Rejoice, for the clever critics have become foolish:
+Rejoice, for the clever critics have become \textoverline{foo}lish:
 
-\Contd{Rejoice, for the writers of myths have faded away!}
+\Contd{Rejoice, for the writers of myths have \textoverline{fa}ded away!}
 
-Rejoice, Thou Who didst rend the webs of the Athenians:
+Rejoice, Thou Who didst rend the webs of the A\textoverline{the}nians:
 
-\Contd{Rejoice, Thou Who didst fill the nets of the fishermen!}
+\Contd{Rejoice, Thou Who didst fill the nets of the \textoverline{fish}ermen!}
 
-Rejoice, Thou Who drawest us from the depths of ignorance:
+Rejoice, Thou Who drawest us from the depths of \textoverline{ig}norance:
 
-\Contd{Rejoice, Thou Who enlightenest many with knowledge!}
+\Contd{Rejoice, Thou Who enlightenest many with \textoverline{know}ledge!}
 
-Rejoice, ship for those who wish to be saved:
+Rejoice, ship for those who \textoverline{wish} to be saved:
 
-\Contd{Rejoice, harbor for sailors on the sea of life!}
+\Contd{Rejoice, harbor for sailors on the \textoverline{sea} of life!}
 
 Rejoice, O Bride Unwedded!}
 
-\Kontakion{$T$ (10)}
+\Kontakion{{\selectlanguage{greek}T} (10)}
 
 \Priest{Desiring to save the world, He that is the Creator of all came to it according to His Own promise, and He that, as God, is the Shepherd, for our sake appeared unto us as a man; for like calling unto like, as God He heareth: Alleluia!}
 
-\Oikos{$Y$ (10)}
+\Oikos{{\selectlanguage{greek}U} (10)}
 
 \Priest{A bulwark art Thou to virgins, and to all that flee unto Thee, O Virgin Theotokos; for the Maker of Heaven and earth prepared Thee, O Most-pure one, dwelt in Thy womb, and taught all to call to Thee:}
 
-\PeopleRejoice{Rejoice, pillar of virginity:
+\PeopleRejoice{Rejoice, pillar of vir\textoverline{gi}nity:
 
-\Contd{Rejoice, gate of salvation!}
+\Contd{Rejoice, gate of sal\textoverline{va}tion!}
 
-Rejoice, leader of mental formation:
+Rejoice, leader of mental for\textoverline{ma}tion:
 
-\Contd{Rejoice, bestower of divine good!}
+\Contd{Rejoice, bestower of di\textoverline{vine} good!}
 
-Rejoice, for Thou didst renew those conceived in shame:
+Rejoice, for Thou didst renew those con\textoverline{ceived} in shame:
 
-\Contd{Rejoice, for Thou gavest wisdom to those robbed of their minds!}
+\Contd{Rejoice, for Thou gavest wisdom to those \textoverline{robbed} of their minds!}
 
-Rejoice, Thou Who didst foil the corrupter of minds:
+Rejoice, Thou Who didst foil the cor\textoverline{rup}ter of minds:
 
-\Contd{Rejoice, Thou Who gavest birth to the Sower of purity!}
+\Contd{Rejoice, Thou Who gavest birth to the Sower of \textoverline{pu}rity!}
 
-Rejoice, bridechamber of a seedless marriage:
+Rejoice, bridechamber of a seedless \textoverline{mar}riage:
 
-\Contd{Rejoice, Thou Who dost wed the faithful to the Lord!}
+\Contd{Rejoice, Thou Who dost wed the \textoverline{faithful} to the Lord!}
 
-Rejoice, good nourisher of virgins:
+Rejoice, good nourisher of \textoverline{vir}gins:
 
-\Contd{Rejoice, adorner of holy souls as for marriage!}
+\Contd{Rejoice, adorner of holy souls as for \textoverline{mar}riage!}
 
 Rejoice, O Bride Unwedded!}
 
-\Kontakion{$\Phi$ (11)}
+\Kontakion{{\selectlanguage{greek}F} (11)}
 
 \Priest{Every hymn is defeated that trieth to encompass the multitude of Thy many compassions; for if we offer to Thee, O Holy King, songs equal in number to the sand, nothing have we done worthy of that which Thou hast given us who shout to Thee: Alleluia!}
 
-\Oikos{$X$ (11)}
+\Oikos{{\selectlanguage{greek}Q} (11)}
 
 \Priest{We behold the holy Virgin, a shining lamp appearing to those in darkness; for, kindling the Immaterial Light, She guideth all to divine knowledge, She illumineth minds with radiance, and is honored by our shouting these things:}
 
-\PeopleRejoice{Rejoice, ray of the noetic Sun:
+\PeopleRejoice{Rejoice, ray of the no\textoverline{e}tic Sun:
 
-\Contd{Rejoice, radiance of the Unsetting Light!}
+\Contd{Rejoice, radiance of the Un\textoverline{set}ting Light!}
 
-Rejoice, lightning that enlightenest our souls:
+Rejoice, lightning that en\textoverline{lighten}est our souls:
 
-\Contd{Rejoice, thunder that terrifiest our enemies!}
+\Contd{Rejoice, thunder that terrifiest our \textoverline{e}nemies!}
 
-Rejoice, for Thou didst cause the refulgent Light to dawn:
+Rejoice, for Thou didst cause the refulgent \textoverline{Light} to dawn:
 
-\Contd{Rejoice, for Thou didst cause the river of many streams to gush forth!}
+\Contd{Rejoice, for Thou didst cause the river of many streams to \textoverline{gush} forth!}
 
-Rejoice, Thou Who paintest the image of the font:
+Rejoice, Thou Who paintest the \textoverline{image} of the font:
 
-\Contd{Rejoice, Thou Who blottest out the stain of sin!}
+\Contd{Rejoice, Thou Who blottest out the \textoverline{stain} of sin!}
 
-Rejoice, laver that washest the conscience clean:
+Rejoice, laver that washest the \textoverline{con}science clean:
 
-\Contd{Rejoice, cup that drawest up joy!}
+\Contd{Rejoice, cup that \textoverline{drawest} up joy!}
 
-Rejoice, aroma of the sweet fragrance of Christ:
+Rejoice, aroma of the sweet \textoverline{fra}grance of Christ:
 
-\Contd{Rejoice, life of mystical gladness!}
+\Contd{Rejoice, life of mystical \textoverline{glad}ness!}
 
 Rejoice, O Bride Unwedded!}
 
-\Kontakion{$\Psi$ (12)}
+\Kontakion{{\selectlanguage{greek}Y} (12)}
 
 \Priest{When the Absolver of all mankind desired to blot out ancient debts, of His Own will He came to dwell among those who had fallen from His Grace; and having torn up the handwriting of their sins, He heareth this from all: Alleluia!}
 
-\Oikos{$\Omega$ (12)}
+\Oikos{{\selectlanguage{greek}W} (12)}
 
 \Priest{While singing to Thine Offspring, we all praise Thee as a living temple, O Theotokos; for the Lord Who holdeth all things in His hand dwelt in Thy womb, and He sanctified and glorified Thee, and taught all to cry to Thee:}
 
-\PeopleRejoice{Rejoice, tabernacle of God the Word:
+\PeopleRejoice{Rejoice, tabernacle of \textoverline{God} the Word:
 
-\Contd{Rejoice, saint greater than the saints!}
+\Contd{Rejoice, saint \textoverline{greater} than the saints!}
 
-Rejoice, ark gilded by the Spirit:
+Rejoice, ark gilded by the \textoverline{Spi}rit:
 
-\Contd{Rejoice, inexhaustible treasury of life!}
+\Contd{Rejoice, inexhaustible \textoverline{treasu}ry of life!}
 
-Rejoice, precious diadem of pious kings:
+Rejoice, precious diadem of \textoverline{pi}ous kings:
 
-\Contd{Rejoice, venerable boast of reverent priests!}
+\Contd{Rejoice, venerable boast of \textoverline{rev}'rent priests!}
 
-Rejoice, unshakable fortress of the Church:
+Rejoice, unshakable \textoverline{fortress} of the Church:
 
-\Contd{Rejoice, inviolable wall of the kingdom!}
+\Contd{Rejoice, inviolable wall of the \textoverline{king}dom!}
 
-Rejoice, Thou through whom victories are obtained:
+Rejoice, Thou through whom \textoverline{victories} are obtained:
 
-\Contd{Rejoice, Thou through whom foes fall prostrate!}
+\Contd{Rejoice, Thou through whom foes fall \textoverline{pros}trate!}
 
-Rejoice, healing of my flesh:
+Rejoice, \textoverline{healing} of my flesh:
 
-\Contd{Rejoice, salvation of my soul!}
+\Contd{Rejoice, sal\textoverline{vation} of my soul!}
 
 Rejoice, O Bride Unwedded!}
 
@@ -552,8 +619,8 @@ Rejoice, O Bride Unwedded!}
   {\color{Maroon}\emph{And again we sing Oikos 1 and Kontakion 1 }}
 \end{center}
 
-\chapter{End of Service}
-
+%% End of any akathist
+\chapter{Closing Prayers}
 
 \Priest{Have mercy on us O God, according to Thy great mercy, we pray Thee, hearken and have mercy.}
 
