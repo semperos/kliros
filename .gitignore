@@ -9,6 +9,9 @@
 *.fdb_latexmk
 *.fls
 *.log
+*.idx
+*.ind
+*.ilg
 
 # Python
 *.pyc
