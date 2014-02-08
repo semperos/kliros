@@ -1,11 +1,9 @@
 *.eps
 *.count
-*.tex
+akathists.tex
 *.texi
 *.ly
 *.txt
 *.dep
 *.out
 *.toc
-
-!foreword.tex
