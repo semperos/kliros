@@ -89,7 +89,7 @@ bass = {
 %%%% WORDS
 
 latinText = \lyricmode {
-  Re -- joice, thou through whom joy shall shine forth,
+  Re -- joice, thou through whom joy will shine forth,
   Re -- joice, thou through whom the curse will cease,
   Re -- joice, re -- call of fall -- en A -- dam,
   Re -- joice, re -- demp -- tion of the tears of Eve.
