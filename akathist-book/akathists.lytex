@@ -59,6 +59,9 @@
 %% \usepackage{multicol}        % used for the two-column index
 \usepackage[bottom]{footmisc}% places footnotes at page bottom
 
+%% Insert PDF's into document
+\usepackage{pdfpages}
+
 % Text Color
 \usepackage[dvipsnames]{xcolor}
 
@@ -262,6 +265,13 @@ Again we pray that the Lord will listen to the prayers of us sinners, and have m
 Hear us O God our Savior, the hope of all the ends of the earth and of those who are far off upon the sea, and show mercy, show mercy O Master, upon us sinners. For Thou art a merciful God and Thou lovest mankind, and unto Thee we ascribe glory: to the Father, and to the Son, and to the Holy Spirit, now and ever, and unto the ages of ages.
 
 \People{Amen.}
+
+\appendix
+
+\chapter{Music}
+
+\includepdf[pages=-,scale=.95]{../pdf/akathist_normal_english.pdf}
+\includepdf{../pdf/akathist_normal_slavonic.pdf}
 
 \end{document}
 
