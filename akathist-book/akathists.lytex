@@ -175,6 +175,7 @@
 
 \begin{document}
 \title{Book of Akathists}
+\date{}
 \maketitle
 \tableofcontents
 
@@ -205,7 +206,29 @@ Our Father, who art in heaven, hallowed be Thy name. Thy kingdom come. Thy will 
 
 \Priest{For Thine is the kingdom, and the power, and the glory of the Father, and of the Son, and of the Holy Spirit, now and ever, and unto the ages of ages.}
 
-\People{Amen.}
+\People Amen.
+
+Lord, have mercy. {\color{Maroon}\emph{(12 times)}}
+
+Glory\ldots Both now\ldots
+
+O come, let us worship God our King.
+
+O come, let us worship and fall down before Christ, our King and God.
+
+O come, let us worship and fall down before Christ Himself, our King and God.
+
+\begin{center}
+  {\large Psalm 50}
+\end{center}
+
+Have mercy on me, O God\ldots
+
+\begin{center}
+  {\large Symbol of Faith}
+\end{center}
+
+I believe in one God\ldots
 
 \pagebreak
 
@@ -233,38 +256,72 @@ Our Father, who art in heaven, hallowed be Thy name. Thy kingdom come. Thy will 
   \Ierei Я́ко Твое́ есть ца́рство и си́ла и сла́ва Отца́ и Сы́на и Свята́го Ду́ха, ны́не и при́сно и во ве́ки веко́в.
 
   \Chtets Ами́нь.
+
+  Го́споди, поми́луй. {\color{Maroon}\emph{(12 раз)}}
+
+  Сла́ва\ldots И ны́не\ldots
+
+  Прииди́те, поклони́мся Царе́ви на́шему Бо́гу.
+
+  Прииди́те, поклони́мся и припаде́м Христу́, Царе́ви на́шему Бо́гу.
+
+  Прииди́те, поклони́мся и припаде́м[1] Самому́ Христу́, Царе́ви и Бо́гу на́шему.
+
+  \begin{center}
+    {\large Псалом 50}
+  \end{center}
+
+  Поми́луй мя, Бо́же\ldots
+
+  \begin{center}
+    {\large Символ веры}
+  \end{center}
+
+  Ве́рую во еди́наго Бо́га\ldots
+
 \end{russian}
 
 \part{Akathists}
+
+%% Use this to insert a blank page, so as to get bilingual arrangement correct
+%% \newpage\null\thispagestyle{empty}\newpage
 
 \include{Chapters/Mother_of_God}
 
 %% End of any akathist
 \part{Closing Prayers}
 
-\Priest{Have mercy on us O God, according to Thy great mercy, we pray Thee, hearken and have mercy.}
+\begin{center}
+  {\color{Maroon}\emph{Here the deacon or priest performs the augmented litany, with the exclamation:}}
+\end{center}
 
-\People{Lord, have mercy. \Thrice}
+\Priest Hearken unto us, O God our Savior, Thou hope of all the ends of the earth and of those that be far off at sea, and be merciful, be merciful, O Master, regarding our sins, and have mercy on us. For Thou art a God of mercy and compassion and love for mankind, and unto Thee do we ascribe glory: to the Father, and to the Son, and to the Holy Spirit, now and ever, and unto the ages of ages.
 
-\Priest{Again we pray for the holy Orthodox Patriarchs of the East; for the Orthodox episcopate of the Russian Church; for our lord the Very Most Reverend Metropolitan Vitaliy, First Hierarch of the Russian Church Abroad; for our lord the Most Reverend Anthony, Archbishop of Western America and San Francisco; and for our lord, the Most Reverend Bishop Kyrill; and all our brethren in Christ:}
+\People Amen.
 
-Again we pray for mercy, life, peace, health, salvation, and visitation for the servants of God NN: (while the names are read, the people sing the litany response softly), and for the pardon and remission of their sins.
+\Priest To the most holy Theotokos, let us pray.
 
-Again we beg Thee, O Lord, to hearken to our petition, and have mercy on Thy servants NN: (the response is sung softly as above). In Thy grace and bounty, fulfill their petitions, and forgive all their sins, whether voluntary or involuntary. Accept their sacrifice of praise upon Thy heavenly altar; protect them from every visible and invisible enemy; deliver them from all misery, sickness, and affliction; grant them health and length of days, we pray Thee, O Lord, hearken and have mercy.
+\People Most holy Theotokos, save us.
 
-\Priest{Again we pray for travelers by land, by sea, and by air; for the sick and the suffering; for the servants of God NN: (as above), and for all those that are under trial, in harsh labor, in exile, imprisonment, and in every tribulation, necessity, and danger, and for their salvation, we pray Thee O Lord, hearken and have mercy.}
+\begin{center}
+  {\color{Maroon}\emph{Here the priest reads the prayer at the end of the akathist.}}
+\end{center}
 
-Again we pray that the Lord our God will preserve this city and this holy temple and every city and country from pestilence, famine, earthquake, flood, fire, the sword, the invasion of enemies, civil war, and sudden death, and that our good God, Who loveth mankind, will be graciously favorable and easily entreated, and will turn away from us all the wrath stirred up against us, and deliver us from all His righteous chastisement which impendeth against us, and have mercy on us.
+\People Amen.
 
-Again we pray for the blessed and ever-memorable, holy Orthodox Patriarchs, and pious kings and right-believing queens, and the founders of this holy temple, and for all our fathers and brethren gone to their rest before us, and the Orthodox here and everywhere laid to rest.
+\Priest Wisdom! O most holy Theotokos, save us.
 
-Again we pray for all the people here present, who await Thy great and rich mercy.
+\People More honorable than the Cherubim and beyond compare more glorious than the Seraphim, thee who without corruption gavest birth to God the Word, the very Theotokos, thee do we magnify.
 
-Again we pray that the Lord will listen to the prayers of us sinners, and have mercy on us.
+\Priest Glory to Thee, O Christ our God, our Hope, glory to Thee.
 
-Hear us O God our Savior, the hope of all the ends of the earth and of those who are far off upon the sea, and show mercy, show mercy O Master, upon us sinners. For Thou art a merciful God and Thou lovest mankind, and unto Thee we ascribe glory: to the Father, and to the Son, and to the Holy Spirit, now and ever, and unto the ages of ages.
+\People Glory to the Father, and to the Son, and to the Holy Spirit. Both now, and ever, and unto the ages of ages. Amen.
 
-\People{Amen.}
+Lord, have mercy\Thrice Father, bless.
+
+\begin{center}
+  {\color{Maroon}\emph{Here the priest gives the dismissal according to the day, after which everyone venerates the icon of the Theotokos.}}
+\end{center}
 
 \appendix
 
