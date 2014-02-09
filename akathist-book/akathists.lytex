@@ -34,7 +34,7 @@
 \usepackage{xunicode}% unicode character macros
 \usepackage{xltxtra}
 % Set font and usual TeX goodies by default
-\setmainfont[Ligatures=TeX,Mapping=tex-text,Numbers=OldStyle,Scale=1.2]{Marion} % Marion, Baskerville
+\setmainfont[Ligatures=TeX,Mapping=tex-text,Scale=1.2]{Marion} % Marion :), Baskerville :)
 % Possibilities for mono: Lucida Console (0.85), Consolas (0.93)
 %% \setmonofont[Scale=0.93]{Consolas}
 
@@ -43,7 +43,7 @@
 \setmainlanguage{english}
 % Russian
 \setotherlanguage{russian}
-\newfontfamily{\russianfont}[Ligatures=TeX,Scale=1.2]{Brill} % Fonts with Cyrillic: Brill, Palatino, Heuristica
+\newfontfamily{\russianfont}[Ligatures=TeX,Scale=1.25]{Brill} % Fonts with Cyrillic: Brill :), Palatino :/, Heuristica :/
 % Greek
 \setotherlanguage[variant=ancient]{greek}
 \newfontfamily{\greekfont}[Ligatures=TeX,Scale=1.25]{Gentium Plus}
