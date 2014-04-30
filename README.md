@@ -1,6 +1,6 @@
 # Eastern Orthodox Christian Chants #
 
-This repository contains the LilyPond source code for Eastern Orthodox Byzantine, Russian and Georgian chants. The `holy_cross_hermitage` folder contains music obtained from the website of Holy Cross Hermitage in Wayne, WV. Several of the top-level files, including `kliros.ly`, `layout.ly` and `midi.ly` are also from that source.
+This repository contains the TeX and LilyPond source code for Eastern Orthodox Byzantine, Russian and Georgian chants and liturgical texts. The `holy_cross_hermitage` folder contains music obtained from the website of Holy Cross Hermitage in Wayne, WV. Several of the shared files in the `inc` folder are also from that source.
 
 ## Dependencies ##
 
@@ -11,7 +11,7 @@ Depending on which parts of this project you want to use, you'll need the follow
  * TeX/LaTeX (more specifically, XeLaTeX)
  * Python (>= 2.7)
 
-You should also install the fonts under the `fonts` directory before attempting to compile any documents.
+You should also install the fonts under the `fonts` directory before attempting to compile any documents. Under *nix platforms, these should also be placed in the `~/.fonts` folder to be recognized by LilyPond.
 
 If you use the Python scripts (used for generating templates for creating new scores), you'll need to install the following Python packages listed in the `requirements.txt` file, which has been generated using the Pip utility's `freeze` command.
 
