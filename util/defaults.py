@@ -34,6 +34,8 @@ def read_value(name, context):
     if name in os.environ:
         context[name.lower()] = os.environ[name]
 
+truths = [True, False]
+
 def read_boolean(name, context):
     if name in os.environ:
         val = os.environ[name].lower()
