@@ -1,4 +1,4 @@
-% (No Title)
+% Milost' Mira -- A mercy of peace
 \version "2.16.2"
 \include "../inc/kliros.ily"
 \header {
