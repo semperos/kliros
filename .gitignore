@@ -1,6 +1,4 @@
 # LilyPond
-*.pdf
-*.midi
 /pdf/
 /midi/
 
