@@ -4,10 +4,7 @@
 \header {
   title = "Beneath Thy Compassion"
 
-
-
-
-
+  composer = "Bortniansky"
 
   tagline = \markup {
     \fill-line {
