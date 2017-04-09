@@ -62,7 +62,7 @@ template-satb:
 	./util/template-satb.py
 
 template-byz:
-	@echo "Generating a score with Byznatine template..."
+	@echo "Generating a score with Byzantine template..."
 	./util/template-byzantine.py
 
 # Compile LilyPond source
