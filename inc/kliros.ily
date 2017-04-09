@@ -92,6 +92,17 @@ B = \set associatedVoice = #"bass"
 				(#:justify-string arg))
 	)))
 
+%%% \markup\ChoirSays#"String"
+#(define-markup-command (ChoirSays layout props arg) (string?)
+	(interpret-markup layout props
+		(markup #:pad-markup 3
+			#:hspace 12
+			#:with-color (rgb-color 0.8 0.1 0)
+			#:italic "Choir:" #:hspace 4.55
+			(#:override '(line-width . 60)
+				(#:justify-string arg))
+	)))
+
 %%% \markup\ChtSays#"String"
 #(define-markup-command (ChtSays layout props arg) (string?)
 	(interpret-markup layout props

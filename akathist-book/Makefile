@@ -12,7 +12,7 @@ endif
 
 LATEX_CMD := latexmk -pdflatex='xelatex -shell-escape -interaction nonstopmode' -use-make -pdf
 # LATEX_CMD := latexmk -pdf
-LILY_BOOK_CMD := lilypond-book # --format=latex # --latex-program="xelatex"
+LILY_BOOK_CMD := /Applications/LilyPond.app/Contents/Resources/bin/lilypond-book # --format=latex # --latex-program="xelatex"
 CURRENT_DIR := $(shell pwd)
 
 .PHONY: akathists.pdf all config clean clean-deps open
