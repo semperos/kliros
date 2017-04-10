@@ -63,6 +63,21 @@ melody = {
 
   g8 a4( g8[ f]) f([ e]) g4 f4.( e8) d([ ees!] d4) d4. \breathe
   %% and taking upon herself
+
+  d8 e4( f ees! d8[ c]) \W c4.( d8) e!4 f \breathe g4~( \acciaccatura a8 g4 d e) f( ees!8[ d] c[ d] c4) c2
+  %% the duty of a myrhh-bearer,
+
+  d4 d d \W ees!8([ d] ees![ fis!] g4 a) a8([ bes!] g4.) \breathe d8 a'4( g8[ fis!]) ees!4( d) d8([ ees!] c2) \breathe
+  %% with lamentation she bringeth Thee
+
+  e!2 \W dis!8([ e] f!4 ees! d!8[ c]) c4.( d8 e!4 f) g~ \acciaccatura a8 g4 \breathe \W
+  %% myrrh oils before
+
+  d4. c8 a'4( g f2 \breathe e8[ dis! e f]) e4 d! e( d c2) c2. \fermata \breathe
+  %% Thine entomb- Thine entombment.
+
+  f4.( \fermata e8^\markup\ison{slowly} g4 f8[ e] e2) \breathe
+  %% Woe unto me
 }
 
 %%%% WORDS
@@ -83,7 +98,7 @@ latinText = \lyricmode {
   with lam -- en -- ta -- tion she bring -- eth
   Thee myrrh oils be -- fore Thine en -- tomb --
   Thine en -- tomb -- ment.
-  Wo un -- to me, saith she,
+  Woe un -- to me, saith she,
   for night is be -- come for me a fren -- zy
   of li -- cen -- tious -- ness,
   a dark and moon -- less love of sin.
