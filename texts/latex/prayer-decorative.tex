@@ -1,0 +1,191 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% This template has been done collecting multiple entries from:
+% http://tex.stackexchange.com
+%
+% Author:
+% Graciano Bay
+%
+% License:
+% CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[%% b4paper
+letter]{memoir}
+\usepackage[margin=1cm,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage[usenames,dvipsnames,svgnames,table,x11names]{xcolor}
+\usepackage{calligra}
+\usepackage{tikz}
+\usetikzlibrary{matrix,fit,chains,calc,scopes}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\usepackage{auto-pst-pdf} %To compile psvectorian directly
+
+\newcommand\myred[0]{VioletRed4}
+
+\usepackage{psvectorian}
+\renewcommand*{\psvectorianDefaultColor}{\myred}%
+%% \usepackage{tgpagella}
+\usepackage{ebgaramond}
+\usepackage{microtype}
+\usepackage{lettrine}
+\usepackage{GoudyIn}
+\renewcommand{\LettrineFontHook}{\color{VioletRed4}\GoudyInfamily{}}
+\LettrineTextFont{\itshape}%
+\setcounter{DefaultLines}{3}%
+
+\usepackage{multicol}
+\setlength{\columnsep}{20pt}
+\setlength{\columnseprule}{0.5pt}
+
+\usepackage{framed}
+\setlength\FrameSep{1em}
+\setlength\FrameRule{0em}
+\setlength\topsep{0pt}
+%% \setlength\OuterFrameSep{1mm}
+%% \setlength\FrameSep{10pt}
+
+\tcbset{
+  Baystyle/.style={
+    sharp corners,
+    enhanced,
+    boxrule=4pt,
+    %% colframe=OliveGreen,
+    colframe=\myred,
+    height=\textheight,
+    width=\textwidth,
+    borderline={5pt}{-7pt}{},
+  }
+}
+
+% Custom Commands
+\newcommand\thrice[0]{\textcolor{\myred}{(\emph{Thrice})}}
+\newcommand\twelvetimes[0]{\textcolor{\myred}{(\emph{Twelve times})}}
+\newcommand\holyThroughTheotokos[0]{Holy, Holy, Holy art Thou, O God; through the Theotokos, have mercy on us.}
+\newcommand\glory[0]{Glory to the Father, and to the Son, and to the Holy Spirit.}
+\newcommand\glorycentered[0]{\begin{center} Glory. \end{center}}
+\newcommand\bothnow[0]{Both now and ever, and unto the ages of ages. Amen.}
+\newcommand\bothnowcentered[0]{\begin{center} Both now. \end{center}}
+\newcommand\glorybothnow[0]{Glory to the Father, and to the Son, and to the Holy Spirit, both now and ever, and unto the ages of ages. Amen.}
+
+\pagestyle{empty}
+\begin{document}
+
+%% \begin{tcolorbox}[Baystyle,]
+\begin{tcolorbox}[Baystyle,colback=white]
+  {
+    \vspace*{5mm}
+    \begin{center}
+      %% \fontsize{45}{45}{\scshape Prayers Upon Waking}
+      \fontsize{30}{30}{\scshape Prayers Upon Waking}
+    \end{center}
+
+    \renewcommand{\baselinestretch}{1.04}
+    \setlength{\parindent}{1em}
+
+    %% \showthe\font
+    %% \message{The columnsep is \the\columnsep}
+    %% \message{The frame sep is \the\FrameSep}
+    %% \setlength{\linewidth}{270pt}
+    %% \newgeometry{textwidth=370pt}
+
+    \begin{framed}
+      %% \normalsize
+      {\fontsize{14}{14}\selectfont
+
+        \begin{multicols}{2}[]
+
+        \lettrine{I}{n} the name of the Father, and of the Son, and of the Holy Spirit. Amen.
+
+        \vspace{5mm}
+
+        Glory to Thee, our God, glory to Thee.
+
+        O Heavenly King, Comforter, Spirit of Truth, Who art everywhere present and fillest all things, Treasury of good things and Giver of life: Come and dwell in us, and cleanse us of all impurity, and save our souls, O Good One.
+
+        Holy God, Holy Mighty, Holy Immortal, have mercy on us. \thrice
+
+        \glorybothnow
+
+        O Most Holy Trinity, have mercy on us. O Lord, blot out our sins. O Master, pardon our iniquities. O Holy One, visit and heal our infirmities for Thy name's sake.
+
+        Lord, have mercy. \thrice
+
+        \glorybothnow
+
+        Our Father, Who art in the Heavens, hallowed be Thy Name. Thy Kingdom come, Thy will be done, on earth as it is in Heaven. Give us this day our daily bread, and forgive us our debts, as we forgive our debtors; and lead us not into temptation, but deliver us from the evil one.
+
+        \medskip
+
+        Having risen from sleep, we fall down before Thee, O Good One, and the angelical hymn we cry aloud to Thee, O Mighty One: \holyThroughTheotokos
+
+        \glorycentered
+
+        From bed and sleep hast Thou raised me up, O Lord: enlighten my mind and heart, and open my lips that I may hymn Thee, O Holy Trinity: \holyThroughTheotokos
+
+        \bothnowcentered
+
+        Suddenly the Judge shall come, and the deeds of each shall be laid bare; but with fear do we cry at midnight: \holyThroughTheotokos
+
+        Lord, have mercy. \twelvetimes
+
+        \medskip
+
+        As I rise from sleep, I thank Thee, O Holy Trinity, for through Thy great goodness and patience Thou wast not angry with me, an idler and sinner, nor hast Thou destroyed me with mine iniquities, but hast shown Thy usual love for mankind; and when I was prostrate in despair, Thou hast raised me up to keep the morning watch and glorify Thy power. And now enlighten my mind's eye, and open my mouth that I may meditate on Thy words, and understand Thy commandments, and do Thy will, and hymn Thee in heartfelt confession, and sing praises to Thine all-holy name: of the Father, and of the Son, and of the Holy Spirit, now and ever, and unto the ages of ages. Amen.
+
+        \medskip
+
+        Glory to Thee, O King, Almighty God, Who through Thy Divine and man-loving providence hast vouchsafed me, a sinner and an unworthy one, to rise from sleep and obtain entry into Thy holy house. Receive, O Lord, the voice of my supplication even as Thou dost accept that of Thy holy and noetic hosts, and deign that through my defiled lips, but from a pure heart and humble spirit, praise may be offered to Thee, so that I also, with the bright lamp of my soul, may become a companion of the wise virgins and glorify Thee, O God the Word, Who art glorified in the Father and the Spirit. Amen.
+
+        \medskip
+
+        \lettrine{T}{hrough} the prayers of our holy fathers, O Lord Jesus Christ our God, have mercy on us. Amen.
+
+        \end{multicols}
+        }
+    \end{framed}
+
+    \restoregeometry
+
+      %% \vspace*{0.018\textheight}
+      %% \vspace*{0.2\textheight}
+      %% % Big Logo\\
+      %% \vspace*{0.2\textheight}
+      %% {\fontsize{12}{12}\calligra A original story of\\}
+      %% \fontsize{28}{28}\scshape Author Name\\
+      %% \vspace*{0.1\textheight}
+      %% \centering
+      %% \begin{tikzpicture}[
+      %%     start chain=main going right,
+      %%   ]
+
+      %%           \node[on chain,align=center,draw=none] (a1){{\fontsize{12}{12}\calligra Illustrations by} \\
+      %%             {\Large Designer}
+      %%           };
+      %%                { [start branch=A going below]
+      %%                  \node[on chain,align=center,draw=none,scale=0.01](d1){};
+      %%                  \node[on chain,align=center,draw=none,](d2){\Huge Press logo};
+      %%                  %\node[on chain,align=center,draw=none,scale=0.01](d3){};
+      %%                }
+      %%                \node[on chain,align=center,draw=none] (a2){\psvectorian[]{148}};
+      %%                     { [start branch=B going below]
+      %%                       \node[on chain,align=center,draw=none,scale=0.01](s1){};
+      %%                       \node[on chain,align=center,draw=none,](s2){};
+      %%                       %\node[on chain,align=center,draw=none,scale=0.01](s3){};
+      %%                     }
+      %%                     \node[on chain,align=center,draw=none]  (a3){{\fontsize{12}{12}\calligra Final review by} \\
+      %%                       {\Large Revisor}
+      %%                     };
+      %%                          { [start branch=C going below]
+      %%                            \node[on chain,align=center,draw=none,scale=0.01](e1){};
+      %%                            \node[on chain,align=center,draw=none,](e2){\Huge Other Logo};
+      %%                            %\node[on chain,align=center,draw=none,scale=0.01](e3){};
+      %%                          }
+      %%                          \draw[black] (s2.north) -- (s2.south);
+      %%         \end{tikzpicture}
+  %% \end{center}
+  }
+\end{tcolorbox}
+\end{document}
