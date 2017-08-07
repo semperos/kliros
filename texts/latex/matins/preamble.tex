@@ -1,0 +1,57 @@
+\pagestyle{plain}
+\chapterstyle{crosshead} %% Centered, minimal spacing
+%% \chapterstyle{dowding} %% Centered, large top margin
+%% \chapterstyle{verville} %% Centered, minimal spacing with upper and lower rules
+
+
+% See memoir manual for sizing.
+% These are taken from the example section.
+\settrimmedsize{11in}{210mm}{*}
+\setlength{\trimtop}{0pt}
+\setlength{\trimedge}{\stockwidth}
+\addtolength{\trimedge}{-\paperwidth}
+\setulmargins{50pt}{*}{*}
+\setlrmargins{*}{*}{1.618}
+\setheaderspaces{*}{*}{1.618}
+\checkandfixthelayout
+
+\usepackage{iftex}
+\ifXeTeX
+  \usepackage{fontspec}
+  \usepackage{xunicode}
+  \usepackage{xltxtra}
+  \defaultfontfeatures{Ligatures=TeX,Mapping=text-text}
+  \setmainfont[Ligatures=TeX,Mapping=tex-text]{EB Garamond}
+\else
+  \usepackage{ebgaramond}
+  \usepackage{microtype}
+  %% \usepackage{lettrine}
+  %% \usepackage{GoudyIn}
+  %% \renewcommand{\LettrineFontHook}{\color{VioletRed4}\GoudyInfamily{}}
+  %% \LettrineTextFont{\itshape}%
+  \usepackage[T1]{fontenc}
+  \usepackage{textcomp}
+  \usepackage{microtype}
+\fi
+
+\usepackage[svgnames]{xcolor}
+
+\def\myred{Maroon}
+
+\newcommand\actor[1]{\textcolor{\myred}{#1:}}
+\newcommand\lbl[1]{\emph{\textcolor{\myred}{#1:}}}
+\newcommand\note[1]{\emph{\textcolor{\myred}{#1}}}
+\newcommand\centernote[1]{{\centering \emph{\textcolor{\myred}{#1}} \par}}
+
+\def\alleluia{Alleluia, alleluia, alleluia, glory to Thee, O God.}
+\def\alleluiaFinal{Alleluia, alleluia, alleluia, glory to Thee, O God, our hope, O Lord, glory be to Thee.}
+\def\bothnow{Both now and ever, and unto the ages of ages. Amen.}
+\def\choir{\actor{Choir}}
+\def\deaconPriest{\actor{Deacon (Priest)}}
+\def\glory{Glory to the Father, and to the Son, and to the Holy Spirit.}
+\def\lhm{Lord, have mercy.}
+\def\priest{\actor{Priest}}
+\def\reader{\actor{Reader}}
+\def\stikh{\lbl{Stichos}}
+\def\thrice{\emph{\textcolor{\myred}{Thrice}}}
+\def\twice{\emph{\textcolor{\myred}{Twice}}}
