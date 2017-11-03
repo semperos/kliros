@@ -1,0 +1,153 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% This template has been done collecting multiple entries from:
+% http://tex.stackexchange.com
+%
+% Author:
+% Graciano Bay
+%
+% License:
+% CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[%% b4paper
+letter]{memoir}
+\usepackage[margin=5cm,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage[usenames,dvipsnames,svgnames,table,x11names]{xcolor}
+\usepackage{calligra}
+\usepackage{tikz}
+\usetikzlibrary{matrix,fit,chains,calc,scopes}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\usepackage{auto-pst-pdf} %To compile psvectorian directly
+
+\newcommand\myred[0]{VioletRed4}
+
+\usepackage{psvectorian}
+\renewcommand*{\psvectorianDefaultColor}{\myred}%
+%% \usepackage{tgpagella}
+\usepackage{ebgaramond}
+\usepackage{microtype}
+\usepackage{lettrine}
+\usepackage{GoudyIn}
+\renewcommand{\LettrineFontHook}{\color{VioletRed4}\GoudyInfamily{}}
+\LettrineTextFont{\itshape}%
+\setcounter{DefaultLines}{3}%
+
+%% \usepackage{multicol}
+%% \setlength{\columnsep}{20pt}
+%% \setlength{\columnseprule}{0.5pt}
+
+\usepackage{framed}
+\setlength\FrameSep{1em}
+\setlength\FrameRule{0em}
+\setlength\topsep{0pt}
+\setlength\OuterFrameSep{1mm}
+\setlength\FrameSep{10pt}
+
+\tcbset{
+  Baystyle/.style={
+    sharp corners,
+    enhanced,
+    boxrule=4pt,
+    %% colframe=OliveGreen,
+    colframe=\myred,
+    height=\textheight,
+    width=\textwidth,
+    borderline={5pt}{-7pt}{},
+  }
+}
+
+% Custom Commands
+\newcommand\thrice[0]{\textcolor{\myred}{(\emph{Thrice})}}
+\newcommand\twelvetimes[0]{\textcolor{\myred}{(\emph{Twelve times})}}
+\newcommand\holyThroughTheotokos[0]{Holy, Holy, Holy art Thou, O God; through the Theotokos, have mercy on us.}
+\newcommand\glory[0]{Glory to the Father, and to the Son, and to the Holy Spirit.}
+\newcommand\glorycentered[0]{\begin{center} Glory. \end{center}}
+\newcommand\bothnow[0]{Both now and ever, and unto the ages of ages. Amen.}
+\newcommand\bothnowcentered[0]{\begin{center} Both now. \end{center}}
+\newcommand\glorybothnow[0]{Glory to the Father, and to the Son, and to the Holy Spirit, both now and ever, and unto the ages of ages. Amen.}
+
+\pagestyle{empty}
+\begin{document}
+
+%% \begin{tcolorbox}[Baystyle,]
+\begin{tcolorbox}[Baystyle,colback=white]
+  {
+    \vspace*{5mm}
+    \begin{center}
+      %% \fontsize{45}{45}{\scshape Prayers Upon Waking}
+      \fontsize{30}{30}{\scshape A Presbyter's Prayer before Serving the Divine Liturgy}
+    \end{center}
+
+    \renewcommand{\baselinestretch}{1.04}
+    \setlength{\parindent}{1em}
+
+    %% \showthe\font
+    %% \message{The columnsep is \the\columnsep}
+    %% \message{The frame sep is \the\FrameSep}
+    %% \setlength{\linewidth}{270pt}
+    %% \newgeometry{textwidth=370pt}
+
+    \begin{framed}
+      %% \normalsize
+      {\fontsize{14}{14}\selectfont
+
+        %% \begin{multicols}{2}[]
+
+          \lettrine{L}{\thinspace\ ord} Jesus, I beseech Thy forgiveness for the unworthy way in which I have so often dared to offer Thy Sacrifice at Thy holy altar. I have served at Thine altar with distractions, with lack of conviction, with guilty thoughts, and with a divided will. I have deserved, indeed I shall always deserve, to be struck down on the spot by fire from heaven. Send that fire, Lord, for I willingly accept even that it destroy me, if beforehand it can kindle and purify my heart. I have no other refuge than the chalice which holds Thy holy and precious Blood. I presume to drink from that chalice. Consume me, O Lord. Let nothing of the old, sinful man remain with me. If I am concerned with myself alone, I drink to my own judgment and condemnation. If it is Thou Whom I contemplate---Thou upon the Cross---then I receive trembling, yet with hope, the holy and precious Blood which flows from Thy saving wounds.
+
+          And, Lord, however unworthy I may be, I beseech Thee to accept those who receive from my hands Thy holy, precious, and immaculate Body and Blood. Receive them unto Thyself for their salvation, O Lord, and grant that they may carry within themselves far beyond our holy community---and to all those whose lives they touch---the fruits of peace and love that flow forth from Thy eucharistic side. O my Redeemer, forgive and sanctify me. Amen.
+
+        %% \vspace{5mm}
+
+        %% \medskip
+
+        %% \end{multicols}
+        }
+    \end{framed}
+
+    \restoregeometry
+
+      %% \vspace*{0.018\textheight}
+      %% \vspace*{0.2\textheight}
+      %% % Big Logo\\
+      %% \vspace*{0.2\textheight}
+      %% {\fontsize{12}{12}\calligra A original story of\\}
+      %% \fontsize{28}{28}\scshape Author Name\\
+      %% \vspace*{0.1\textheight}
+      %% \centering
+      %% \begin{tikzpicture}[
+      %%     start chain=main going right,
+      %%   ]
+
+      %%           \node[on chain,align=center,draw=none] (a1){{\fontsize{12}{12}\calligra Illustrations by} \\
+      %%             {\Large Designer}
+      %%           };
+      %%                { [start branch=A going below]
+      %%                  \node[on chain,align=center,draw=none,scale=0.01](d1){};
+      %%                  \node[on chain,align=center,draw=none,](d2){\Huge Press logo};
+      %%                  %\node[on chain,align=center,draw=none,scale=0.01](d3){};
+      %%                }
+      %%                \node[on chain,align=center,draw=none] (a2){\psvectorian[]{148}};
+      %%                     { [start branch=B going below]
+      %%                       \node[on chain,align=center,draw=none,scale=0.01](s1){};
+      %%                       \node[on chain,align=center,draw=none,](s2){};
+      %%                       %\node[on chain,align=center,draw=none,scale=0.01](s3){};
+      %%                     }
+      %%                     \node[on chain,align=center,draw=none]  (a3){{\fontsize{12}{12}\calligra Final review by} \\
+      %%                       {\Large Revisor}
+      %%                     };
+      %%                          { [start branch=C going below]
+      %%                            \node[on chain,align=center,draw=none,scale=0.01](e1){};
+      %%                            \node[on chain,align=center,draw=none,](e2){\Huge Other Logo};
+      %%                            %\node[on chain,align=center,draw=none,scale=0.01](e3){};
+      %%                          }
+      %%                          \draw[black] (s2.north) -- (s2.south);
+      %%         \end{tikzpicture}
+  %% \end{center}
+  }
+\end{tcolorbox}
+\end{document}
