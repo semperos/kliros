@@ -56,7 +56,10 @@ global = {
 soprano = {
   c'4.( d8 c4) b a2 g a( b8[ c] d4) c2 c4 a b2 c2. r4 \W
   e4.( f8 e4) d c d8([ e]) f4( e) d2
-  d4( c8[ d] e4) d8([ e]) c4.( d8 c4 b a2 b8[ c] d4) c2
+  d4( c8[ d] e4) d8([ e]) c4.( d8 c4 b a2 b8[ c] d4) c2 \W
+  c4 a b2 c2. r4 \W
+  
+  b4 c d e f2( e d8[ c b c] d2) d4 c1 \fermata \bar "||"
   % a'4 a\breve a4 a g a( g) f2 g1 \bar "||"
   
   % f4 f f g2 g4 g g g g g g f g a( g) f( g) a2 \W
@@ -79,18 +82,27 @@ alto = {
   c''4.( d8 c4) b a2 g a( b8[ c] d4) c2 c4 a b2 c2. r4 \W
   c2. b4 a a8([ c]) c2 a2
   b4( a8[ b] c4) b a1( a4 e g b) g2 \W
+  a4 e g2 g2. r4 \W
+
+  g4 g8([ a]) a4 c c1( b8[ g] g4 b2) b4 g1 \bar "||"
 }
 
 tenor = {
   c4.( d8 c4) b a2 g a( b8[ c] d4) c2 c4 a b2 c2. r4 \W
   g'4.( a8 g4) g e f8([ g]) a4( g8[ a]) f2
   g4( e8[ g] g4) g e4.( f8 e4 d8[ e] c2 d8[ e] g4) e2 \W
+  e4 c d2 e2. r4 \W
+
+  g4 g8([ e]) f4 g a2( g g8[ e d e] g2) g4 e1 \bar "||"
 }
 
 bass = {
   c4.( d8 c4) b a2 g a( b8[ c] d4) c2 c4 a b2 c2. r4 \W
   c2. g4 a d8([ c]) f,4 c' d2
   g,4( a8[ g] c4) g a1( a2 g2) c2 \W
+  a4 a g2 c2. r4 \W
+
+  g'4 e d c f,( a c2 g1) g4 c1 \fermata \bar "||"
 }
 
 
@@ -100,7 +112,8 @@ cyrillicText = \lyricmode {
                                 % \override LyricText #'font-name = #"Izhitsa"
                                 % \override LyricText #'font-size = #1.5
   И -- же хе -- ру -- ви -- мы, хе -- ру -- ви -- мы, хе -- ру -- ви -- мы,
-  и -- же хе -- ру -- ви -- мы, хе -- ру -- ви -- мы, хе -- ру -- ви -- мы,
+  и -- же хе -- ру -- ви -- мы, хе -- ру -- ви -- мы,
+  тай -- но об -- ра -- зу -- ю -- ще,
   % И \left "ны́не и при́сно и во" ве́ -- ки ве -- ко́в. __ А -- ми́нь.
   % Е -- ди -- но -- ро́д -- ный Сы́ -- не и Сло́ -- ве Бо́ -- жий, без -- сме́р -- тен Сый,
   % и из -- во́ -- ли -- вый спа -- се́ -- ни -- я на́ -- ше -- го ра́ -- ди
@@ -119,8 +132,7 @@ cyrillicText = \lyricmode {
 }
                                 %
 latinText = \lyricmode {
-  И -- же хе -- ру -- ви -- мы, хе -- ру -- ви -- мы, хе -- ру -- ви -- мы,
-  и -- же хе -- ру -- ви -- мы, хе -- ру -- ви -- мы, хе -- ру -- ви -- мы,
+  
 }
 
 %%%% SCORE
