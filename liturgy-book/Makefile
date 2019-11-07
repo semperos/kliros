@@ -11,7 +11,8 @@ MIDI_PLAY_CMD := timidity
 endif
 
 LATEX_CMD := latexmk -pdflatex='xelatex -shell-escape -interaction nonstopmode' -pdf
-LILY_BOOK_CMD = /Applications/LilyPond.app/Contents/Resources/bin/lilypond-book # --format=latex # --latex-program="xelatex"
+# LILY_BOOK_CMD = /Applications/LilyPond.app/Contents/Resources/bin/lilypond-book # --format=latex # --latex-program="xelatex"
+LILY_BOOK_CMD = /bin/lilypond-book
 CURRENT_DIR := $(shell pwd)
 
 .PHONY: config clean clean-deps open
@@ -32,10 +33,13 @@ all: liturgy.pdf
 #      file names.
 %.pdf: %.tex
 	cp ../inc/only_begotten_son_abbr_znammeny_smirnov.ipdf ../pdf/only_begotten_son_abbr_znammeny_smirnov.pdf
-	make -C .. pdf/only_begotten_son_znammeny.pdf
 	make -C .. pdf/great_ektenia_trilingual.pdf
 	make -C .. pdf/sunday_liturgy_first_antiphon.pdf
 	make -C .. pdf/sunday_liturgy_second_antiphon.pdf
+	make -C .. pdf/only_begotten_son_abbr_znammeny_smirnov.pdf
+	make -C .. pdf/only_begotten_son_znammeny.pdf
+	make -C .. pdf/sunday_liturgy_beatitudes.pdf
+	make -C .. pdf/byz_tone_1_exemplars.pdf
 	$(LATEX_CMD) $<
 
 # Ensure the system can compile LilyPond source files

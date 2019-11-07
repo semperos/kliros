@@ -83,7 +83,7 @@ The materials in this book have been composed to help the choir meet their respo
 \includepdf[pages=-,scale=.95]{../pdf/only_begotten_son_abbr_znammeny_smirnov.pdf}
 \includepdf[pages=-,scale=.95]{../pdf/only_begotten_son_znammeny.pdf}
 \chapter{Third Antiphon, Beatitudes}
-\include[pages=-,scale=.95]{../pdf/sunday_liturgy_beatitudes.pdf}
+\includepdf[pages=-,scale=.95]{../pdf/sunday_liturgy_beatitudes.pdf}
 \part{Liturgy of the Faithful}
 \part{Communion}
 \part{Dismissal}
