@@ -33,7 +33,7 @@ global = {
 %
 
 soprano = {
-  g'8 g g \breve g a b4 a g2( fis8[ g] a4) g1 \bar "||"
+  g'8 g g\breve g8 a b4 a g2( fis8[ g] a4) g1 \bar "||"
   % b'2.\rest g4 g2 fis4 g a2( b4 c) b2. b4\rest
   % b2 a g fis g a b( a4) g fis1 g2. b4\rest
   % g2 fis g1 a2( b4 c) b2. b4\rest
