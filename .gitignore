@@ -10,6 +10,7 @@
 *.idx
 *.ind
 *.ilg
+.auctex-auto/
 
 # Python
 *.pyc
