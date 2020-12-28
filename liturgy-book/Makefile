@@ -7,7 +7,7 @@ endif
 
 ifeq ($(UNAME), Linux)
 OPEN_CMD := xdg-open
-MIDI_PLAY_CMD := timidity
+MIDI_PLAY_CMD := vlc
 endif
 
 LATEX_CMD := latexmk -pdflatex='xelatex -shell-escape -interaction nonstopmode' -pdf
