@@ -38,3 +38,24 @@ While putting together a new piece of music, it helps to use a PDF viewer that e
 Text have been composed using a form of LaTeX called XeLaTeX. This flavor of LaTeX makes trivial to use system-installed fonts in TeX documents without requiring any font conversions.
 
 Documents are compiled differently based on their needs. Some are simple documents that require a single pass, others may have tables of contents and references that require several compilation passes. If you're not familiar with LaTeX, you should familiarize yourself with it first.
+
+## Project Structure
+
+```
+.
+|-- Makefile              # Build rules
+|-- README.md             # This file
+|-- external              # Third-party scores and assets
+|-- fonts                 # Fonts used in Lilypond/LaTeX
+|-- holy_cross_hermitage  # Original material from Holy Cross Hermitage, Wayne WV
+|-- inc                   # Common Lilypond files, HCM
+|-- liturgy-book          # Liturgy, multiple languages and music
+|-- midi                  # Output folder for MIDI files
+|-- monthly-calendar      # Landscape calendar, LaTeX
+|-- pdf                   # Output folder for PDF files
+|-- requirements.txt      # Python dependencies list
+|-- scores                # Lilypond musical score source code
+|-- templates             # Musical score templates
+|-- texts                 # Service and prayer texts. Deprecated.
+`-- util                  # Python utilities
+```
