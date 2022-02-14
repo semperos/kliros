@@ -1,6 +1,6 @@
 % Milost' Mira -- A mercy of peace
 \version "2.16.2"
-\include "../inc/kliros.ily"
+\include "../inc/kliros2.ly"
 \header {
   title = \markup {
     % \override #'(font-name . "Hirmos Ponomar")
@@ -300,7 +300,8 @@ latinText = \lyricmode {
   \context ChoirStaff <<
     \context Staff = top <<
       \context Voice = melody \relative c'
-      { \voiceOne \clef "G" \global
+      {
+        \voiceOne \clef "G" \global
 
         \melody
 
@@ -321,20 +322,24 @@ latinText = \lyricmode {
 
   \include "../inc/midi_fast.ily"
 
-  \layout { %ragged-last = ##t
-            %ragged-right = ##t
-            %indent = 0
+  \layout {
+    %ragged-last = ##t
+    %ragged-right = ##t
+    %indent = 0
 
-            \context { \Staff
-                       % \remove "Time_signature_engraver"
+    \context {
+      \Staff
+      % \remove "Time_signature_engraver"
 
-                     }
-                                % this is a correction to keep it from getting crowded on the final system, especially when ragged-last is set.
-            \context { \Score
-                       \override SpacingSpanner #'shortest-duration-space = #2.3
-                     }
-                                % Lilypond's default lyric spacing is to tight. This corrects it:
-            \context {
-              \Lyrics \override LyricSpace #'minimum-distance = #.8 }
-          }
+    }
+    % this is a correction to keep it from getting crowded on the final system, especially when ragged-last is set.
+    \context {
+      \Score
+      \override SpacingSpanner #'shortest-duration-space = #2.3
+    }
+    % Lilypond's default lyric spacing is to tight. This corrects it:
+    \context {
+      \Lyrics \override LyricSpace #'minimum-distance = #.8
+    }
+  }
 }
