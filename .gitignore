@@ -1,6 +1,7 @@
 # LilyPond
 /pdf/
 /midi/
+*.tmp
 
 # LaTeX
 *.aux

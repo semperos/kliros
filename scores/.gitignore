@@ -1,0 +1,3 @@
+# Some tools produce these alongside the source files
+*.midi
+*.pdf
