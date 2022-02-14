@@ -1,13 +1,13 @@
 % (No Title)
 \version "2.16.2"
-\include "../inc/kliros.ily"
+\include "../inc/kliros2.ly"
 
 \paper  {
   myStaffSize = #20
   #(define fonts
-    (make-pango-font-tree "Palatino"
-                          "Lucida Sans"
-                          "Monaco"
+     (make-pango-font-tree "Palatino"
+                           "Lucida Sans"
+                           "Monaco"
                            (/ myStaffSize 20)))
   indent = 0\cm
 }
