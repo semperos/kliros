@@ -12,7 +12,7 @@ endif
 
 LATEX_CMD := latexmk -pdflatex='xelatex -shell-escape -interaction nonstopmode' -pdf
 # LILY_BOOK_CMD = /Applications/LilyPond.app/Contents/Resources/bin/lilypond-book # --format=latex # --latex-program="xelatex"
-LILY_BOOK_CMD = /bin/lilypond-book
+LILY_BOOK_CMD = lilypond-book
 CURRENT_DIR := $(shell pwd)
 
 .PHONY: config clean clean-deps open
